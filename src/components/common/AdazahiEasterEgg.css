@@ -1,0 +1,64 @@
+.adazahi-easter-egg {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  animation: adazahiPopIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.adazahi-avatar {
+  height: 120px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.adazahi-easter-egg:hover .adazahi-avatar {
+  transform: scale(1.08) rotate(-2deg);
+  filter: drop-shadow(0 6px 18px rgba(255, 65, 108, 0.6));
+}
+
+.adazahi-easter-egg:active .adazahi-avatar {
+  transform: scale(0.95);
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 24px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: floatAndFade 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  filter: drop-shadow(0 2px 6px rgba(255, 65, 108, 0.6));
+}
+
+@keyframes adazahiPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes floatAndFade {
+  0% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--drift, 0px)), 0) scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate(calc(-50% + var(--drift, 0px)), -45px) scale(1.25) rotate(-12deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--drift, 0px)), -95px) scale(1) rotate(12deg);
+  }
+}

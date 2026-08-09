@@ -180,7 +180,7 @@ describe('App Component', () => {
     const user = userEvent.setup();
     render(<App />);
 
-    expect(screen.getByTestId('easter-egg-status')).toHaveTextContent('Inactive');
+    expect(screen.queryByTestId('adazahi-easter-egg')).not.toBeInTheDocument();
     expect(document.body.style.background).toBe('');
 
     const adazahiBtn = screen.getByTestId('adazahi-btn');
@@ -190,13 +190,14 @@ describe('App Component', () => {
       await user.click(adazahiBtn);
     }
 
-    expect(screen.getByTestId('easter-egg-status')).toHaveTextContent('Inactive');
+    expect(screen.queryByTestId('adazahi-easter-egg')).not.toBeInTheDocument();
     expect(document.body.style.background).toBe('');
 
     // Click 8th time
     await user.click(adazahiBtn);
 
-    expect(screen.getByTestId('easter-egg-status')).toHaveTextContent('Active');
-    expect(document.body.style.background).toBe('rgb(7, 8, 12)'); // '#07080c' converts to rgb in jsdom
+    expect(screen.getByTestId('adazahi-easter-egg')).toBeInTheDocument();
+    // Background remains unchanged (standard) when Adazahi easter egg is active
+    expect(document.body.style.background).toBe('');
   });
 });

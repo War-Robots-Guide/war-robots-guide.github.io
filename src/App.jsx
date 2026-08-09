@@ -3,6 +3,7 @@ import './App.css';
 import { usePathRouting } from './hooks/usePathRouting';
 import { Header } from './components/common/Header';
 import { Footer } from './components/common/Footer';
+import { AdazahiEasterEgg } from './components/common/AdazahiEasterEgg';
 import { DashboardTab } from './components/dashboard/DashboardTab';
 import { TierListTab } from './components/tiers/TierListTab';
 import { RobotsGuideTab } from './components/robots/RobotsGuideTab';
@@ -30,32 +31,32 @@ const TAB_METADATA = {
     description: 'Welcome to the database compiled by the expert community at War Robots Guide. Navigate to the top of the site to browse our extensive collection of helpful resources!'
   },
   tiers: {
-    title: 'War Robots Meta Tier List | War Robots Guide',
-    description: 'A power based tier list that ranks every unit in the game.'
+    title: 'Robot Tier List & Analysis',
+    description: 'Explore our tier list ratings for War Robots. View detailed breakdowns for longevity, lethality, mobility, utility, and overall meta rankings.'
   },
   robots: {
-    title: 'War Robots Ratings & Guide | War Robots Guide',
-    description: 'Value rating represents F2P friendliness and return on investment.'
+    title: 'Robot Guide Ratings & Scores',
+    description: 'In-depth performance evaluation and guide scores for every robot in War Robots, calculated by experts.'
   },
   builds: {
-    title: 'War Robots Optimal Builds | War Robots Guide',
-    description: 'Learn the best weapon, specialization, pilot, and drone configurations for your robots.'
+    title: 'Recommended Robot Build Guides',
+    description: 'Curated builds, module pairings, drone setups, and weapons for top-tier War Robots.'
   },
   specializations: {
-    title: 'Module Specialization Layouts | War Robots Guide',
-    description: 'Learn what specializations and modules are the best for you.'
+    title: 'Module & Specialization Database',
+    description: 'Comprehensive database of passive and active modules, titan specializations, and optimal pairings.'
   },
   pilots: {
-    title: 'Best Pilot Skills & Builds | War Robots Guide',
-    description: 'Learn what pilot skills are the strongest and which skills should be avoided.'
+    title: 'Legendary Pilot Skills Database',
+    description: 'Complete pilot skills list with stat boosts, synergy details, and recommended pilot setups.'
   },
   weapons: {
-    title: 'Weapon DPS Statistics & Charts | War Robots Guide',
-    description: 'Compare the DPS of most weapons in the game. Select up to four weapons to generate a bar chart.'
+    title: 'Weapon DPS & Burst Damage Charts',
+    description: 'Compare weapon DPS, cycle damage, range, reload speed, and burst capabilities.'
   },
   hangar: {
-    title: 'Hangar Analyzer & Optimizer | War Robots Guide',
-    description: 'Get a general idea of how strong your hangar is.'
+    title: 'Hangar Analyzer Tool',
+    description: 'Analyze your War Robots hangar composition, calculate overall power scores, and receive tailored optimization tips.'
   }
 };
 
@@ -65,12 +66,15 @@ function App() {
 
   useEffect(() => {
     const meta = TAB_METADATA[activeTab] || TAB_METADATA.dashboard;
-    document.title = meta.title;
+    document.title = `${meta.title} | War Robots Guide`;
 
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute('content', meta.description);
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      document.head.appendChild(metaDesc);
     }
+    metaDesc.setAttribute('content', meta.description);
 
     const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
@@ -102,12 +106,12 @@ function App() {
   };
 
   useEffect(() => {
-    if (isEasterEggActive || isAdazahiEggActive) {
+    if (isEasterEggActive) {
       document.body.style.background = '#07080c'; // Neutral dark background to remove blue tint
     } else {
       document.body.style.background = '';
     }
-  }, [isEasterEggActive, isAdazahiEggActive]);
+  }, [isEasterEggActive]);
 
   const [currentTab, setCurrentTab] = useState(activeTab);
 
@@ -137,9 +141,7 @@ function App() {
           const isActive = activeTab === tab;
 
           let bgUrl;
-          if (isAdazahiEggActive) {
-            bgUrl = "url('/backgrounds/easteregg-adazahi-bg.webp')";
-          } else if (isEasterEggActive) {
+          if (isEasterEggActive) {
             bgUrl = "url('/backgrounds/easteregg-crimsonhawk-bg.webp')";
           } else {
             bgUrl = `url('${BACKGROUND_IMAGES[tab]}')`;
@@ -154,7 +156,7 @@ function App() {
               className={`bg-layer bg-theme-${tab} ${isActive ? 'active' : ''}`}
               style={{
                 backgroundImage: bgUrl,
-                opacity: isActive ? (isEasterEggActive || isAdazahiEggActive ? 0.75 : 0.15) : 0,
+                opacity: isActive ? (isEasterEggActive ? 0.75 : 0.15) : 0,
                 transform: transformStyle,
                 filter: filterStyle
               }}
@@ -163,7 +165,7 @@ function App() {
         })}
       </div>
 
-      <Header activeTab={activeTab} onTabChange={setActiveTab} isEasterEggActive={isEasterEggActive || isAdazahiEggActive} />
+      <Header activeTab={activeTab} onTabChange={setActiveTab} isEasterEggActive={isEasterEggActive} />
 
       <main className={`main-content bg-theme-${activeTab}`}>
         {activeTab === 'dashboard' && <DashboardTab onTabChange={setActiveTab} onItemClick={openItemDetails} />}
@@ -177,6 +179,8 @@ function App() {
       </main>
 
       <Footer onDeveloperClick={handleDeveloperClick} onAdazahiClick={handleAdazahiClick} />
+
+      {isAdazahiEggActive && <AdazahiEasterEgg />}
 
       {selectedItem && (
         <DetailModal selectedItem={selectedItem} onClose={() => setSelectedItem(null)} />
