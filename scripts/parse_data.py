@@ -860,67 +860,68 @@ def parse_robot_guide():
             f"the value-rating table:\n  - {joined}"
         )
         
-    # 5.6 Parse SAGE Retro Camelot
+    # 5.6 Parse SAGE Retro Camelot (optional sheet)
     camelot_data = []
-    camelot_sheet = wb["SAGE Retro Camelot"]
-    current_camelot_tier = "S"
-    
-    r = 3 # row index 3 is where S tier Lancelot starts (1-indexed row 3)
-    # Let's iterate until the end
-    while r <= camelot_sheet.max_row:
-        c0 = camelot_sheet.cell(row=r, column=1).value
-        c1 = camelot_sheet.cell(row=r, column=2).value
-        c2 = camelot_sheet.cell(row=r, column=3).value
+    if "SAGE Retro Camelot" in wb:
+        camelot_sheet = wb["SAGE Retro Camelot"]
+        current_camelot_tier = "S"
         
-        # Check tier change
-        if c0 and str(c0).strip() in ["S", "A", "B", "C", "D", "E", "F"]:
-            current_camelot_tier = str(c0).strip()
+        r = 3 # row index 3 is where S tier Lancelot starts (1-indexed row 3)
+        # Let's iterate until the end
+        while r <= camelot_sheet.max_row:
+            c0 = camelot_sheet.cell(row=r, column=1).value
+            c1 = camelot_sheet.cell(row=r, column=2).value
+            c2 = camelot_sheet.cell(row=r, column=3).value
             
-        if c1:
-            bot_name = str(c1).strip()
-            desc = str(c2 or "").strip()
-            builds_list = []
-            
-            # Read next rows for description continuation and viable builds
-            nr = r + 1
-            while nr <= camelot_sheet.max_row:
-                nc1 = camelot_sheet.cell(row=nr, column=2).value
-                # If there's a new bot name in the next row, stop
-                if nc1:
-                    break
-                    
-                nc0 = camelot_sheet.cell(row=nr, column=1).value
-                nc2 = camelot_sheet.cell(row=nr, column=3).value
+            # Check tier change
+            if c0 and str(c0).strip() in ["S", "A", "B", "C", "D", "E", "F"]:
+                current_camelot_tier = str(c0).strip()
                 
-                # Check for viable builds
-                if nc2 and "viable builds" in str(nc2).lower():
-                    # Collect builds from columns 4 to 9
-                    for col_idx in range(4, 10):
-                        b_val = camelot_sheet.cell(row=nr, column=col_idx).value
-                        if b_val:
-                            builds_list.append(str(b_val).strip())
-                elif nc2:
-                    # Append to description
-                    desc += "\n" + str(nc2).strip()
-                    
-                # In some cases, viable builds spans multiple rows
-                # Check if columns 4 to 9 are filled but Col 1 & 2 & 3 are empty
-                if not nc1 and not nc2 and any(camelot_sheet.cell(row=nr, column=x).value for x in range(4, 10)):
-                    for col_idx in range(4, 10):
-                        b_val = camelot_sheet.cell(row=nr, column=col_idx).value
-                        if b_val:
-                            builds_list.append(str(b_val).strip())
-                            
-                nr += 1
+            if c1:
+                bot_name = str(c1).strip()
+                desc = str(c2 or "").strip()
+                builds_list = []
                 
-            camelot_data.append({
-                "name": bot_name,
-                "tier": current_camelot_tier,
-                "description": desc,
-                "builds": builds_list
-            })
-            r = nr - 1
-        r += 1
+                # Read next rows for description continuation and viable builds
+                nr = r + 1
+                while nr <= camelot_sheet.max_row:
+                    nc1 = camelot_sheet.cell(row=nr, column=2).value
+                    # If there's a new bot name in the next row, stop
+                    if nc1:
+                        break
+                        
+                    nc0 = camelot_sheet.cell(row=nr, column=1).value
+                    nc2 = camelot_sheet.cell(row=nr, column=3).value
+                    
+                    # Check for viable builds
+                    if nc2 and "viable builds" in str(nc2).lower():
+                        # Collect builds from columns 4 to 9
+                        for col_idx in range(4, 10):
+                            b_val = camelot_sheet.cell(row=nr, column=col_idx).value
+                            if b_val:
+                                builds_list.append(str(b_val).strip())
+                    elif nc2:
+                        # Append to description
+                        desc += "\n" + str(nc2).strip()
+                        
+                    # In some cases, viable builds spans multiple rows
+                    # Check if columns 4 to 9 are filled but Col 1 & 2 & 3 are empty
+                    if not nc1 and not nc2 and any(camelot_sheet.cell(row=nr, column=x).value for x in range(4, 10)):
+                        for col_idx in range(4, 10):
+                            b_val = camelot_sheet.cell(row=nr, column=col_idx).value
+                            if b_val:
+                                builds_list.append(str(b_val).strip())
+                                
+                    nr += 1
+                    
+                camelot_data.append({
+                    "name": bot_name,
+                    "tier": current_camelot_tier,
+                    "description": desc,
+                    "builds": builds_list
+                })
+                r = nr - 1
+            r += 1
         
     # Parse footnotes from Bot Roles column 9
     roles_footnotes = []
