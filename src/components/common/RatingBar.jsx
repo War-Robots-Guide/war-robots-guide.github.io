@@ -1,6 +1,6 @@
 import { getRatingColor, getValueRatingTiers, getRatingTierIndex } from '../../utils/ratingColors';
 
-export function RatingBar({ rating, align = 'left', unitType }) {
+export function RatingBar({ rating, align = 'left' }) {
   const tiers = getValueRatingTiers();
   const activeTierIndex = getRatingTierIndex(rating);
 
