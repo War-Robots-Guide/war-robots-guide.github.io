@@ -21,7 +21,7 @@ vi.mock('../data/robot_guide.json', () => ({
   }
 }));
 
-import { getRatingColor, getRatingColorsList, getValueRatingRange, getOverallScoreRange } from './ratingColors';
+import { getRatingColor, getRatingColorsList, getValueRatingTiers, getRatingTierIndex, getValueRatingGradient, getValueRatingRange, getOverallScoreRange } from './ratingColors';
 
 describe('ratingColors utility', () => {
   describe('getRatingColor', () => {
@@ -70,6 +70,46 @@ describe('ratingColors utility', () => {
         '#mock_blue'
       ];
       expect(getRatingColorsList()).toEqual(expectedList);
+    });
+  });
+
+  describe('getValueRatingTiers', () => {
+    it('returns 5 tiers with expected labels and colors', () => {
+      const tiers = getValueRatingTiers();
+      expect(tiers).toHaveLength(5);
+      expect(tiers.map(t => t.label)).toEqual(['Bad', 'Poor', 'Fair', 'Good', 'Best']);
+      expect(tiers[0].color).toBe('#mock_red');
+      expect(tiers[4].color).toBe('#mock_blue');
+    });
+  });
+
+  describe('getRatingTierIndex', () => {
+    it('maps ratings to correct tier indices (0 to 4)', () => {
+      expect(getRatingTierIndex(15)).toBe(0);
+      expect(getRatingTierIndex(20)).toBe(0);
+      expect(getRatingTierIndex(21)).toBe(1);
+      expect(getRatingTierIndex(25)).toBe(1);
+      expect(getRatingTierIndex(26)).toBe(2);
+      expect(getRatingTierIndex(30)).toBe(2);
+      expect(getRatingTierIndex(31)).toBe(3);
+      expect(getRatingTierIndex(34)).toBe(3);
+      expect(getRatingTierIndex(35)).toBe(4);
+      expect(getRatingTierIndex(36)).toBe(4);
+      expect(getRatingTierIndex(44)).toBe(4);
+    });
+  });
+
+  describe('getValueRatingGradient', () => {
+    it('generates gradient matching rating thresholds for min=12 and max=44', () => {
+      const gradient = getValueRatingGradient(12, 44);
+      expect(gradient).toBe(
+        'linear-gradient(to right, #mock_red 0%, #mock_red 25%, #mock_orange 34.38%, #mock_yellow 50%, #mock_lime 60.94%, #mock_green 67.19%, #mock_blue 71.88%, #mock_blue 100%)'
+      );
+    });
+
+    it('handles edge case when max <= min', () => {
+      const gradient = getValueRatingGradient(20, 20);
+      expect(gradient).toBe('linear-gradient(to right, #mock_red 0%, #mock_blue 100%)');
     });
   });
 

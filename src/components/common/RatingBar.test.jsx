@@ -4,65 +4,73 @@ import { RatingBar } from './RatingBar';
 
 describe('RatingBar Component', () => {
   describe('default unitType (robot)', () => {
-    it('renders correctly with a standard positive rating', () => {
-      const { container } = render(<RatingBar rating={28} />);
+    it('renders correctly with a standard positive rating (Fair)', () => {
+      render(<RatingBar rating={28} />);
 
-      // Should show the correct label for rating 28 (Fair)
       expect(screen.getByText('Fair (28)')).toBeInTheDocument();
-
-      // Calculate expected percentage: ((28 - 12) / (44 - 12)) * 100 = 50%
-      const markerElement = container.querySelector('div[style*="position: absolute"]');
-      expect(markerElement).toHaveStyle({ left: '50%' });
+      const segments = screen.getAllByTestId(/rating-segment-/);
+      expect(segments).toHaveLength(5);
+      // Fair is index 2, so segments 0, 1, 2 should be active
+      expect(segments[0]).not.toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+      expect(segments[1]).not.toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+      expect(segments[2]).not.toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+      expect(segments[3]).toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+      expect(segments[4]).toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
     });
 
-    it('renders correctly with a negative/low rating', () => {
-      const { container } = render(<RatingBar rating={7} />);
+    it('renders correctly with a low rating (Bad)', () => {
+      render(<RatingBar rating={7} />);
 
       expect(screen.getByText('Bad (7)')).toBeInTheDocument();
-
-      // Calculate expected percentage (clamped to minVal 15): 0%
-      const markerElement = container.querySelector('div[style*="position: absolute"]');
-      expect(markerElement).toHaveStyle({ left: '0%' });
+      const segments = screen.getAllByTestId(/rating-segment-/);
+      expect(segments[0]).not.toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+      expect(segments[1]).toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
     });
 
-    it('clamps rating to upper bound visually but shows dynamic label', () => {
-      const { container } = render(<RatingBar rating={44} />);
+    it('renders correctly with maximum rating (Best)', () => {
+      render(<RatingBar rating={44} />);
 
       expect(screen.getByText('Best (44)')).toBeInTheDocument();
-
-      // Calculate expected percentage: ((44 - 12) / (44 - 12)) * 100 = 100%
-      const markerElement = container.querySelector('div[style*="position: absolute"]');
-      expect(markerElement).toHaveStyle({ left: '100%' });
+      const segments = screen.getAllByTestId(/rating-segment-/);
+      segments.forEach(segment => {
+        expect(segment).not.toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+      });
     });
 
-    it('clamps rating to lower bound visually but shows dynamic label', () => {
-      const { container } = render(<RatingBar rating={-5} />);
+    it('renders correctly with a negative rating', () => {
+      render(<RatingBar rating={-5} />);
 
       expect(screen.getByText('Bad (-5)')).toBeInTheDocument();
+      const segments = screen.getAllByTestId(/rating-segment-/);
+      expect(segments[0]).not.toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+      expect(segments[1]).toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+    });
 
-      // Calculate expected percentage capped at 0: ((0 - 0) / (35 - 0)) * 100 = 0%
-      const markerElement = container.querySelector('div[style*="position: absolute"]');
-      expect(markerElement).toHaveStyle({ left: '0%' });
+    it('renders rating 36 with Best label and all 5 segments filled', () => {
+      render(<RatingBar rating={36} />);
+
+      expect(screen.getByText('Best (36)')).toBeInTheDocument();
+      const segments = screen.getAllByTestId(/rating-segment-/);
+      expect(segments).toHaveLength(5);
+      segments.forEach(segment => {
+        expect(segment).not.toHaveStyle({ backgroundColor: 'rgba(255, 255, 255, 0.08)' });
+      });
     });
   });
 
   describe('unitType "titan"', () => {
     it('renders correctly with a standard positive rating', () => {
-      const { container } = render(<RatingBar rating={28} unitType="titan" />);
+      render(<RatingBar rating={28} unitType="titan" />);
 
       expect(screen.getByText('Fair (28)')).toBeInTheDocument();
-
-      const markerElement = container.querySelector('div[style*="position: absolute"]');
-      expect(markerElement).toHaveStyle({ left: '50%' });
+      const segments = screen.getAllByTestId(/rating-segment-/);
+      expect(segments).toHaveLength(5);
     });
 
-    it('clamps rating to upper bound visually but shows dynamic label', () => {
-      const { container } = render(<RatingBar rating={44} unitType="titan" />);
+    it('renders upper bound rating', () => {
+      render(<RatingBar rating={44} unitType="titan" />);
 
       expect(screen.getByText('Best (44)')).toBeInTheDocument();
-
-      const markerElement = container.querySelector('div[style*="position: absolute"]');
-      expect(markerElement).toHaveStyle({ left: '100%' });
     });
   });
 

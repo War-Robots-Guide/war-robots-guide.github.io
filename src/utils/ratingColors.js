@@ -40,6 +40,52 @@ export const getRatingColorsList = () => {
   ];
 };
 
+export const getValueRatingTiers = () => {
+  return [
+    { label: 'Bad', color: colors["<= -2"], maxScore: 20 },
+    { label: 'Poor', color: colors["-1"], maxScore: 25 },
+    { label: 'Fair', color: colors["0"], maxScore: 30 },
+    { label: 'Good', color: colors["+2"], maxScore: 34 },
+    { label: 'Best', color: colors[">= +3"], maxScore: Infinity }
+  ];
+};
+
+export const getRatingTierIndex = (val) => {
+  if (val <= 20) return 0;
+  if (val <= 25) return 1;
+  if (val <= 30) return 2;
+  if (val <= 34) return 3;
+  return 4;
+};
+
+export const getValueRatingGradient = (minVal = 12, maxVal = 44) => {
+  if (maxVal <= minVal) {
+    return `linear-gradient(to right, ${colors["<= -2"]} 0%, ${colors[">= +3"]} 100%)`;
+  }
+  const getPct = (v) => {
+    const clamped = Math.max(minVal, Math.min(maxVal, v));
+    return Math.round(((clamped - minVal) / (maxVal - minVal)) * 10000) / 100;
+  };
+
+  const cRed = colors["<= -2"];
+  const cOrange = colors["-1"];
+  const cYellow = colors["0"];
+  const cLime = colors["+1"];
+  const cGreen = colors["+2"];
+  const cBlue = colors[">= +3"];
+
+  const p0 = 0;
+  const pRed = getPct(20);
+  const pOrange = getPct(23);
+  const pYellow = getPct(28);
+  const pLime = getPct(31.5);
+  const pGreen = getPct(33.5);
+  const pBlue = getPct(35);
+  const p100 = 100;
+
+  return `linear-gradient(to right, ${cRed} ${p0}%, ${cRed} ${pRed}%, ${cOrange} ${pOrange}%, ${cYellow} ${pYellow}%, ${cLime} ${pLime}%, ${cGreen} ${pGreen}%, ${cBlue} ${pBlue}%, ${cBlue} ${p100}%)`;
+};
+
 export const getValueRatingRange = () => {
   const robots = robotGuideData?.robots || [];
   const titans = robotGuideData?.titans || [];
