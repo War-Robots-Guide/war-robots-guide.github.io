@@ -80,11 +80,11 @@ export function BuildDetailModal({ build, onClose }) {
             <div style={{ display: 'flex', gap: '16px' }}>
               <div style={{ flex: 1 }}>
                 <span style={{ fontSize: '10px', color: 'var(--text-muted)', fontWeight: 600, display: 'block', marginBottom: '4px' }}>F2P SETUPS</span>
-                <p style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0 }}>{build.f2p_weapons || 'N/A'}</p>
+                <div style={{ fontSize: '13px', color: 'var(--text-secondary)', margin: 0, whiteSpace: 'pre-line', lineHeight: 1.5 }}>{build.f2p_weapons || 'N/A'}</div>
               </div>
               <div style={{ flex: 1, borderLeft: '1px solid var(--border-light)', paddingLeft: '16px' }}>
                 <span style={{ fontSize: '10px', color: '#fbbf24', fontWeight: 600, display: 'block', marginBottom: '4px' }}>META SETUPS</span>
-                <p style={{ fontSize: '13px', color: '#fbbf24', margin: 0 }}>{build.best_weapons || 'N/A'}</p>
+                <div style={{ fontSize: '13px', color: '#fbbf24', margin: 0, whiteSpace: 'pre-line', lineHeight: 1.5 }}>{build.best_weapons || 'N/A'}</div>
               </div>
             </div>
           </div>

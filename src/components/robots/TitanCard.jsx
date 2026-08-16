@@ -80,16 +80,15 @@ export function TitanCard({ titan, onClick }) {
           </div>
           {titan.roles.some(r => r.footnote) && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', marginTop: '8px' }}>
-              {titan.roles
-                .filter(r => r.footnote)
-                .map(r => {
-                  const fText = getFootnoteText(r.footnote, robotGuideData?.footnotes);
-                  return (
-                    <span key={r.role} style={{ fontSize: '10.5px', color: 'var(--text-muted)', fontStyle: 'italic', lineHeight: 1.3 }}>
-                      {r.footnote} {fText.replace(/^\*+/, '').trim()}
-                    </span>
-                  );
-                })}
+              {Array.from(new Set(titan.roles.filter(r => r.footnote).map(r => r.footnote))).map(fn => {
+                const fText = getFootnoteText(fn, robotGuideData?.footnotes);
+                const cleanedText = fText ? fText.replace(/^\*+/, '').trim() : '';
+                return (
+                  <span key={fn} style={{ fontSize: '10.5px', color: 'var(--text-muted)', fontStyle: 'italic', lineHeight: 1.3 }}>
+                    {fn}{cleanedText ? ` ${cleanedText}` : ''}
+                  </span>
+                );
+              })}
             </div>
           )}
         </div>

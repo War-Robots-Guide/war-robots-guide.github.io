@@ -152,12 +152,12 @@ export function BuildGuidesTab() {
                 <span className="build-meta-label">Weapon Options</span>
                 <div style={{ display: 'flex', gap: '10px', marginTop: '4px' }}>
                   <div style={{ flex: 1 }}>
-                    <span style={{ fontSize: '10px', color: 'var(--text-muted)', fontWeight: 600 }}>F2P SETUPS</span>
-                    <p style={{ fontSize: '12px', color: 'var(--text-secondary)' }}>{build.f2p_weapons || 'N/A'}</p>
+                    <span style={{ fontSize: '10px', color: 'var(--text-muted)', fontWeight: 600, display: 'block', marginBottom: '3px' }}>F2P SETUPS</span>
+                    <div style={{ fontSize: '12px', color: 'var(--text-secondary)', whiteSpace: 'pre-line', lineHeight: 1.4 }}>{build.f2p_weapons || 'N/A'}</div>
                   </div>
                   <div style={{ flex: 1, borderLeft: '1px solid var(--border-light)', paddingLeft: '10px' }}>
-                    <span style={{ fontSize: '10px', color: '#fbbf24', fontWeight: 600 }}>META SETUPS</span>
-                    <p style={{ fontSize: '12px', color: '#fbbf24' }}>{build.best_weapons || 'N/A'}</p>
+                    <span style={{ fontSize: '10px', color: '#fbbf24', fontWeight: 600, display: 'block', marginBottom: '3px' }}>META SETUPS</span>
+                    <div style={{ fontSize: '12px', color: '#fbbf24', whiteSpace: 'pre-line', lineHeight: 1.4 }}>{build.best_weapons || 'N/A'}</div>
                   </div>
                 </div>
               </div>

@@ -923,14 +923,21 @@ def parse_robot_guide():
                 r = nr - 1
             r += 1
         
-    # Parse footnotes from Bot Roles column 9
+    # Parse footnotes from Bot Roles and Titan Roles sheets
     roles_footnotes = []
-    for r in range(2, roles_sheet.max_row + 1):
-        footnote_val = roles_sheet.cell(row=r, column=9).value
-        if footnote_val:
-            footnote_str = str(footnote_val).strip()
-            if footnote_str.startswith("*"):
-                roles_footnotes.append(footnote_str)
+    seen_footnotes = set()
+    for sheet in [roles_sheet, titan_roles_sheet]:
+        for r in range(1, sheet.max_row + 1):
+            for c in range(1, sheet.max_column + 1):
+                val = sheet.cell(row=r, column=c).value
+                if val:
+                    val_str = str(val).strip()
+                    if re.match(r'^\*+\s*[A-Za-z]', val_str):
+                        if val_str not in seen_footnotes:
+                            seen_footnotes.add(val_str)
+                            roles_footnotes.append(val_str)
+    # Sort footnotes by asterisk count (*, **, ***, ...)
+    roles_footnotes.sort(key=lambda x: len(re.match(r'^\*+', x).group(0)) if re.match(r'^\*+', x) else 0)
 
     rating_colors = extract_rating_colors(wb)
 

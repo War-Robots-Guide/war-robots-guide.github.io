@@ -105,4 +105,10 @@ describe('BuildGuidesTab Search and Duplication Fix', () => {
     consoleWarnSpy.mockRestore();
     consoleErrorSpy.mockRestore();
   });
+
+  it('renders weapon setups with pre-line whiteSpace to preserve separate lines', () => {
+    render(<BuildGuidesTab />);
+    const hazardElement = screen.getByText('Hazard');
+    expect(hazardElement).toHaveStyle({ whiteSpace: 'pre-line' });
+  });
 });

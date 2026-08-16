@@ -274,6 +274,22 @@ export function RobotsGuideTab({ onItemClick }) {
         />
       )}
 
+      {/* Role Notes & Conditional Requirements Legend */}
+      {robotGuideData?.footnotes && robotGuideData.footnotes.length > 0 && (
+        <div className="glass-panel" style={{ marginTop: '28px', padding: '18px 22px' }}>
+          <h4 style={{ fontSize: '13px', color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '10px', fontWeight: 600, letterSpacing: '0.05em' }}>
+            Role Notes & Conditional Requirements
+          </h4>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            {robotGuideData.footnotes.map((fn, idx) => (
+              <div key={idx} style={{ fontSize: '12.5px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
+                <strong style={{ color: 'var(--cyan)' }}>{fn.match(/^\*+/)?.[0]}</strong> {fn.replace(/^\*+/, '').trim()}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }

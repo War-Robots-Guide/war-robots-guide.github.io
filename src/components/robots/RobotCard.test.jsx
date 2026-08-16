@@ -102,4 +102,24 @@ describe('RobotCard', () => {
     // Falls back to footnote ID '1' since guide data isn't available
     expect(brawlerBadge).toHaveAttribute('title', '1');
   });
+
+  it('renders asterisk footnote labels and explanatory text accurately', () => {
+    const asteriskRobot = {
+      ...mockRobot,
+      roles: [
+        { role: 'Brawler', type: 'primary', footnote: '***' },
+        { role: 'Support', type: 'secondary', footnote: '***' }
+      ]
+    };
+    const guideDataWithFootnotes = {
+      footnotes: [
+        '*Only with Traditionalist pilot skill',
+        '***Only with Lock-down Ammo module or Paralysis drone'
+      ]
+    };
+
+    render(<RobotCard robot={asteriskRobot} onClick={vi.fn()} robotGuideData={guideDataWithFootnotes} />);
+
+    expect(screen.getByText('*** Only with Lock-down Ammo module or Paralysis drone')).toBeInTheDocument();
+  });
 });

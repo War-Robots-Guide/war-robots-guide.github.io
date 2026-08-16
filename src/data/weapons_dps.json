@@ -134,6 +134,13 @@
       "notes": "Burst DPS for weapons that unload in under 1 second is simply replaced with damage per burst to avoid confusion."
     },
     {
+      "name": "Barq-a",
+      "burst_dps": 34090.0,
+      "cycle_dps": 22277.0,
+      "range": "200m",
+      "notes": "Ignores stealth and hits an AoE CURRENTLY INFLATED BY INTEL."
+    },
+    {
       "name": "Basilisk",
       "burst_dps": 32189.0,
       "cycle_dps": 18832.0,
@@ -332,6 +339,13 @@
       "notes": ""
     },
     {
+      "name": "Barq-b",
+      "burst_dps": 22703.94,
+      "cycle_dps": 14836.482,
+      "range": "200m",
+      "notes": "Ignores stealth and hits an AoE CURRENTLY INFLATED BY INTEL."
+    },
+    {
       "name": "Krait",
       "burst_dps": 22662.0,
       "cycle_dps": 13060.0,
@@ -401,7 +415,7 @@
       "burst_dps": 93123.0,
       "cycle_dps": 18624.0,
       "range": "350m",
-      "notes": "A full charge requires enemies to deal about 350k damage to you. Shields count.\nBurst DPS for weapons that unload in under 1 second is simply replaced with damage per burst to avoid confusion."
+      "notes": "A full charge requires enemies to deal about 400k damage to you. Shields count.\nBurst DPS for weapons that unload in under 1 second is simply replaced with damage per burst to avoid confusion."
     },
     {
       "name": "UE Glory (25m)",
@@ -474,6 +488,13 @@
       "notes": "Damage varies with range."
     },
     {
+      "name": "Harmattan-H (No % Damage)",
+      "burst_dps": 49293.007,
+      "cycle_dps": 14786.969,
+      "range": "25m",
+      "notes": "Percentage damage is widely variable since it's based on current health. Harmattans are MUCH better than they are shown here, but accurately estimating the percentage damage they deal is difficult.\nJust keep in mind that a mag of 4 Hamattans can easily do upward of 90% of an enemy's HP, no matter how well defended they are. The base DPS becomes relevant only when the enemy becomes \nso low on HP that the percentage damage is irrelevant (or when shooting shields). CURRENTLY INFLATED BY INTEL."
+    },
+    {
       "name": "UE Devastator (100m)",
       "burst_dps": 46319.4,
       "cycle_dps": 31827.6,
@@ -537,13 +558,6 @@
       "notes": ""
     },
     {
-      "name": "Exodus",
-      "burst_dps": 37751.0,
-      "cycle_dps": 7523.0,
-      "range": "350m",
-      "notes": "Intel already accounted for"
-    },
-    {
       "name": "Kirin (25m)",
       "burst_dps": 37648.0,
       "cycle_dps": 14804.0,
@@ -598,6 +612,13 @@
       "cycle_dps": 17954.0,
       "range": "25m",
       "notes": "Ol' Reliable"
+    },
+    {
+      "name": "Incinerator",
+      "burst_dps": 29996.0,
+      "cycle_dps": 5993.0,
+      "range": "500m",
+      "notes": "Incinerator gets ~1.2 blasts per mag, so ~1.2 blasts are accounted for in the DPS. T3 weapons blast effect does 26,500 damage due to intel. Note that Incinerator actually applies more than\n1.2 blasts worth in a mag, but there is a cooldown when a blast happens where the shots cannot apply blast. In real games, this should affect ALL blast weapons, but in our tests, it only affects\nincinerator since only incinerator gets >1 blast per mag. This means the numbers for Scorcher and Scald are a bit less realistic and the numbers for Incinerator are a bit more realistic."
     },
     {
       "name": "Piercer (Max Fatigue)",
@@ -800,7 +821,7 @@
       "burst_dps": 17999.0,
       "cycle_dps": 9290.0,
       "range": "25m",
-      "notes": ""
+      "notes": "Tempest has a bug where some bullets just don't fire for some reason. It should have a magsize of 70, but in my testing only about 55 bullets were fired, resulting in much lower DPS than\nother sources such as the CN wiki cite."
     },
     {
       "name": "UE Calamity (350m)",
@@ -956,7 +977,7 @@
       "burst_dps": 61926.795,
       "cycle_dps": 12384.96,
       "range": "350m",
-      "notes": "A full charge requires enemies to deal about 350k damage to you. Shields count. \nBurst DPS for weapons that unload in under 1 second is simply replaced with damage per burst to avoid confusion."
+      "notes": "A full charge requires enemies to deal about 400k damage to you. Shields count.\nBurst DPS for weapons that unload in under 1 second is simply replaced with damage per burst to avoid confusion."
     },
     {
       "name": "UE Cryo (Frozen)",
@@ -1020,6 +1041,13 @@
       "cycle_dps": 9196.0,
       "range": "600m",
       "notes": ""
+    },
+    {
+      "name": "Harmattan-M (No % Damage)",
+      "burst_dps": 36979.0,
+      "cycle_dps": 11093.0,
+      "range": "25m",
+      "notes": "Percentage damage is widely variable since it's based on current health. Harmattans are MUCH better than they are shown here, but accurately estimating the percentage damage they deal is difficult.\nJust keep in mind that a mag of 4 Hamattans can easily do upward of 90% of an enemy's HP, no matter how well defended they are. The base DPS becomes relevant only when the enemy becomes \nso low on HP that the percentage damage is irrelevant (or when shooting shields). CURRENTLY INFLATED BY INTEL."
     },
     {
       "name": "UE Havoc (25m)",
@@ -1090,6 +1118,13 @@
       "cycle_dps": 14503.5,
       "range": "800m",
       "notes": "CURRENTLY INFLATED BY INTEL"
+    },
+    {
+      "name": "UE Taran",
+      "burst_dps": 30864.0,
+      "cycle_dps": 20661.0,
+      "range": "350m",
+      "notes": ""
     },
     {
       "name": "UE Scourge (25m)",
@@ -1176,6 +1211,13 @@
       "notes": "At 200m, it's still a slug shot, so the spread doesnt take any effect"
     },
     {
+      "name": "Scorcher",
+      "burst_dps": 21550.0,
+      "cycle_dps": 4536.0,
+      "range": "500m",
+      "notes": "Scorcher gets 1 blast per mag, so 1 blast is accounted for in the DPS. T3 weapons blast effect does 26,500 damage due to intel."
+    },
+    {
       "name": "UE Molot T (25m)",
       "burst_dps": 21066.0,
       "cycle_dps": 11371.0,
@@ -1229,13 +1271,6 @@
       "burst_dps": 18802.0,
       "cycle_dps": 10652.0,
       "range": "500m",
-      "notes": ""
-    },
-    {
-      "name": "UE Taran",
-      "burst_dps": 18395.0,
-      "cycle_dps": 12314.0,
-      "range": "350m",
       "notes": ""
     },
     {
@@ -1502,7 +1537,7 @@
       "burst_dps": 5453.0,
       "cycle_dps": 2307.0,
       "range": "800m",
-      "notes": ""
+      "notes": "Probably has better accuracy against larger bots. Target was UE Phantom."
     },
     {
       "name": "Mace (350m)",
@@ -1539,7 +1574,7 @@
       "burst_dps": 46561.5,
       "cycle_dps": 9312.0,
       "range": "350m",
-      "notes": "Burst DPS for weapons that unload in under 1 second is simply replaced with damage per burst to avoid confusion. \nA full charge requires enemies to deal about 400k damage to you. Shields count."
+      "notes": "A full charge requires enemies to deal about 400k damage to you. Shields count.\nBurst DPS for weapons that unload in under 1 second is simply replaced with damage per burst to avoid confusion."
     },
     {
       "name": "UE Shredder (25m)",
@@ -1547,6 +1582,13 @@
       "cycle_dps": 24144.0,
       "range": "25m",
       "notes": "\"Light Weapon\""
+    },
+    {
+      "name": "UE Halo (25m)",
+      "burst_dps": 40946.0,
+      "cycle_dps": 14491.0,
+      "range": "25m",
+      "notes": "UE Halo has a weird reload mechanic that puts 2 shots at a time into a mag of 5. Since it is a RWF weapon, you don't need to wait on the last shot to reload, so the cycle DPS was calculated differently\nfrom how we usually would in order to give a more accurate value."
     },
     {
       "name": "Elox (25m)",
@@ -1577,13 +1619,6 @@
       "notes": "Burst DPS for weapons that unload in under 1 second is simply replaced with damage per burst to avoid confusion."
     },
     {
-      "name": "UE Halo (25m)",
-      "burst_dps": 30827.0,
-      "cycle_dps": 13071.0,
-      "range": "25m",
-      "notes": "Halo has a weird firing mechanism that's difficult to properly calculate with in-game testing. The numbers I got were off, so these are the wiki numbers (adjusted to account for intel)"
-    },
-    {
       "name": "Velos",
       "burst_dps": 30496.886,
       "cycle_dps": 12197.88,
@@ -1610,6 +1645,13 @@
       "cycle_dps": 9628.0,
       "range": "25m",
       "notes": "One Cudgel can get about half a blast per mag, so half a blast is accounted for in the DPS (assuming you're using 2+ Cudgel)"
+    },
+    {
+      "name": "Harmattan-L (No % Damage)",
+      "burst_dps": 24628.014,
+      "cycle_dps": 7387.938,
+      "range": "25m",
+      "notes": "Percentage damage is widely variable since it's based on current health. Harmattans are MUCH better than they are shown here, but accurately estimating the percentage damage they deal is difficult.\nJust keep in mind that a mag of 4 Hamattans can easily do upward of 90% of an enemy's HP, no matter how well defended they are. The base DPS becomes relevant only when the enemy becomes \nso low on HP that the percentage damage is irrelevant (or when shooting shields)."
     },
     {
       "name": "UE Scatter (100m)",
@@ -1654,7 +1696,7 @@
       "notes": "Assumes you stop shooting before they overheat, so the cooldown is only 5 seconds rather than 6 seconds."
     },
     {
-      "name": "Lumen-M (Heat x1)",
+      "name": "Lumen-L (Heat x1)",
       "burst_dps": 21316.5,
       "cycle_dps": 12827.5,
       "range": "600m",
@@ -1707,7 +1749,7 @@
       "burst_dps": 16238.0,
       "cycle_dps": 6232.0,
       "range": "500m",
-      "notes": "Percentage damage is widely variable since it's based on current health. Arms are MUCH better than they are shown here, but accurately estimating the percentage damage they deal is difficult.\nJust keep in mind that a mag of 4 arms can easily do 75% of an enemy's HP, no matter how well defended they are. The base DPS becomes relevant only when the enemy becomes so low on HP\nthat the percentage damage is irrelevant (or when shooting shields)."
+      "notes": "Percentage damage is widely variable since it's based on current health. Arms are MUCH better than they are shown here, but accurately estimating the percentage damage they deal is difficult.\nJust keep in mind that a mag of 4 arms can easily do 75% of an enemy's HP, no matter how well defended they are. The base DPS becomes relevant only when the enemy becomes so low on HP\nthat the percentage damage is irrelevant (or when shooting shields). CURRENTLY INFLATED BY INTEL."
     },
     {
       "name": "Voonith (600m)",
@@ -1717,7 +1759,7 @@
       "notes": "CURRENTLY INFLATED BY INTEL"
     },
     {
-      "name": "Lumen-M (Heat x2)",
+      "name": "Lumen-L (Heat x2)",
       "burst_dps": 15645.5,
       "cycle_dps": 9415.0,
       "range": "600m",
@@ -1752,7 +1794,7 @@
       "notes": ""
     },
     {
-      "name": "Lumen-M (Heat x3)",
+      "name": "Lumen-L (Heat x3)",
       "burst_dps": 13138.5,
       "cycle_dps": 7906.0,
       "range": "600m",
@@ -1773,7 +1815,14 @@
       "notes": "At longer range, quarker needs to cool off about 75% of the way to max heat in order to hit every shot"
     },
     {
-      "name": "Lumen-M (Heat x4)",
+      "name": "Scald",
+      "burst_dps": 12542.0,
+      "cycle_dps": 4877.0,
+      "range": "500m",
+      "notes": "Scald gets 1 blast per mag, so 1 blast is accounted for in the DPS. T3 weapons blast effect does 26,500 damage due to intel."
+    },
+    {
+      "name": "Lumen-L (Heat x4)",
       "burst_dps": 12121.5,
       "cycle_dps": 7297.0,
       "range": "600m",
@@ -1934,7 +1983,7 @@
       "notes": "Great titan chargerate but poor damage."
     },
     {
-      "name": "Lumen-M (No Heat)",
+      "name": "Lumen-L (No Heat)",
       "burst_dps": 7762.5,
       "cycle_dps": 4671.0,
       "range": "600m",
