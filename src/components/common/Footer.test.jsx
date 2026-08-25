@@ -14,6 +14,9 @@ describe('Footer Component', () => {
 
     // Check if the developer name is rendered
     expect(screen.getByText('CrimsonHawk')).toBeInTheDocument();
+
+    // Check if the AI disclaimer is rendered
+    expect(screen.getByText(/developed with the assistance of AI technologies/i)).toBeInTheDocument();
   });
 
   it('calls onDeveloperClick callback when the developer name is clicked', async () => {

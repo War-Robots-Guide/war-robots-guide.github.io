@@ -28,6 +28,9 @@ export function Footer({ onDeveloperClick, onAdazahiClick }) {
         </span>
         .
       </p>
+      <p style={{ marginTop: '8px', fontSize: '11px', opacity: 0.85 }}>
+        This site is developed with the assistance of AI technologies, but all testing and content are written manually by humans.
+      </p>
     </footer>
   );
 }
