@@ -3,6 +3,7 @@ import './App.css';
 import { usePathRouting } from './hooks/usePathRouting';
 import { Header } from './components/common/Header';
 import { Footer } from './components/common/Footer';
+import { SupportBanner } from './components/common/SupportBanner';
 import { AdazahiEasterEgg } from './components/common/AdazahiEasterEgg';
 import { DashboardTab } from './components/dashboard/DashboardTab';
 import { TierListTab } from './components/tiers/TierListTab';
@@ -165,6 +166,7 @@ function App() {
         })}
       </div>
 
+      <SupportBanner />
       <Header activeTab={activeTab} onTabChange={setActiveTab} isEasterEggActive={isEasterEggActive} />
 
       <main className={`main-content bg-theme-${activeTab}`}>

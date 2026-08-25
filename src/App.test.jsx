@@ -84,6 +84,7 @@ describe('App Component', () => {
 
   it('renders dashboard tab by default', async () => {
     render(<App />);
+    expect(screen.getByTestId('support-banner')).toBeInTheDocument();
     expect(screen.getByTestId('header')).toBeInTheDocument();
     expect(screen.getByTestId('dashboard-tab')).toBeInTheDocument();
     expect(screen.getByTestId('active-tab')).toHaveTextContent('dashboard');
