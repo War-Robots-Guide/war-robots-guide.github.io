@@ -29,7 +29,7 @@
       "notes": "100% grey damage. DAMAGE AT RANGE TESTED AGAINST A TITAN."
     },
     {
-      "name": "Vendicatoire",
+      "name": "Vendicatore",
       "burst_dps": 91008.0,
       "cycle_dps": 5688.0,
       "range": "1,100m",
@@ -103,7 +103,7 @@
       "burst_dps": 42933.0,
       "cycle_dps": 42933.0,
       "range": "25m",
-      "notes": "I didnt bother calculating the cycle DPS because it will never be relevant. It takes almost 3 straight minutes of shooting without stopping to run out of ammo."
+      "notes": "I didnt bother calculating the cycle DPS because it will never be relevant. It takes over 2 straight minutes of shooting without stopping to run out of ammo."
     },
     {
       "name": "MahaVajra (150m)",
@@ -187,7 +187,7 @@
       "burst_dps": 19683.3,
       "cycle_dps": 19683.3,
       "range": "500m",
-      "notes": ""
+      "notes": "This is the average DPS when cycling between the three damage modes. If you start with the highest damage shot, your DPS will be higher in that instance, and then drop as you do less damage."
     },
     {
       "name": "Arbiter (no boost)",
@@ -378,7 +378,7 @@
       "burst_dps": 14580.3,
       "cycle_dps": 14580.3,
       "range": "500m",
-      "notes": ""
+      "notes": "This is the average DPS when cycling between the three damage modes. If you start with the highest damage shot, your DPS will be higher in that instance, and then drop as you do less damage."
     },
     {
       "name": "Equalizer (no boost)",
@@ -548,7 +548,7 @@
       "burst_dps": 40752.0,
       "cycle_dps": 13584.0,
       "range": "25m",
-      "notes": "Intel already accounted for"
+      "notes": ""
     },
     {
       "name": "Exodus",
@@ -1068,7 +1068,7 @@
       "burst_dps": 34473.0,
       "cycle_dps": 16087.5,
       "range": "970m",
-      "notes": ""
+      "notes": "CURRENTLY INFLATED BY INTEL"
     },
     {
       "name": "Havoc (25m)",
@@ -1124,7 +1124,7 @@
       "burst_dps": 30864.0,
       "cycle_dps": 20661.0,
       "range": "350m",
-      "notes": ""
+      "notes": "This weapon was silently buffed and became much stronger. This buff could very well be silently undone. Contact Adazahi if the damage appears off."
     },
     {
       "name": "UE Scourge (25m)",
@@ -1253,6 +1253,20 @@
       "notes": "DoT damage accounted for."
     },
     {
+      "name": "UE Atomizer (25m)",
+      "burst_dps": 19093.0,
+      "cycle_dps": 19093.0,
+      "range": "25m",
+      "notes": "Assumes you start with the weapon heated to 25% for max firerate. At close range, you dont need to let them cool off, so they can continually do their burst dps forever. CURRENTLY INFLATED BY INTEL."
+    },
+    {
+      "name": "UE Atomizer (500m)",
+      "burst_dps": 19093.0,
+      "cycle_dps": 13517.0,
+      "range": "500m",
+      "notes": "Assumes you start with the weapon heated to 25% for max firerate.  At longer range, UE atomizer needs to cool off about 85% of the way to max heat in order to hit every shot. CURRENTLY INFLATED BY INTEL."
+    },
+    {
       "name": "Growler (25m)",
       "burst_dps": 19010.0,
       "cycle_dps": 13232.0,
@@ -1309,6 +1323,20 @@
       "notes": "CURRENTLY INFLATED BY INTEL"
     },
     {
+      "name": "Atomizer (25m)",
+      "burst_dps": 17484.0,
+      "cycle_dps": 17484.0,
+      "range": "25m",
+      "notes": "At close range, you dont need to let them cool off, so they can continually do their burst dps forever"
+    },
+    {
+      "name": "Atomizer (500m)",
+      "burst_dps": 17484.0,
+      "cycle_dps": 12627.0,
+      "range": "500m",
+      "notes": "At longer range, atomizer needs to cool off about 75% of the way to max heat in order to hit every shot"
+    },
+    {
       "name": "Urhag (0m)",
       "burst_dps": 17289.0,
       "cycle_dps": 8068.5,
@@ -1342,20 +1370,6 @@
       "cycle_dps": 6217.0,
       "range": "150m",
       "notes": ""
-    },
-    {
-      "name": "Atomizer (25m)",
-      "burst_dps": 15705.0,
-      "cycle_dps": 15705.0,
-      "range": "25m",
-      "notes": "At close range, you dont need to let them cool off, so they can continually do their burst dps forever"
-    },
-    {
-      "name": "Atomizer (500m)",
-      "burst_dps": 15705.0,
-      "cycle_dps": 11403.0,
-      "range": "500m",
-      "notes": "At longer range, atomizer needs to cool off about 75% of the way to max heat in order to hit every shot"
     },
     {
       "name": "Igniter (25m)",

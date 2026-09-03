@@ -5,7 +5,7 @@
       "items": [
         {
           "name": "Fang",
-          "description": "Fang is the most recent development in gamebreaking saboteurs. Aside from its insane speed, it applies a powerful EMP and rust effect (through walls!) and has weirdly high firepower for a saboteur. While it exits stealth upon firing, similarly to Crisis, the pilot grants it a durable aegis shield to give itself some cover, and the fact that it has multiple charges of its ability allows it to quickly reenter stealth after unloading."
+          "description": "Fang is the most recent development in gamebreaking saboteurs. Aside from its insane speed, it applies a powerful EMP and rust effect (through walls!) and has weirdly high firepower for a saboteur. As it exits stealth upon firing, similarly to Crisis, the pilot grants it a durable aegis shield to give itself some cover, and the fact that it has multiple charges of its ability allows it to quickly reenter stealth after unloading."
         },
         {
           "name": "Ammit",
@@ -41,7 +41,7 @@
         },
         {
           "name": "Vulcan",
-          "description": "A walking nuclear amplifier. When scaled up, this robot is extremely hard to take down without some way of ignoring its powerful forcefield, and it has absurd firepower."
+          "description": "A walking nuclear amplifier. When scaled up, this robot is difficult to take down without some way of ignoring its powerful forcefield, and it has absurd firepower."
         },
         {
           "name": "Omen Vulcan",
@@ -58,6 +58,10 @@
         {
           "name": "UE Hawk",
           "description": "Pretty much just a marginally worse version of Anaksor. Susceptible to chip damage and lacks deft survivor, but otherwise an incredibly strong bot with an incredibly strong built in weapon, the strongest reflector in the game, and insane ability uptime."
+        },
+        {
+          "name": "UE Raven",
+          "description": "Unsurprisingly an insanely powerful and sustainable robot thanks to its original counterpart having aged so well already. Immense damage paired with the best defense system in the game as well as the option to go with limitless gray healing if the user chooses to. Only real counters against UE Raven are EMP & Lockdown, as UE Raven isn\u2019t able to jump while locked down. Otherwise, the single strongest duelist robot in X tier and it\u2019s not even close."
         }
       ]
     },
@@ -70,11 +74,11 @@
         },
         {
           "name": "UE Haechi",
-          "description": "Functional as both a solid opener and a mid-late game Titan slayer. Oppressively annoying to beat without shieldbreaker, but relatively easy to beat with it."
+          "description": "Functional as both a solid opener and a mid to late game Titan slayer. Oppressively annoying to beat without shieldbreaker, but relatively easy to beat with it."
         },
         {
           "name": "UE Leo",
-          "description": "Fairly tanky attacker with all around solid stats. Has the ability to easily stack both QR and SB together via the pilot and Hawkeye drone, while still having room for Phase Shift or UC. Unfortunately, it\u2019s a bit susceptible to chip damage, and some high damage builds may be able to kill it through the reflector."
+          "description": "Fairly tanky attacker with all around solid stats. Has the ability to easily stack both QR and SB together via the pilot and Hawkeye drone, while still having room for Phase Shift, Advanced Repair, or UC. Unfortunately, it\u2019s a bit susceptible to chip damage, and some high damage builds may be able to kill it through the reflector."
         },
         {
           "name": "UE Ravana",
@@ -82,7 +86,7 @@
         },
         {
           "name": "UE Fenrir",
-          "description": "A top tier tank, similar to Ammit, but slightly worse, as it doesn\u2019t have the whole built in weapon and insane uptime purple shield. Can become nearly immortal with enough UC/advanced repair spam though."
+          "description": "A top tier tank, similar to Ammit, but slightly worse, as it doesn\u2019t have the whole built in weapon and insane uptime purple shield. Can become nearly immortal with certain support robots helping it however, like a Nuo/Lio link."
         },
         {
           "name": "UE Sword",
@@ -134,6 +138,14 @@
           "description": "Solid mid-late game bot that can poke titans and tanks pretty much for free, but requires reliable cover to function properly and can\u2019t stall for nearly as long as it could before its nerf."
         },
         {
+          "name": "Rex",
+          "description": "Capable of outputting a ton of damage, but susceptible to being bursted down due to its significantly nerfed resistance. Needs to be played more like a saboteur and less like a brawler."
+        },
+        {
+          "name": "Raptor",
+          "description": "Solid opener robot. It can be a competent disruptor with EMP from the pilot. Superjump with jump unit allows it to be first to center on many maps, and its massive grey resist makes it benefit greatly from showdown."
+        },
+        {
           "name": "UE Phantom",
           "description": "Really fast and relatively tanky with good sustain, but not as tanky as modern tanks, who can often feel comparable (albeit still ultimately worse) in terms of mobility. Nonetheless an acceptable opener bot."
         },
@@ -168,10 +180,6 @@
         {
           "name": "UE Griffin",
           "description": "Starting to see a pattern yet? High damage potential with blind and 4 medium slots."
-        },
-        {
-          "name": "Rex",
-          "description": "Capable of outputting a ton of damage, but susceptible to being bursted down due to its significantly nerfed resistance. Needs to be played more like a saboteur and less like a brawler."
         }
       ]
     },
@@ -181,10 +189,6 @@
         {
           "name": "Ravana",
           "description": "Powercreep has caught up with this grandpa of a bot, but it\u2019s still chugging along fairly well. A strict downgrade from UE Ravana, but still good in of itself."
-        },
-        {
-          "name": "Raptor",
-          "description": "Acceptable opener robot that\u2019s showing its age. It can be a competent disruptor with EMP from the pilot. Superjump with jump unit allows it to be first to center on many maps, and its massive grey resist makes it benefit greatly from showdown."
         },
         {
           "name": "Raven",
@@ -568,11 +572,11 @@
   },
   "Titans": {
     "X": {
-      "casual_name": "We alone are the honored ones",
+      "casual_name": "The honored ones",
       "items": [
         {
           "name": "Princeps",
-          "description": "The most broken titan in the game. Has an ability that tosses enemies across the map and an ability that gives it godmode. Also has deft survivor, because of course it does."
+          "description": "One of the most broken titans in the game. Has an ability that tosses enemies across the map and an ability that gives it godmode. Also has deft survivor, because of course it does."
         },
         {
           "name": "Sirocco",
@@ -625,6 +629,14 @@
           "description": "Hunter stacks are still OP, and Waymaker\u2019s Hunter stacks heal even more grey damage than Pathfinder\u2019s, but the Titan pretty much doesn\u2019t have anything else. The second ability is mid, and the opportunity cost of using this Titan just for Hunter stacks is too high considering you have 5 bots and 1 Titan. F2p\u2019s should keep an eye on this Titan as it very well may become the best f2p Titan in the game after it becomes readily accessible."
         },
         {
+          "name": "Mauler",
+          "description": "One of the most broken abilities in the game (darklight) but it struggles to survive for long enough in situations where it\u2019s needed. Still, good at shutting down brawlers through their defenses, though many top tier titans have many ways of preventing darklight from ruining their game plan, so your darklight push will need to be very well planned and probably supported by a teammate in order to be successful."
+        },
+        {
+          "name": "Eiffel",
+          "description": "The f2p version of UE Ming. Vendicatoires in the summoned slots add a ton of burst that can kill enemies before they have the chance to hit their deft survivor, and the mobility with the dash is comparable to even Bersagliere. The only downside is that it lacks protection and strongly relies on defensive motherships like Stealther or Bifrost."
+        },
+        {
           "name": "UE Nodens",
           "description": "Similar to Waymaker, but it gives up the ability to stack teammates with marks for more defensive personal stats and on-demand marginal grey healing that doesn\u2019t require destroying a marked enemy."
         }
@@ -635,33 +647,16 @@
       "items": [
         {
           "name": "Bjorn",
-          "description": "Heavy duty brawler with high firepower but basically no mobility."
-        },
-        {
-          "name": "Mauler",
-          "description": "One of the most broken abilities in the game (darklight) but it struggles to survive for long enough in situations where it\u2019s needed. Still, good at shutting down brawlers through their defenses, but honestly, most top tier titans have many ways of preventing darklight from ruining their game plan."
+          "description": "Heavy duty brawler with high firepower but basically no mobility. An upgrade over Luchador in some aspects, mainly stalling potential due to titan last stand."
         },
         {
           "name": "Luchador",
           "description": "Honestly worse than Minos at this point. All it has going for it is grey resistance and a bit more firepower. Otherwise, it\u2019s slow, has long cooldowns, and subpar firepower."
         },
         {
-          "name": "UE Arthur",
-          "description": "Only in B tier because the shields protect against non-splash weaponry. Flames and Venires turn this thing into paste. It\u2019s a regular edition Ming amount of health behind those shields, so you better pray you don\u2019t run into anyone who is able to bypass them."
-        },
-        {
           "name": "Minos",
-          "description": "Not significantly worse than UE Minos, honestly a really solid f2p brawler. Lacks the EMP and has a slightly weaker reflector as well as longer cooldowns, but stats wise, T3 damage resistance makes up for a lot."
+          "description": "Not significantly worse than UE Minos, honestly a really solid f2p brawler. Lacks the EMP and has a slightly weaker reflector as well as longer cooldowns, but stats wise, it actually has about the same effective HP as UE minos due to T3 damage resistance."
         },
-        {
-          "name": "Eiffel",
-          "description": "The f2p version of UE Ming. Vendicatoires in the summoned slots add a ton of burst that can kill enemies before they have the chance to hit their deft survivor, and the mobility with the dash is comparable to even Bersagliere. The only downside is that it lacks protection and strongly relies on motherships like Stealther or Bifrost."
-        }
-      ]
-    },
-    "C": {
-      "casual_name": "mid",
-      "items": [
         {
           "name": "Aether",
           "description": "Has pretty strong protection in flight, though if you\u2019re taking fire from multiple titans they may be able to brute force through it. Very weak on the ground and EMP takes forever to accumulate."
@@ -672,7 +667,24 @@
         },
         {
           "name": "Devourer",
-          "description": "Pretty much just a support titan at this point that can debuff enemies it links to. Needs the help of Bifrost or Stealther to have any impact itself, as its ability provides essentially no protection against titans."
+          "description": "Mostly a support titan that can debuff enemies it links to. Needs the help of Bifrost or Stealther to have any impact itself, as its ability provides essentially no protection against titans."
+        },
+        {
+          "name": "UE Arthur",
+          "description": "Only in B tier because the shields protect against non-splash weaponry. Flames and Venires turn this thing into paste. It\u2019s a regular edition Ming amount of health behind those shields, so you better pray you don\u2019t run into anyone who is able to bypass them."
+        }
+      ]
+    },
+    "C": {
+      "casual_name": "mid",
+      "items": [
+        {
+          "name": "Nodens",
+          "description": "Can remotely support other team mates with solid normal healing from a long range, but pretty niche since it does not heal gray damage. Suppression through walls is also occasionally helpful."
+        },
+        {
+          "name": "Heimdall",
+          "description": "Mediocre brawler and usable support. The suppression rocket is not a reliable form of defense due to the prevalence of anticontrol/anti jamming turret."
         }
       ]
     },
@@ -680,12 +692,12 @@
       "casual_name": "poor",
       "items": [
         {
-          "name": "Nodens",
-          "description": "Can remotely support other team mates with decent normal healing, but pretty niche since it does not heal gray damage"
+          "name": "Rook",
+          "description": "Due to the fairly mediocre but plentiful physical shields it possesses, rook serves to do little more than charge enemy nuclear amplifiers. That being said, it has fairly good mobility, comparable to that of Eiffel, so it can technically serve as an annoying beacon runner/staller lategame."
         },
         {
-          "name": "Heimdall",
-          "description": "Mediocre brawler and usable support. The suppression rocket is not a reliable form of defense due to the prevalence of anticontrol/anti jamming turret."
+          "name": "Sharanga",
+          "description": "Outdated titan that went all in on firepower back in the day. Nowadays, titans can have the same amount of firepower it has (or more!) and also have actual impactful abilities."
         }
       ]
     },
@@ -694,15 +706,7 @@
       "items": [
         {
           "name": "Sirius",
-          "description": "Awful support titan, huge hitbox, slow, neither ability actually does much of anything to support the team... don't invest in this thing."
-        },
-        {
-          "name": "Sharanga",
-          "description": "Outdated titan that went all in on firepower back in the day. Nowadays, titans can have the same amount of firepower it has (or more!) and also have actual impactful abilities."
-        },
-        {
-          "name": "Rook",
-          "description": "Due to the fairly mediocre but plentiful physical shields it possesses, rook serves to do little more than charge enemy nuclear amplifiers."
+          "description": "Awful support titan, huge hitbox, slow, neither ability actually does much of anything to support the team... don't invest in this thing, the only thing keeping it out of F tier is its modules."
         }
       ]
     },
@@ -1021,7 +1025,7 @@
         },
         {
           "name": "Ozempic (R\u2019lyeh)",
-          "description": "Fairly good attack ship that functions as the opposite of keel, targeting high HP targets rather than low HP targets. Still, hard to justify taking over defense ships."
+          "description": "Fairly good attack ship that functions as the opposite of keel, targeting high HP targets rather than low HP targets. Still, it's hard to justify taking over defense ships."
         }
       ]
     },
@@ -1199,22 +1203,6 @@
       "casual_name": "insane",
       "items": [
         {
-          "name": "Velos, Machiana, Basileus",
-          "description": "These are currently the best 500m weapons in the game, dominating the midrange niche and also being the best support weapons in the game thanks to their powerful debuffs."
-        },
-        {
-          "name": "Kelvin, Farenheit, Celsius",
-          "description": "The closest thing to a weapon family that can contest crocodile guns in the close range niche, almost entirely thanks to their ability to curve around corners and pretty much never miss whatsoever."
-        },
-        {
-          "name": "Voonith, Urhag, Shantak",
-          "description": "These are currently the best long range snipers in the game. On top of their ability to somewhat counter Anaksor and stealth robots thanks to their vertical spread, they also do insane damage at range."
-        },
-        {
-          "name": "Harmattan L, Harmattan M, Harmattan H",
-          "description": "Welcome to hell. Percentage damage shotguns. Imagine if ARM and BSGs had a possessed demonic child that killed anything it touched."
-        },
-        {
           "name": "UE Toxin, UE Venom",
           "description": "On builds that abuse rust (ie Webby Imugi) or have high shieldbreaker uptime (ie Hawkeye Vector) these weapons can pose a serious threat to titans and well defended (ie Reflector) bots, able to ignore their defenses. Unfortunately, the total lack of base damage means these weapons do fully repairable DoT damage and struggle to get through aegis shields (which is why they are really only recommended with Webby or Hawkeye)."
         },
@@ -1245,6 +1233,22 @@
         {
           "name": "Murix",
           "description": "Deadly shotgun at point blank, but tickle past like, 100m. Notably better than Elox in terms of damage, and it just so happens that more top tier builds running acid shotguns have plenty of medium slots but lack light slots."
+        },
+        {
+          "name": "Velos, Machiana, Basileus",
+          "description": "These are currently the best 500m weapons in the game, dominating the midrange niche and also being the best support weapons in the game thanks to their powerful debuffs."
+        },
+        {
+          "name": "Kelvin, Farenheit, Celsius",
+          "description": "The closest thing to a weapon family that can contest crocodile guns in the close range niche, almost entirely thanks to their ability to curve around corners and pretty much never miss whatsoever."
+        },
+        {
+          "name": "Voonith, Urhag, Shantak",
+          "description": "These are currently the best long range snipers in the game. On top of their ability to somewhat counter Anaksor and stealth robots thanks to their vertical spread, they also do insane damage at range."
+        },
+        {
+          "name": "Harmattan L, Harmattan M, Harmattan H",
+          "description": "Welcome to hell. Percentage damage shotguns. Imagine if ARM and BSGs had a possessed demonic child that killed anything it touched."
         }
       ]
     },
@@ -1254,14 +1258,6 @@
         {
           "name": "UE Punisher T",
           "description": "Solid niche weapon that can tear through enemies that have defense points but no DMI. Can be exceptionally strong against non TRA titans, and even TRA titans after their DMI has expired."
-        },
-        {
-          "name": "Elox",
-          "description": "Deadly shotgun at point blank, but tickle past like, 100m. Murix is a bit stronger than Elox since its nerf was much less significant for no real reason."
-        },
-        {
-          "name": "Piercer",
-          "description": "A fairly strong sniper that was the best in the game up until it was powercrept and nerfed."
         },
         {
           "name": "UE Wasp",
@@ -1278,6 +1274,14 @@
         {
           "name": "UE Redeemer",
           "description": "Solid burst and sustained damage 350m weapons with fast mothership charge and fast projectile speed."
+        },
+        {
+          "name": "Elox",
+          "description": "Deadly shotgun at point blank, but tickle past like, 100m. Murix is a bit stronger than Elox since its nerf was much less significant for no real reason."
+        },
+        {
+          "name": "Piercer",
+          "description": "A fairly strong sniper that was the best in the game up until it was powercrept and nerfed."
         }
       ]
     },
@@ -1313,14 +1317,6 @@
           "description": "Their damage is pretty awful, but their splash is still huge, allowing them to cheese people around corners and force them out of cover."
         },
         {
-          "name": "ArmM, ArmL",
-          "description": "Downgrades to their UE variants that still hold up pretty well."
-        },
-        {
-          "name": "Deshret, Hedjet, Pshent",
-          "description": "Weird weapons that can do a lot of burst and even hurt people through walls. Unfortunately, they trade a decent bit of damage for this utility."
-        },
-        {
           "name": "UE Molot T, UE Tempest",
           "description": "Extremely niche midrange autocannons that can technically merk titans from across the map, assuming you use a dedicated build with lockdown unit and the solar drone."
         },
@@ -1329,16 +1325,24 @@
           "description": "The UE version of these weapons only beat the regular version by virtue of magazine size. The damage is pretty much the same."
         },
         {
-          "name": "Liodari, Kroko, Hippo",
-          "description": "Possess extremely high burst damage, but not so much so that they own the entire meta quite like they did before the rebalance."
-        },
-        {
           "name": "UE Avenger",
           "description": "The nerf has left these weaker than their medium counterpart. They are still okay, but easily replaceable by better weapons."
         },
         {
           "name": "UE Cryo",
           "description": "The nerf to their fire rate and damage has left UE Cryos much less bursty than they once were, but they are still fairly functional weapons nonetheless."
+        },
+        {
+          "name": "Liodari, Kroko, Hippo",
+          "description": "Possess extremely high burst damage, but not so much so that they own the entire meta quite like they did before the rebalance."
+        },
+        {
+          "name": "ArmM, ArmL",
+          "description": "Downgrades to their UE variants that still hold up pretty well."
+        },
+        {
+          "name": "Deshret, Hedjet, Pshent",
+          "description": "Weird weapons that can do a lot of burst and even hurt people through walls. Unfortunately, they trade a decent bit of damage for this utility."
         }
       ]
     },
@@ -1346,12 +1350,16 @@
       "casual_name": "decent",
       "items": [
         {
+          "name": "UE Atomizer",
+          "description": "Barely an upgrade over regular atomizer while being more complicated to use. Honestly the most disappointing ultimate release in a while."
+        },
+        {
           "name": "Howler, Growler, Screamer",
           "description": "Trade the burst of sonic shotguns for better sustain and more range. Really nice on many builds, and typically my go-to recommendation for f2p."
         },
         {
           "name": "Atomizer, Nucleon, Quarker",
-          "description": "A f2p staple. These weapons output consistent damage and are flexible, working from 500m to point blank. Atomizer unfortunately lags behind the rest by a bit. Trade some DPS and the full grey damage of Howler family for better performance at range."
+          "description": "A f2p staple. These weapons output consistent damage and are flexible, working from 500m to point blank. They trade some DPS and the full grey damage of Howler family for better performance at range."
         },
         {
           "name": "Cudgel, Hammer, Mace",
@@ -1468,6 +1476,10 @@
       "casual_name": "poor",
       "items": [
         {
+          "name": "UE Dragoon, UE Hussar",
+          "description": "Ultimates that were unjustly nerfed to hell twice over. Not worth investing in for anyone, as they yield awful results despite their price."
+        },
+        {
           "name": "Trebuchet",
           "description": "Long range with some of the highest damage per bullet in the game. Unfortunately, it has an insanely long reload. These weapons may prove to be semi-usable in certain metas that favor damage dealt in a single shot."
         },
@@ -1478,10 +1490,6 @@
         {
           "name": "Viper",
           "description": "Outdated energy machine gun. A bit weaker than Avenger but with better accuracy and some damage as DoT."
-        },
-        {
-          "name": "UE Dragoon, UE Hussar",
-          "description": "Ultimates that were unjustly nerfed to hell twice over. Not worth investing in for anyone, as they yield awful results despite their price."
         },
         {
           "name": "Regulator",
@@ -1603,7 +1611,7 @@
         },
         {
           "name": "Orkan, Pinata",
-          "description": "These used to be deadly close range burst weapons, often referred to as \u201cDB\u201d or \u201cDeathbutton\u201d. Nowadays, they are little more than a piece of WR history. Early game players should just stick to the Punisher family, as they cost silver while being moderately competitive options, though Pinata doesn\u2019t cost silver and is thus an acceptable option in the extremely early game stages, where the burst it carries can actually cripple the enemy."
+          "description": "These used to be deadly close range burst weapons, often referred to as \u201cDB\u201d or \u201cDeathbutton\u201d. Nowadays, they are little more than a piece of WR history. Early game players should just stick to the Punisher family, as they cost silver while being moderately competitive options, though Pinata doesn\u2019t cost gold and is thus an acceptable option in the extremely early game stages, where the burst it carries can actually cripple the enemy."
         },
         {
           "name": "Molot T, Molot",

@@ -24,32 +24,29 @@ def find_file_case_insensitive(filename):
         if f.lower() == target_lower:
             return os.path.join(sample_dir, f)
             
-    # 2. Try fuzzy match for versioned spreadsheet (1-10)
-    if ("simplified" in target_lower or "new players" in target_lower) and ("1-10" in target_lower or "1_10" in target_lower or "ver" in target_lower):
+    # 2. Try match for robot guide spreadsheet (The Newbie Guide / The Simplified WR Guide)
+    # Give priority to 'newbie' as the new filename
+    if "newbie" in target_lower or "simplified" in target_lower or "new players" in target_lower:
         for f in files:
             f_lower = f.lower()
-            if "simplified" in f_lower and "new players" in f_lower and f_lower.endswith(".xlsx"):
-                if "1-10" in f_lower or "1_10" in f_lower or "ver" in f_lower:
-                    print(f"Fuzzy matched versioned spreadsheet: {f}")
-                    return os.path.join(sample_dir, f)
-                    
-    # 3. Try general fuzzy match for simplified spreadsheet
-    if "simplified" in target_lower or "new players" in target_lower:
+            if "newbie" in f_lower and f_lower.endswith(".xlsx"):
+                print(f"Fuzzy matched robot guide spreadsheet (newbie): {f}")
+                return os.path.join(sample_dir, f)
         for f in files:
             f_lower = f.lower()
-            if "simplified" in f_lower and "new players" in f_lower and f_lower.endswith(".xlsx"):
-                print(f"Fuzzy matched spreadsheet: {f}")
+            if ("simplified" in f_lower or "new players" in f_lower) and f_lower.endswith(".xlsx"):
+                print(f"Fuzzy matched robot guide spreadsheet (simplified): {f}")
                 return os.path.join(sample_dir, f)
 
-    # 4. Try fuzzy match for tier docx (Tiers.docx / Tier List Rationales.docx / Tier List Rationales & Disclaimers.docx)
-    if ("tier" in target_lower or "rationale" in target_lower) and target_lower.endswith(".docx"):
+    # 3. Try fuzzy match for tier docx (Tier List Rationales.docx / Tier List Rationales & Disclaimers.docx / Tiers.docx)
+    if ("tier" in target_lower or "rationale" in target_lower or "disclaimer" in target_lower) and target_lower.endswith(".docx"):
         for f in files:
             f_lower = f.lower()
-            if ("tier" in f_lower or "rationale" in f_lower) and f_lower.endswith(".docx"):
+            if ("tier" in f_lower or "rationale" in f_lower or "disclaimer" in f_lower) and f_lower.endswith(".docx"):
                 print(f"Fuzzy matched tier docx: {f}")
                 return os.path.join(sample_dir, f)
 
-    # 5. Try fuzzy match for pilot docx
+    # 4. Try fuzzy match for pilot docx
     if "pilot" in target_lower and target_lower.endswith(".docx"):
         for f in files:
             f_lower = f.lower()
@@ -57,7 +54,7 @@ def find_file_case_insensitive(filename):
                 print(f"Fuzzy matched pilot docx: {f}")
                 return os.path.join(sample_dir, f)
 
-    # 6. Try fuzzy match for specialization docx
+    # 5. Try fuzzy match for specialization docx
     if "specialization" in target_lower and target_lower.endswith(".docx"):
         for f in files:
             f_lower = f.lower()
@@ -65,23 +62,23 @@ def find_file_case_insensitive(filename):
                 print(f"Fuzzy matched specialization docx: {f}")
                 return os.path.join(sample_dir, f)
 
-    # 7. Try fuzzy match for weapon dps xlsx
-    if "dps" in target_lower and target_lower.endswith(".xlsx"):
+    # 6. Try fuzzy match for weapon dps xlsx
+    if ("dps" in target_lower or "weapon" in target_lower) and target_lower.endswith(".xlsx"):
         for f in files:
             f_lower = f.lower()
             if "dps" in f_lower and f_lower.endswith(".xlsx"):
                 print(f"Fuzzy matched DPS spreadsheet: {f}")
                 return os.path.join(sample_dir, f)
 
-    # 8. Try fuzzy match for WR tier lists xlsx
-    if ("wr tier" in target_lower or "tier list" in target_lower) and target_lower.endswith(".xlsx"):
+    # 7. Try fuzzy match for WR tier lists xlsx
+    if ("wr tier" in target_lower or "tier list" in target_lower or "tiers" in target_lower) and target_lower.endswith(".xlsx"):
         for f in files:
             f_lower = f.lower()
-            if "tier" in f_lower and f_lower.endswith(".xlsx"):
+            if "tier" in f_lower and f_lower.endswith(".xlsx") and "newbie" not in f_lower and "simplified" not in f_lower:
                 print(f"Fuzzy matched WR tier lists spreadsheet: {f}")
                 return os.path.join(sample_dir, f)
 
-    # 9. Generic word matching fallback
+    # 8. Generic word matching fallback
     target_stem = os.path.splitext(target_lower)[0]
     target_ext = os.path.splitext(target_lower)[1]
     target_words = [w for w in re.split(r'\W+', target_stem) if len(w) > 2]
@@ -95,6 +92,7 @@ def find_file_case_insensitive(filename):
                 return os.path.join(sample_dir, f)
 
     return os.path.join(sample_dir, filename)
+
 
 
 # Graceful check for GitHub runner where secrets are not yet configured
@@ -331,9 +329,9 @@ def parse_weapons_dps():
 # 4. PARSE Tiers.docx and WR tier lists.xlsx
 # ----------------------------------------------------
 def parse_tiers():
-    docx_path = find_file_case_insensitive("Tier List Rationales & Disclaimers.docx")
+    docx_path = find_file_case_insensitive("Tier List Rationales.docx")
     if not os.path.exists(docx_path):
-        docx_path = find_file_case_insensitive("Tier List Rationales.docx")
+        docx_path = find_file_case_insensitive("Tier List Rationales & Disclaimers.docx")
     if not os.path.exists(docx_path):
         docx_path = find_file_case_insensitive("Tiers.docx")
         
@@ -354,7 +352,7 @@ def parse_tiers():
     xlsx_path = find_file_case_insensitive("WR tier lists.xlsx")
     if not os.path.exists(xlsx_path) and os.path.exists(sample_dir):
         for f in os.listdir(sample_dir):
-            if f.endswith(".xlsx") and "tier" in f.lower():
+            if f.endswith(".xlsx") and "tier" in f.lower() and "newbie" not in f.lower() and "simplified" not in f.lower():
                 xlsx_path = os.path.join(sample_dir, f)
                 break
 
@@ -588,20 +586,24 @@ def extract_rating_colors(wb):
     }
 
 def parse_robot_guide():
-    filepath = find_file_case_insensitive("The Simplified WR Guide for New Players, 1-10 Ver_.xlsx")
+    filepath = find_file_case_insensitive("The Newbie Guide.xlsx")
+    if not os.path.exists(filepath):
+        filepath = find_file_case_insensitive("The Simplified WR Guide for New Players.xlsx")
+    if not os.path.exists(filepath):
+        filepath = find_file_case_insensitive("The Simplified WR Guide for New Players, 1-10 Ver_.xlsx")
     
     wb = openpyxl.load_workbook(filepath, data_only=True)
 
-    
-    # 5.1 Parse Changelog (start at row 2 to skip headers)
+    # 5.1 Parse Changelog (skip header row if present)
     changelog = []
     changes_sheet = wb["Changes Log"]
-    for r in range(2, changes_sheet.max_row + 1):
+    for r in range(1, changes_sheet.max_row + 1):
         d_val = changes_sheet.cell(row=r, column=1).value
         txt_val = changes_sheet.cell(row=r, column=2).value
         if d_val and txt_val:
-            # format date
-            d_str = str(d_val)
+            d_str = str(d_val).strip()
+            if d_str.lower() in ["date", "timestamp", "time"]:
+                continue
             if "00:00:00" in d_str:
                 d_str = d_str.split(" ")[0]
             changelog.append({
@@ -860,69 +862,6 @@ def parse_robot_guide():
             f"the value-rating table:\n  - {joined}"
         )
         
-    # 5.6 Parse SAGE Retro Camelot (optional sheet)
-    camelot_data = []
-    if "SAGE Retro Camelot" in wb:
-        camelot_sheet = wb["SAGE Retro Camelot"]
-        current_camelot_tier = "S"
-        
-        r = 3 # row index 3 is where S tier Lancelot starts (1-indexed row 3)
-        # Let's iterate until the end
-        while r <= camelot_sheet.max_row:
-            c0 = camelot_sheet.cell(row=r, column=1).value
-            c1 = camelot_sheet.cell(row=r, column=2).value
-            c2 = camelot_sheet.cell(row=r, column=3).value
-            
-            # Check tier change
-            if c0 and str(c0).strip() in ["S", "A", "B", "C", "D", "E", "F"]:
-                current_camelot_tier = str(c0).strip()
-                
-            if c1:
-                bot_name = str(c1).strip()
-                desc = str(c2 or "").strip()
-                builds_list = []
-                
-                # Read next rows for description continuation and viable builds
-                nr = r + 1
-                while nr <= camelot_sheet.max_row:
-                    nc1 = camelot_sheet.cell(row=nr, column=2).value
-                    # If there's a new bot name in the next row, stop
-                    if nc1:
-                        break
-                        
-                    nc0 = camelot_sheet.cell(row=nr, column=1).value
-                    nc2 = camelot_sheet.cell(row=nr, column=3).value
-                    
-                    # Check for viable builds
-                    if nc2 and "viable builds" in str(nc2).lower():
-                        # Collect builds from columns 4 to 9
-                        for col_idx in range(4, 10):
-                            b_val = camelot_sheet.cell(row=nr, column=col_idx).value
-                            if b_val:
-                                builds_list.append(str(b_val).strip())
-                    elif nc2:
-                        # Append to description
-                        desc += "\n" + str(nc2).strip()
-                        
-                    # In some cases, viable builds spans multiple rows
-                    # Check if columns 4 to 9 are filled but Col 1 & 2 & 3 are empty
-                    if not nc1 and not nc2 and any(camelot_sheet.cell(row=nr, column=x).value for x in range(4, 10)):
-                        for col_idx in range(4, 10):
-                            b_val = camelot_sheet.cell(row=nr, column=col_idx).value
-                            if b_val:
-                                builds_list.append(str(b_val).strip())
-                                
-                    nr += 1
-                    
-                camelot_data.append({
-                    "name": bot_name,
-                    "tier": current_camelot_tier,
-                    "description": desc,
-                    "builds": builds_list
-                })
-                r = nr - 1
-            r += 1
-        
     # Parse footnotes from Bot Roles and Titan Roles sheets
     roles_footnotes = []
     seen_footnotes = set()
@@ -947,14 +886,15 @@ def parse_robot_guide():
         "builds": builds,
         "robots": robots_data,
         "titans": titans_data,
-        "camelot": camelot_data,
+        "camelot": [],
         "footnotes": roles_footnotes,
         "rating_colors": rating_colors
     }
     
     with open(os.path.join(data_out_dir, "robot_guide.json"), "w", encoding="utf-8") as f:
         json.dump(guide_json, f, indent=2)
-    print("Parsed simplified robot guide spreadsheet.")
+    print("Parsed robot guide spreadsheet.")
+
 
 # ----------------------------------------------------
 # MAIN EXECUTION

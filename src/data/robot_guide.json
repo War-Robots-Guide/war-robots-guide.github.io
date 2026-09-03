@@ -1,6 +1,10 @@
 {
   "changelog": [
     {
+      "date": "2024-09-24",
+      "text": "Updates for 10.4 megapatch: Curie +1 Accessibility, -1 Lethality, -1 Longevity. Raptor Lethality -1. Shenlou Longevity -1. - Mistermath"
+    },
+    {
       "date": "2024-11-06",
       "text": "Updates for data pad update, Dux, Condor, and bot re-evaluations: Dagon -1 Longevity, Ophion +1 Lethality, Shenlou +1 Accessibility, Dux added at total +1, Condor added at total +1. - Mistermath"
     },
@@ -355,6 +359,30 @@
     {
       "date": "2026-08-15",
       "text": "Anaksor accessibility 4 -> 3 due to overreliance on Myia -Adazahi"
+    },
+    {
+      "date": "2026-08-21",
+      "text": "Princeps access 3 -> 8 since it's in black market and a non-statchecker. Waymaker access 1 -> 3 since it's in normal titan pad. Rook access 5 -> 4, Mauler access 3 -> 4, these bots will be treated as assassins rather than straight up statcheckers. -Adazahi"
+    },
+    {
+      "date": "2026-08-22",
+      "text": "Hastatus Longevity 5 -> 7 Lethality 7 -> 8. Hastatus was underrated in these categories; its BIW and defensive ability were both getting underrated. -Adazahi"
+    },
+    {
+      "date": "2026-08-24",
+      "text": "Fang accessibility 0 -> 1, accounting for high stealth uptime, speed, and useful utility. -Mistermath\nShenlou longevity 5 -> 4, it was a bit overrated compared to the other 5's -Adazahi"
+    },
+    {
+      "date": "2026-08-25",
+      "text": "Added seeker as an option for Loki due to countersuppression. -Adazahi"
+    },
+    {
+      "date": "2026-08-29",
+      "text": "Vector Mobility 10 -> 8, Vector Longevity 10 -> 8. After Vector's nerf, it will be comparable to Raptor in the sense that it has good burst mobility with insane downtime issues as the match goes on. \nSince the reflector is being removed from the speed part of the ability, you will need to spam cancel at close quarters in order to get the reflector back, eating your charges and preventing you from spending as much time moving as you'd like. -Adazahi"
+    },
+    {
+      "date": "2026-08-29",
+      "text": "Added UE bot value ratings and mini build guides.\nMender mobility 8 -> 7. Mender does not reach its theoretical maximum speed due to a low speed cap. -Adazahi"
     }
   ],
   "builds": [
@@ -613,17 +641,17 @@
       "robot": "Loki",
       "f2p_weapons": "Needles (for Aegis)",
       "best_weapons": "Doesn't matter",
-      "drone_options": "Whiteout\nShowdown\nMyia\nWARD\nKestrel\nScourveil",
+      "drone_options": "Whiteout\nShowdown\nMyia\nWARD\nKestrel\nScourveil\nSeeker",
       "pilot": "Chester Coen",
       "specialization": "Saboteur (Beacon Op +\nAccelerator)\nPhase Shift",
-      "explanation": "Similarly to Skyros, beacon capper Loki has pretty much no good reason to exit stealth."
+      "explanation": "Similarly to Skyros, beacon capper Loki has pretty much no good reason to exit stealth. Seeker can be useful\nfor the level 9 counter suppression, which may save you from an encounter with an enemy running QR."
     },
     {
       "build_name": "Opportunist",
       "robot": "Loki",
       "f2p_weapons": "Not recommended for F2P",
       "best_weapons": "Elox\nUE Halo\nHippo\nHarmattans",
-      "drone_options": "Scourveil\nKestrel\nArmadillo",
+      "drone_options": "Scourveil\nKestrel\nArmadillo\nSeeker",
       "pilot": "Chester Coen",
       "specialization": "Saboteur (Beacon Op +\nAccelerator)\nPhase Shift",
       "explanation": "Loki as an opportunist is just like Skyros as an opportunist, requiring very high burst damage\nweapoms and a specific level 12 drone in order to perform.Not recommended for f2p."
@@ -801,7 +829,7 @@
     {
       "build_name": "Assault",
       "robot": "Vulcan",
-      "f2p_weapons": "Growler+Howler\nAtomizer+Quarker",
+      "f2p_weapons": "Growler+Howler\nAtomizer+Quarker\nHazard+Blight",
       "best_weapons": "Lumens\nMachiara+Velos \nUE Arms\nFahrenheit+Celsius",
       "drone_options": "Lar\nSeeker",
       "pilot": "Ines Diaz",
@@ -811,7 +839,7 @@
     {
       "build_name": "Debuffer\nAssault",
       "robot": "Omen Vulcan",
-      "f2p_weapons": "Growler+Howler\nAtomizer+Quarker",
+      "f2p_weapons": "Growler+Howler\nAtomizer+Quarker\nHazard+Blight",
       "best_weapons": "Lumens\nMachiara+Velos \nUE Arms\nFahrenheit+Celsius\nFahrenheit+UE Toxin\nUE Arm+UE Toxin\nLumen+UE Toxin",
       "drone_options": "Webby",
       "pilot": "Ines Diaz",
@@ -841,8 +869,8 @@
     {
       "build_name": "Saboteur",
       "robot": "Fang",
-      "f2p_weapons": "Havoc\nMogwan\nMace\nDeshret",
-      "best_weapons": "Harmattans\nMurix\nClose range UE setups\nHarmattan + Murx \nHarmattan + UE Storm",
+      "f2p_weapons": "Havoc\nMogwan\nMace\nDeshret\nArm+Any",
+      "best_weapons": "Harmattans\nMurix\nClose range UE setups\nHarmattan + Murix \nHarmattan + UE Storm",
       "drone_options": "Scourveil\nSeeker\nKestrel",
       "pilot": "Nadir Rakhim",
       "specialization": "Any Specialization\nPhase Shift or QR",
@@ -910,7 +938,7 @@
           "footnote": ""
         }
       ],
-      "comments": "Between the twin fliers, Siren's freeze and stronger reflector give it a notable edge in overall power."
+      "comments": "Between the twin fliers, Siren's freeze and stronger reflector give it a notable edge in overall power. Equipped with lockdown unit, it can immobilize an entire team with its snowstorm."
     },
     {
       "name": "Typhon",
@@ -1106,7 +1134,7 @@
         "overall": 19
       },
       "roles": [],
-      "comments": "Compared to the other aerial bots, Hawk lacks both damage and utility. The retraction of weapons during flight hurts it terribly, so it should fly as little as possible and play as Natasha Pro Max."
+      "comments": "Compared to the other aerial bots, Hawk lacks both damage and utility. The retraction of weapons during flight hurts it terribly, so it should fly as little as possible (only to escape bad positions) and play as Natasha Pro Max."
     },
     {
       "name": "Nightingale",
@@ -1421,7 +1449,7 @@
           "footnote": ""
         }
       ],
-      "comments": "Lynx's defensive tools in stealth and forcefield both don't care about level. That combined with the execute gun and high speed make Lynx a good hit-and-run damage dealer."
+      "comments": "Lynx's defensive tools in stealth and forcefield both don't care about level. That combined with the execute gun and high speed make Lynx a solid and accessible hit-and-run damage dealer."
     },
     {
       "name": "Crisis",
@@ -1550,14 +1578,14 @@
     {
       "name": "Shenlou",
       "sheet": "Tier 4",
-      "value_rating": 27,
+      "value_rating": 26,
       "scores": {
-        "longevity": 5.0,
+        "longevity": 4.0,
         "lethality": 6.0,
         "mobility": 9.0,
         "utility": 3.0,
         "accessibility": 4.0,
-        "overall": 27
+        "overall": 26
       },
       "roles": [
         {
@@ -2014,14 +2042,14 @@
     {
       "name": "Hastatus",
       "sheet": "Tier 4",
-      "value_rating": 23,
+      "value_rating": 26,
       "scores": {
-        "longevity": 5.0,
-        "lethality": 7.0,
+        "longevity": 7.0,
+        "lethality": 8.0,
         "mobility": 3.0,
         "utility": 3.0,
         "accessibility": 5.0,
-        "overall": 23
+        "overall": 26
       },
       "roles": [
         {
@@ -2092,11 +2120,6 @@
           "footnote": ""
         },
         {
-          "role": "Brawler",
-          "type": "secondary",
-          "footnote": "****"
-        },
-        {
           "role": "Beacon Runner",
           "type": "primary",
           "footnote": ""
@@ -2112,14 +2135,14 @@
     {
       "name": "Vector",
       "sheet": "Tier 4",
-      "value_rating": 32,
+      "value_rating": 28,
       "scores": {
-        "longevity": 10.0,
+        "longevity": 8.0,
         "lethality": 6.0,
-        "mobility": 10.0,
+        "mobility": 8.0,
         "utility": 6.0,
         "accessibility": 0.0,
-        "overall": 32
+        "overall": 28
       },
       "roles": [
         {
@@ -2256,14 +2279,14 @@
     {
       "name": "Fang",
       "sheet": "Tier 4",
-      "value_rating": 33,
+      "value_rating": 34,
       "scores": {
         "longevity": 7.0,
         "lethality": 7.0,
         "mobility": 10.0,
         "utility": 9.0,
-        "accessibility": 0.0,
-        "overall": 33
+        "accessibility": 1.0,
+        "overall": 34
       },
       "roles": [
         {
@@ -2277,6 +2300,11 @@
           "footnote": ""
         },
         {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": "****"
+        },
+        {
           "role": "Beacon Runner",
           "type": "primary",
           "footnote": ""
@@ -2287,7 +2315,7 @@
           "footnote": ""
         }
       ],
-      "comments": "Fang is a disgustingly overtuned assassin that single handily dismantles Vectors and other brawlers alike. Rusts and EMPs through walls, can hit multiple targets at the same time, as is now the fastest robot in the game. Anti-stealth is a MUST in order to kill a built Fang."
+      "comments": "Fang is a potent assassin that single handedly dismantles Vectors and other brawlers alike. Rusts and EMPs through walls, can hit multiple targets at the same time, as is now the fastest robot in the game."
     },
     {
       "name": "Fury",
@@ -2665,14 +2693,14 @@
     {
       "name": "Mender",
       "sheet": "Tier 3",
-      "value_rating": 33,
+      "value_rating": 32,
       "scores": {
         "longevity": 7.0,
         "lethality": 3.0,
-        "mobility": 8.0,
+        "mobility": 7.0,
         "utility": 7.0,
         "accessibility": 8.0,
-        "overall": 33
+        "overall": 32
       },
       "roles": [
         {
@@ -2881,7 +2909,7 @@
           "footnote": ""
         }
       ],
-      "comments": "Phantom is essentially a Loki with brawling tendencies. Few bots are both as fast and tanky as it is; though it pays for it on the firepower department."
+      "comments": "Phantom is essentially a Loki with brawling tendencies. Few bots are both as fast and tanky as it is; though it pays for it in the firepower department."
     }
   ],
   "titans": [
@@ -3000,7 +3028,7 @@
           "footnote": ""
         }
       ],
-      "comments": "Minos is a fast, safe, and cheap beacon runner, though it's less effective at killing enemy titans due to its lack of Alpha hardpoints."
+      "comments": "Minos is a fast, safe, and cheap beacon runner and brawler, though it's less effective at killing enemy titans then most due to its lack of Alpha hardpoints."
     },
     {
       "name": "Sharanga",
@@ -3229,14 +3257,14 @@
     },
     {
       "name": "Rook",
-      "value_rating": 24,
+      "value_rating": 23,
       "scores": {
         "longevity": 5.0,
         "lethality": 5.0,
         "mobility": 8.0,
         "utility": 1.0,
-        "accessibility": 5.0,
-        "overall": 24
+        "accessibility": 4.0,
+        "overall": 23
       },
       "roles": [
         {
@@ -3409,14 +3437,14 @@
     },
     {
       "name": "Mauler",
-      "value_rating": 33,
+      "value_rating": 34,
       "scores": {
         "longevity": 6.0,
         "lethality": 10.0,
         "mobility": 7.0,
         "utility": 7.0,
-        "accessibility": 3.0,
-        "overall": 33
+        "accessibility": 4.0,
+        "overall": 34
       },
       "roles": [
         {
@@ -3559,14 +3587,14 @@
     },
     {
       "name": "Princeps",
-      "value_rating": 32,
+      "value_rating": 37,
       "scores": {
         "longevity": 10.0,
         "lethality": 7.0,
         "mobility": 4.0,
         "utility": 8.0,
-        "accessibility": 3.0,
-        "overall": 32
+        "accessibility": 8.0,
+        "overall": 37
       },
       "roles": [
         {
@@ -3600,18 +3628,18 @@
           "footnote": ""
         }
       ],
-      "comments": "Princeps has an overpowered mix of high damage, the best defensive ability in the game, and as a cherry on top, crowd control utility. Unfortunately, like most other meta titans, it loses a lot of f2p value due to lack of accessibility."
+      "comments": "Princeps has an overpowered mix of high damage, the best defensive ability in the game, and as a cherry on top, crowd control utility. Since it is now available in the black market, it's far more obtainable for f2p players, though it is definitely at risk of getting nerfed soon."
     },
     {
       "name": "Waymaker",
-      "value_rating": 32,
+      "value_rating": 34,
       "scores": {
         "longevity": 6.0,
         "lethality": 9.0,
         "mobility": 6.0,
         "utility": 10.0,
-        "accessibility": 1.0,
-        "overall": 32
+        "accessibility": 3.0,
+        "overall": 34
       },
       "roles": [
         {
@@ -3640,7 +3668,7 @@
           "footnote": ""
         }
       ],
-      "comments": "Waymaker is a potent support titan that's dragged down by the rest of its kit. It also suffers from opportunity cost; pathfinder only requires a robot slot to do what it does while waymaker requires a titan slot."
+      "comments": "Waymaker is a potent support titan that's dragged down by the rest of its kit. It also suffers from opportunity cost; pathfinder & shoggoth only require a robot slot to do what they do while waymaker requires a titan slot."
     },
     {
       "name": "Sirocco",
@@ -3688,7 +3716,7 @@
     "*Only with Traditionalist pilot skill",
     "**Only with level 9 (or higher) Freezo drone",
     "***Only with Lock-down Ammo module or Paralysis drone",
-    "****Only with level 9 (or higher) Myia",
+    "****Only with Scourveil",
     "*****Only with level 12 Webby"
   ],
   "rating_colors": {
