@@ -1,12 +1,12 @@
 import robotGuideData from '../data/robot_guide.json';
 
 const defaultColors = {
-  "<= -2": "#ef4444", // Red
-  "-1": "#f97316",    // Orange
-  "0": "#eab308",     // Yellow
-  "+1": "#84cc16",    // Lime/light green
-  "+2": "#22c55e",    // Green
-  ">= +3": "#3b82f6"  // Blue
+  "<= -2": "#ff0000", // Red
+  "-1": "#ff8000",    // Orange
+  "0": "#ffff00",     // Yellow
+  "+1": "#80ff00",    // Lime/light green
+  "+2": "#00ff00",    // Green
+  ">= +3": "#00ffff"  // Cyan
 };
 
 // Use colors from json if available, otherwise use default colors

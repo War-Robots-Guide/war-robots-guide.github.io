@@ -5,13 +5,21 @@ import { SearchInput } from '../common/SearchInput';
 import { BuildDetailModal } from './BuildDetailModal';
 
 // Precompute static data at module level to optimize render loop
-const precomputedBuilds = (robotGuideData?.builds || []).map(build => ({
-  ...build,
-  _searchString: `${build.build_name} ${build.robot} ${build.best_weapons} ${build.drone_options || ''} ${build.explanation}`.toLowerCase(),
-  parsed_build_name: build.build_name.replace(/\n/g, ' '),
-  parsed_pilot: build.pilot.replace(/\n/g, ' '),
-  parsed_specialization: build.specialization.split('\n')
-}));
+const precomputedBuilds = (robotGuideData?.builds || []).map(build => {
+  const is_ultimate = Boolean(
+    build.is_ultimate ||
+    build.build_name?.toLowerCase() === 'ultimate' ||
+    build.robot?.toLowerCase().startsWith('ue ')
+  );
+  return {
+    ...build,
+    is_ultimate,
+    _searchString: `${build.build_name} ${build.robot} ${build.best_weapons} ${build.drone_options || ''} ${build.explanation}`.toLowerCase(),
+    parsed_build_name: build.build_name.replace(/\n/g, ' '),
+    parsed_pilot: build.pilot.replace(/\n/g, ' '),
+    parsed_specialization: build.specialization.split('\n')
+  };
+});
 
 function renderDroneOptions(options, fontSize = '12.5px') {
   if (!options || options === 'N/A') return 'N/A';
@@ -50,7 +58,6 @@ export function BuildGuidesTab() {
 
   const filteredBuilds = useMemo(() => {
     const query = searchQuery.toLowerCase().trim();
-    
     if (!query) {
       return precomputedBuilds;
     }
@@ -118,7 +125,8 @@ export function BuildGuidesTab() {
       <div className="dashboard-grid">
         {visibleBuilds.map((build, index) => (
           <div 
-            className="glass-panel glass-panel-hover build-card" 
+            className={`glass-panel glass-panel-hover build-card ${build.is_ultimate ? 'ultimate-build-card' : ''}`}
+            style={build.is_ultimate ? { borderColor: 'rgba(234, 179, 8, 0.25)' } : {}}
             key={`${build.robot}-${build.build_name}-${index}`}
             onClick={() => setSelectedBuild(build)}
             onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedBuild(build); } }}
@@ -128,9 +136,26 @@ export function BuildGuidesTab() {
           >
             <div className="build-title-row">
               <div>
-                <span className="spec-class-tag" style={{ background: 'rgba(6, 182, 212, 0.1)', color: 'var(--cyan)', borderColor: 'rgba(6, 182, 212, 0.2)', marginBottom: '4px', display: 'inline-block' }}>
-                  {build.robot}
-                </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap', marginBottom: '4px' }}>
+                  <span className="spec-class-tag" style={{ background: 'rgba(6, 182, 212, 0.1)', color: 'var(--cyan)', borderColor: 'rgba(6, 182, 212, 0.2)', display: 'inline-block' }}>
+                    {build.robot}
+                  </span>
+                  {build.is_ultimate && (
+                    <span style={{
+                      fontSize: '10px',
+                      fontWeight: 800,
+                      letterSpacing: '0.06em',
+                      padding: '1px 6px',
+                      borderRadius: '4px',
+                      background: 'rgba(234, 179, 8, 0.15)',
+                      color: '#fbbf24',
+                      border: '1px solid rgba(234, 179, 8, 0.35)',
+                      textTransform: 'uppercase'
+                    }}>
+                      Ultimate
+                    </span>
+                  )}
+                </div>
                 <h3 className="build-name">{build.parsed_build_name}</h3>
               </div>
             </div>
@@ -183,6 +208,33 @@ export function BuildGuidesTab() {
           ref={sentinelRef} 
           style={{ height: '20px', margin: '20px 0' }} 
         />
+      )}
+
+      {/* UE Weapon Index Reference Legend */}
+      {robotGuideData?.ue_weapon_index && Object.keys(robotGuideData.ue_weapon_index).length > 0 && (
+        <div className="glass-panel" style={{ marginTop: '28px', padding: '18px 22px' }}>
+          <h4 style={{ fontSize: '13px', color: 'var(--text-muted)', textTransform: 'uppercase', marginBottom: '8px', fontWeight: 600, letterSpacing: '0.05em' }}>
+            UE (Ultimate Edition) Weapon Index
+          </h4>
+          <p style={{ fontSize: '12.5px', color: 'var(--text-secondary)', margin: '0 0 14px 0', lineHeight: 1.4 }}>
+            When build guides specify <em>&quot;UE Setups&quot;</em>, <em>&quot;Midrange UE setups&quot;</em>, or <em>&quot;Close range UE setups&quot;</em>, refer to these weapon categories:
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '10px' }}>
+            {Object.entries(robotGuideData.ue_weapon_index).map(([category, weapons]) => (
+              <div key={category} style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '10px 14px', borderRadius: '8px', border: '1px solid var(--border-light)' }}>
+                <strong style={{ color: '#fbbf24', fontSize: '12.5px', display: 'block', marginBottom: '3px' }}>
+                  {category} Setups
+                </strong>
+                <div style={{ fontSize: '12px', color: 'var(--text-secondary)', lineHeight: 1.4 }}>
+                  {weapons}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ fontSize: '11.5px', color: 'var(--text-muted)', fontStyle: 'italic', marginTop: '12px' }}>
+            * F2P weapons are obtainable through workshop or black market. ARM-M and ARM-L are collab items.
+          </div>
+        </div>
       )}
 
       {selectedBuild && (

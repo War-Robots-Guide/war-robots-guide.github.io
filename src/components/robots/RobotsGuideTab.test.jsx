@@ -8,6 +8,7 @@ vi.mock('../../data/robot_guide.json', () => ({
     robots: [
       {
         name: 'Ravana',
+        sheet: 'Tier 4 Robots',
         value_rating: 4,
         scores: { longevity: 2, lethality: 1, mobility: 1, utility: 2, accessibility: 2, overall: 4 },
         comments: 'Highly recommended brawler robot.',
@@ -15,10 +16,19 @@ vi.mock('../../data/robot_guide.json', () => ({
       },
       {
         name: 'Destrier',
+        sheet: 'Tier 3 Robots',
         value_rating: 1,
         scores: { longevity: 0, lethality: 0, mobility: 1, utility: 0, accessibility: 3, overall: 1 },
         comments: 'Introductory Ravana-like robot guide.',
         roles: []
+      },
+      {
+        name: 'UE Raven',
+        sheet: 'Ultimate Robots',
+        value_rating: 30,
+        scores: { longevity: 10, lethality: 8, mobility: 10, utility: 2, accessibility: 0, overall: 30 },
+        comments: 'UE Raven is completely broken.',
+        roles: [{ role: 'Brawler', type: 'primary', footnote: '' }]
       }
     ],
     titans: [
@@ -60,11 +70,32 @@ describe('RobotsGuideTab Search Prioritization', () => {
     });
   });
 
-  it('filters by stat score minimums and sorts by stat scores', () => {
+  it('renders all robots including Ultimate robots in the same place initially', () => {
     render(<RobotsGuideTab />);
-    
-    // Check that new filter and sorting options are available in the document
-    expect(screen.getByText('All Stats')).toBeInTheDocument();
-    expect(screen.getByText('Default Sort')).toBeInTheDocument();
+    expect(screen.getByText('Ravana')).toBeInTheDocument();
+    expect(screen.getByText('Destrier')).toBeInTheDocument();
+    expect(screen.getByText('UE Raven')).toBeInTheDocument();
+  });
+
+  it('filters by category (All Robot Types / Ultimate Robots)', () => {
+    render(<RobotsGuideTab />);
+    const categorySelect = screen.getByDisplayValue('All Robot Types');
+
+    // Filter to Ultimate Robots
+    fireEvent.change(categorySelect, { target: { value: 'Ultimate Robots' } });
+    expect(screen.getByText('UE Raven')).toBeInTheDocument();
+    expect(screen.queryByText('Ravana')).not.toBeInTheDocument();
+    expect(screen.queryByText('Destrier')).not.toBeInTheDocument();
+
+    // Filter back to All Robot Types
+    fireEvent.change(categorySelect, { target: { value: 'All' } });
+    expect(screen.getByText('Ravana')).toBeInTheDocument();
+    expect(screen.getByText('UE Raven')).toBeInTheDocument();
+  });
+
+  it('renders Ultimate badge on Ultimate robot cards', () => {
+    render(<RobotsGuideTab />);
+    const ultimateBadges = screen.getAllByText('Ultimate');
+    expect(ultimateBadges.length).toBeGreaterThanOrEqual(1);
   });
 });

@@ -528,16 +528,16 @@ def interpolate_color(color1, color2, factor):
     return rgb_to_hex(rgb_interp)
 
 def extract_rating_colors(wb):
-    # Default fallback colors
+    # Default fallback colors (bright primary/secondary palette)
     rating_colors = {
-        "min": "#ef4444",
-        "mid": "#eab308",
-        "max": "#22c55e",
-        "super": "#3b82f6"
+        "min": "#ff0000",
+        "mid": "#ffff00",
+        "max": "#00ff00",
+        "super": "#00ffff"
     }
     try:
         sheet = None
-        for sname in ["Tier 4", "Tier 3", "Titans"]:
+        for sname in ["Tier 4 Robots", "Tier 4", "Tier 3 Robots", "Tier 3", "Ultimate Robots", "All Titans", "Titans", "Value Rating Criterion"]:
             if sname in wb.sheetnames:
                 sheet = wb[sname]
                 break
@@ -611,34 +611,51 @@ def parse_robot_guide():
                 "text": str(txt_val).strip()
             })
             
-    # 5.2 Parse Mini Build Guides
-    builds_sheet = wb["Mini Build Guides"]
+    # 5.2 Parse Mini Build Guides (support both 'Robot Mini Build Guides' and legacy 'Mini Build Guides')
+    builds_sheet_name = "Robot Mini Build Guides" if "Robot Mini Build Guides" in wb.sheetnames else "Mini Build Guides"
+    builds_sheet = wb[builds_sheet_name]
     builds = []
-    headers_builds = [builds_sheet.cell(row=1, column=c).value for c in range(1, 10)]
+    ue_weapon_index = {}
+
     for r in range(2, builds_sheet.max_row + 1):
         bname = builds_sheet.cell(row=r, column=1).value
         bot = builds_sheet.cell(row=r, column=2).value
         
         bname_str = str(bname).strip() if bname else ""
+        bot_str = str(bot).strip() if bot else ""
+
         if bname_str.startswith("*") or bname_str.startswith("UE Index") or "f2p weapons" in bname_str.lower():
             break
             
         if bname and bot:
+            is_ultimate = (bname_str.lower() == "ultimate") or bot_str.lower().startswith("ue ")
             builds.append({
-                "build_name": str(bname).strip(),
-                "robot": str(bot).strip(),
+                "build_name": bname_str,
+                "robot": bot_str,
                 "f2p_weapons": str(builds_sheet.cell(row=r, column=3).value or "").strip(),
                 "best_weapons": str(builds_sheet.cell(row=r, column=4).value or "").strip(),
                 "drone_options": str(builds_sheet.cell(row=r, column=5).value or "").strip(),
                 "pilot": str(builds_sheet.cell(row=r, column=6).value or "").strip(),
                 "specialization": str(builds_sheet.cell(row=r, column=7).value or "").strip(),
                 "explanation": str(builds_sheet.cell(row=r, column=8).value or "").strip(),
+                "is_ultimate": is_ultimate
             })
+
+    # Parse UE Weapon Index (rows 78-83 in Robot Mini Build Guides or wherever quoted index appears)
+    for r in range(1, builds_sheet.max_row + 1):
+        c1_val = str(builds_sheet.cell(row=r, column=1).value or "").strip()
+        c2_val = str(builds_sheet.cell(row=r, column=2).value or "").strip()
+        if c1_val.startswith('"') and c1_val.endswith('"'):
+            cat = c1_val.strip('"')
+            ue_weapon_index[cat] = c2_val
 
     # 5.3 Parse Roles with fill colors
     roles_sheet = wb["Bot Roles"]
     roles_data = {}
-    role_headers = [roles_sheet.cell(row=1, column=c).value for c in range(1, 9)] # Bot, Support, Tank-buster, Sniper, Midrange, Brawler, Beacon Runner, Assassin
+    role_headers = []
+    for c in range(1, roles_sheet.max_column + 1):
+        h = roles_sheet.cell(row=1, column=c).value
+        role_headers.append(str(h).strip() if h else "")
     
     for r in range(2, roles_sheet.max_row + 1):
         bot_name = roles_sheet.cell(row=r, column=1).value
@@ -650,7 +667,9 @@ def parse_robot_guide():
             continue
             
         bot_roles = []
-        for c in range(2, 9):
+        for c in range(2, len(role_headers) + 1):
+            if c - 1 >= len(role_headers) or not role_headers[c-1]:
+                continue
             cell = roles_sheet.cell(row=r, column=c)
             val = cell.value
             fill = cell.fill
@@ -680,10 +699,65 @@ def parse_robot_guide():
                 })
         roles_data[bot_str.lower()] = bot_roles
 
+    # 5.3.2 Parse UE Bot Roles with fill colors (if present)
+    ue_roles_sheet = wb["UE Bot Roles"] if "UE Bot Roles" in wb.sheetnames else None
+    if ue_roles_sheet:
+        ue_role_headers = []
+        for c in range(1, ue_roles_sheet.max_column + 1):
+            h = ue_roles_sheet.cell(row=1, column=c).value
+            ue_role_headers.append(str(h).strip() if h else "")
+
+        for r in range(2, ue_roles_sheet.max_row + 1):
+            bot_name = ue_roles_sheet.cell(row=r, column=1).value
+            if not bot_name:
+                continue
+            bot_str = str(bot_name).strip()
+            if len(bot_str) > 40:
+                continue
+
+            bot_roles = []
+            for c in range(2, len(ue_role_headers) + 1):
+                if c - 1 >= len(ue_role_headers) or not ue_role_headers[c-1]:
+                    continue
+                cell = ue_roles_sheet.cell(row=r, column=c)
+                val = cell.value
+                fill = cell.fill
+
+                color_hex = None
+                if fill and fill.fill_type == 'solid':
+                    color = fill.start_color
+                    if color:
+                        color_hex = color.rgb
+
+                role_type = "none"
+                if color_hex:
+                    clean_hex = color_hex[-6:].upper() if isinstance(color_hex, str) else ""
+                    if clean_hex == "00FF00":
+                        role_type = "primary"
+                    elif clean_hex == "FFFF00":
+                        role_type = "secondary"
+
+                footnote = str(val).strip() if val is not None else ""
+                # In UE Bot Roles, Freezo drone note is marked with single asterisk, map to '**' to align with Bot Roles
+                if footnote == "*":
+                    footnote = "**"
+
+                if role_type != "none" or footnote:
+                    bot_roles.append({
+                        "role": ue_role_headers[c-1],
+                        "type": role_type,
+                        "footnote": footnote
+                    })
+            roles_data[bot_str.lower()] = bot_roles
+
     # 5.3.5 Parse Titan Roles with fill colors
-    titan_roles_sheet = wb["Titan Roles"]
+    titan_roles_sheet_name = "Titan Roles"
+    titan_roles_sheet = wb[titan_roles_sheet_name]
     titan_roles_data = {}
-    titan_role_headers = [titan_roles_sheet.cell(row=1, column=c).value for c in range(1, 9)] # Titan, Support, Sniper, Midrange, Brawler, Beacon Runner, Early Drop, Late Drop
+    titan_role_headers = []
+    for c in range(1, titan_roles_sheet.max_column + 1):
+        h = titan_roles_sheet.cell(row=1, column=c).value
+        titan_role_headers.append(str(h).strip() if h else "")
     
     for r in range(2, titan_roles_sheet.max_row + 1):
         titan_name = titan_roles_sheet.cell(row=r, column=1).value
@@ -695,7 +769,9 @@ def parse_robot_guide():
             continue
             
         titan_roles = []
-        for c in range(2, 9):
+        for c in range(2, len(titan_role_headers) + 1):
+            if c - 1 >= len(titan_role_headers) or not titan_role_headers[c-1]:
+                continue
             cell = titan_roles_sheet.cell(row=r, column=c)
             val = cell.value
             fill = cell.fill
@@ -724,22 +800,11 @@ def parse_robot_guide():
                 })
         titan_roles_data[titan_str.lower()] = titan_roles
 
-    # 5.4 Parse Tiers/Value ratings and detailed scores
-    # We combine 'Tier 4' and 'Tier 3' robots
-    robots_data = []
-    unmatched_rating_rows = []
-    
-    for sheet_name in ["Tier 4", "Tier 3"]:
-        sheet = wb[sheet_name]
-        
-        # We parse the side-by-side tables
-        # Row 1 is header:
-        # Col A: Robot, Col B: Value Rating, Col C: empty, Col D: Robot, Col E: Longevity, Col F: Lethality, Col G: Mobility, Col H: Utility, Col I: Accessibility, Col J: Overall, Col K: Comments
-        
-        # First build maps
-        left_ratings = {} # name -> rating
-        right_details = {} # name -> scores dict
-        
+    # Helper function to parse side-by-side ratings and score details tables
+    def parse_scores_table(sheet, sheet_display_name, lookup_roles):
+        left_ratings = {}
+        right_details = {}
+
         for r in range(2, sheet.max_row + 1):
             left_bot = sheet.cell(row=r, column=1).value
             left_rating = sheet.cell(row=r, column=2).value
@@ -748,112 +813,88 @@ def parse_robot_guide():
                     left_ratings[str(left_bot).strip()] = int(float(left_rating))
                 except (ValueError, TypeError):
                     left_ratings[str(left_bot).strip()] = 0
-                
+
             right_bot = sheet.cell(row=r, column=4).value
             if right_bot is not None:
                 right_bot_str = str(right_bot).strip()
-                right_details[right_bot_str] = {
-                    "longevity": sheet.cell(row=r, column=5).value,
-                    "lethality": sheet.cell(row=r, column=6).value,
-                    "mobility": sheet.cell(row=r, column=7).value,
-                    "utility": sheet.cell(row=r, column=8).value,
-                    "accessibility": sheet.cell(row=r, column=9).value,
-                    "overall": sheet.cell(row=r, column=10).value,
-                    "comments": str(sheet.cell(row=r, column=11).value or "").strip()
-                }
-                
-        # Merge them
-        # Note: we search matches by stripped lowercase names
-        left_keys_mapped = {}
-        for k, v in left_ratings.items():
-            left_keys_mapped[k.lower().strip()] = (k, v)
-            
+                if sheet.cell(row=r, column=10).value is not None or sheet.cell(row=r, column=5).value is not None:
+                    right_details[right_bot_str] = {
+                        "longevity": sheet.cell(row=r, column=5).value,
+                        "lethality": sheet.cell(row=r, column=6).value,
+                        "mobility": sheet.cell(row=r, column=7).value,
+                        "utility": sheet.cell(row=r, column=8).value,
+                        "accessibility": sheet.cell(row=r, column=9).value,
+                        "overall": sheet.cell(row=r, column=10).value,
+                        "comments": str(sheet.cell(row=r, column=11).value or "").strip()
+                    }
+
+        left_keys_mapped = {k.lower().strip(): (k, v) for k, v in left_ratings.items()}
+        result_items = []
+        unmatched = []
+
+        def to_num(v):
+            if v is None:
+                return 0.0
+            try:
+                return float(v)
+            except (ValueError, TypeError):
+                return 0.0
+
         for rname, details in right_details.items():
             rname_clean = rname.lower().strip()
             val_rating = 0
             original_name = rname
-            
+
             if rname_clean in left_keys_mapped:
                 original_name, val_rating = left_keys_mapped[rname_clean]
             else:
-                unmatched_rating_rows.append(f"robot '{rname}' in {sheet_name}")
-                
-            # Lookup roles
-            bot_roles = roles_data.get(original_name.lower().strip(), [])
-            
-            robots_data.append({
+                unmatched.append(f"item '{rname}' in {sheet_display_name}")
+
+            roles = lookup_roles.get(original_name.lower().strip(), [])
+
+            result_items.append({
                 "name": original_name,
-                "sheet": sheet_name,
+                "sheet": sheet_display_name,
                 "value_rating": val_rating,
                 "scores": {
-                    "longevity": details["longevity"],
-                    "lethality": details["lethality"],
-                    "mobility": details["mobility"],
-                    "utility": details["utility"],
-                    "accessibility": details["accessibility"],
-                    "overall": details["overall"]
+                    "longevity": to_num(details["longevity"]),
+                    "lethality": to_num(details["lethality"]),
+                    "mobility": to_num(details["mobility"]),
+                    "utility": to_num(details["utility"]),
+                    "accessibility": to_num(details["accessibility"]),
+                    "overall": to_num(details["overall"])
                 },
-                "roles": bot_roles,
+                "roles": roles,
                 "comments": details["comments"]
             })
-            
-    # 5.5 Parse Titans sheet
-    titans_data = []
-    titans_sheet = wb["Titans"]
-    left_titan_ratings = {}
-    right_titan_details = {}
-    
-    for r in range(2, titans_sheet.max_row + 1):
-        left_t = titans_sheet.cell(row=r, column=1).value
-        left_rating = titans_sheet.cell(row=r, column=2).value
-        if left_t is not None and left_rating is not None:
-            try:
-                left_titan_ratings[str(left_t).strip()] = int(float(left_rating))
-            except (ValueError, TypeError):
-                left_titan_ratings[str(left_t).strip()] = 0
-            
-        right_t = titans_sheet.cell(row=r, column=4).value
-        if right_t is not None:
-            right_t_str = str(right_t).strip()
-            right_titan_details[right_t_str] = {
-                "longevity": titans_sheet.cell(row=r, column=5).value,
-                "lethality": titans_sheet.cell(row=r, column=6).value,
-                "mobility": titans_sheet.cell(row=r, column=7).value,
-                "utility": titans_sheet.cell(row=r, column=8).value,
-                "accessibility": titans_sheet.cell(row=r, column=9).value,
-                "overall": titans_sheet.cell(row=r, column=10).value,
-                "comments": str(titans_sheet.cell(row=r, column=11).value or "").strip()
-            }
-            
-    left_t_keys_mapped = {k.lower().strip(): (k, v) for k, v in left_titan_ratings.items()}
-    
-    for tname, details in right_titan_details.items():
-        tname_clean = tname.lower().strip()
-        val_rating = 0
-        original_name = tname
-        
-        if tname_clean in left_t_keys_mapped:
-            original_name, val_rating = left_t_keys_mapped[tname_clean]
-        else:
-            unmatched_rating_rows.append(f"titan '{tname}' in Titans")
-            
-        # Lookup roles
-        t_roles = titan_roles_data.get(original_name.lower().strip(), [])
 
-        titans_data.append({
-            "name": original_name,
-            "value_rating": val_rating,
-            "scores": {
-                "longevity": details["longevity"],
-                "lethality": details["lethality"],
-                "mobility": details["mobility"],
-                "utility": details["utility"],
-                "accessibility": details["accessibility"],
-                "overall": details["overall"]
-            },
-            "roles": t_roles,
-            "comments": details["comments"]
-        })
+        return result_items, unmatched
+
+    # 5.4 Parse Tiers/Value ratings and detailed scores
+    # Combine regular robots ('Tier 4' + 'Tier 3') and 'Ultimate Robots'
+    robots_data = []
+    unmatched_rating_rows = []
+
+    robot_sheet_names = []
+    if "Tier 4 Robots" in wb.sheetnames:
+        robot_sheet_names.extend(["Tier 4 Robots", "Tier 3 Robots"])
+    elif "Tier 4" in wb.sheetnames:
+        robot_sheet_names.extend(["Tier 4", "Tier 3"])
+
+    if "Ultimate Robots" in wb.sheetnames:
+        robot_sheet_names.append("Ultimate Robots")
+
+    for sheet_name in robot_sheet_names:
+        sheet = wb[sheet_name]
+        items, unmatched = parse_scores_table(sheet, sheet_name, roles_data)
+        robots_data.extend(items)
+        unmatched_rating_rows.extend(unmatched)
+
+    # 5.5 Parse Titans sheet (support 'All Titans' and 'Titans')
+    titan_sheet_name = "All Titans" if "All Titans" in wb.sheetnames else "Titans"
+    titans_sheet = wb[titan_sheet_name]
+    titans_data, titan_unmatched = parse_scores_table(titans_sheet, titan_sheet_name, titan_roles_data)
+    unmatched_rating_rows.extend(titan_unmatched)
 
     if unmatched_rating_rows:
         joined = "\n  - ".join(unmatched_rating_rows)
@@ -862,16 +903,23 @@ def parse_robot_guide():
             f"the value-rating table:\n  - {joined}"
         )
         
-    # Parse footnotes from Bot Roles and Titan Roles sheets
+    # Parse footnotes from Bot Roles, UE Bot Roles, and Titan Roles sheets
     roles_footnotes = []
     seen_footnotes = set()
-    for sheet in [roles_sheet, titan_roles_sheet]:
+    footnote_sheets = [roles_sheet, titan_roles_sheet]
+    if ue_roles_sheet:
+        footnote_sheets.append(ue_roles_sheet)
+
+    for sheet in footnote_sheets:
         for r in range(1, sheet.max_row + 1):
             for c in range(1, sheet.max_column + 1):
                 val = sheet.cell(row=r, column=c).value
                 if val:
                     val_str = str(val).strip()
                     if re.match(r'^\*+\s*[A-Za-z]', val_str):
+                        # Normalize single asterisk Freezo note if present
+                        if "freezo" in val_str.lower() and val_str.startswith("*") and not val_str.startswith("**"):
+                            val_str = "*" + val_str
                         if val_str not in seen_footnotes:
                             seen_footnotes.add(val_str)
                             roles_footnotes.append(val_str)
@@ -888,6 +936,7 @@ def parse_robot_guide():
         "titans": titans_data,
         "camelot": [],
         "footnotes": roles_footnotes,
+        "ue_weapon_index": ue_weapon_index,
         "rating_colors": rating_colors
     }
     

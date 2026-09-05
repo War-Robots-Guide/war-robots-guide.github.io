@@ -11,6 +11,7 @@ export function RobotsGuideTab({ onItemClick }) {
   const [guideSubTab, setGuideSubTab] = useState('robots');
   const [searchInput, setSearchInput] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('All');
   const [robotValueFilter, setRobotValueFilter] = useState('All');
   const [robotRoleFilter, setRobotRoleFilter] = useState('All');
   const [statFilter, setStatFilter] = useState('All');
@@ -41,6 +42,7 @@ export function RobotsGuideTab({ onItemClick }) {
   const [prevFilterState, setPrevFilterState] = useState({
     guideSubTab,
     searchQuery,
+    categoryFilter,
     robotValueFilter,
     robotRoleFilter,
     statFilter,
@@ -51,6 +53,7 @@ export function RobotsGuideTab({ onItemClick }) {
   if (
     guideSubTab !== prevFilterState.guideSubTab ||
     searchQuery !== prevFilterState.searchQuery ||
+    categoryFilter !== prevFilterState.categoryFilter ||
     robotValueFilter !== prevFilterState.robotValueFilter ||
     robotRoleFilter !== prevFilterState.robotRoleFilter ||
     statFilter !== prevFilterState.statFilter ||
@@ -60,6 +63,7 @@ export function RobotsGuideTab({ onItemClick }) {
     setPrevFilterState({
       guideSubTab,
       searchQuery,
+      categoryFilter,
       robotValueFilter,
       robotRoleFilter,
       statFilter,
@@ -69,6 +73,12 @@ export function RobotsGuideTab({ onItemClick }) {
     setVisibleCount(12);
   }
 
+  const availableCategories = useMemo(() => {
+    if (!robotGuideData?.robots) return [];
+    const sheets = robotGuideData.robots.map(r => r.sheet);
+    return Array.from(new Set(sheets));
+  }, []);
+
   const filteredRobots = useMemo(() => {
     if (!robotGuideData?.robots) return [];
     const query = searchQuery.toLowerCase().trim();
@@ -77,6 +87,8 @@ export function RobotsGuideTab({ onItemClick }) {
       const matchSearch = robot.name.toLowerCase().includes(query) || 
                           robot.comments.toLowerCase().includes(query);
       
+      const matchCategory = categoryFilter === 'All' || robot.sheet === categoryFilter;
+
       const matchValue = robotValueFilter === 'All' || robot.value_rating === parseInt(robotValueFilter);
       
       const matchRole = robotRoleFilter === 'All' || 
@@ -88,7 +100,7 @@ export function RobotsGuideTab({ onItemClick }) {
         matchStat = score !== undefined && score >= parseInt(minScoreFilter);
       }
       
-      return matchSearch && matchValue && matchRole && matchStat;
+      return matchSearch && matchCategory && matchValue && matchRole && matchStat;
     });
 
     if (sortBy !== 'Default') {
@@ -113,7 +125,7 @@ export function RobotsGuideTab({ onItemClick }) {
     }
 
     return filtered;
-  }, [searchQuery, robotValueFilter, robotRoleFilter, statFilter, minScoreFilter, sortBy]);
+  }, [searchQuery, categoryFilter, robotValueFilter, robotRoleFilter, statFilter, minScoreFilter, sortBy]);
 
   const filteredTitans = useMemo(() => {
     if (!robotGuideData?.titans) return [];
@@ -215,6 +227,7 @@ export function RobotsGuideTab({ onItemClick }) {
         activeTab={guideSubTab}
         onChange={(val) => {
           setGuideSubTab(val);
+          setCategoryFilter('All');
           setRobotRoleFilter('All');
           setRobotValueFilter('All');
           setStatFilter('All');
@@ -230,6 +243,9 @@ export function RobotsGuideTab({ onItemClick }) {
         guideSubTab={guideSubTab}
         searchInput={searchInput}
         setSearchInput={setSearchInput}
+        categoryFilter={categoryFilter}
+        setCategoryFilter={setCategoryFilter}
+        availableCategories={availableCategories}
         robotValueFilter={robotValueFilter}
         setRobotValueFilter={setRobotValueFilter}
         robotRoleFilter={robotRoleFilter}

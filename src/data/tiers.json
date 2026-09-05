@@ -20,10 +20,6 @@
           "description": "The oldest and most f2p friendly X tier bot, Pathfinder hunter stacks are extremely busted and can turn f2p bots into titans and whale titans into unstoppable nightmares."
         },
         {
-          "name": "Vector",
-          "description": "The best early game center beacon rusher in the game. It has insane stall potential as well as the ability to throw people off the map."
-        },
-        {
           "name": "UE Typhon",
           "description": "Top tier endgame option, able to shut down titans in a way even Anaksor can\u2019t perfectly replicate."
         },
@@ -95,6 +91,10 @@
         {
           "name": "Nuo",
           "description": "Powerful support with a buff that\u2019s similar to Pathfinder\u2019s, trading permanent uptime after acquisition for a more frontloaded buff that doesn\u2019t require a kill. Also gives blind stacks, grey immunity and healing, but enemies will often track it down and prioritize killing it. Additionally, Nuo\u2019s high damage and speed make it a fairly strong sniper with wide target access."
+        },
+        {
+          "name": "Vector",
+          "description": "A powerful early game center beacon rushing brawler. It has suffered a fairly large nerf to its reflector duration, though it is still one of the better brawlers in the game."
         }
       ]
     },
@@ -1224,7 +1224,7 @@
         },
         {
           "name": "UE Taran",
-          "description": "A random silent buff doubled their damage, reverting them to their prime pre-nerf state and catapulting them into X tier. UE Tarans are outstanding close range weapons, and while they lose out to shotguns, their perfect accuracy and fast projectiles at 350m range makes them not something to be taken lightly."
+          "description": "A random silent buff doubled their damage, reverting them to their prime pre-nerf state and catapulting them back into X tier. UE Tarans are outstanding close range weapons, and while they lose out to shotguns, their perfect accuracy and fast projectiles at 350m range makes them not something to be taken lightly."
         },
         {
           "name": "Lumen L, Lumen M, Lumen H",
@@ -1603,7 +1603,7 @@
         },
         {
           "name": "Gekko",
-          "description": "Super long range weapons generally have lower damage to compensate for how much range they have. Thus, one could imagine how a 10+ year old light laser weapon in the modern age barely tickles. Fun fact: This is the only weapon in the game whose projectile changes color based on its level."
+          "description": "Super long range weapons generally have lower damage to compensate for how much range they have. Thus, one could imagine how a 10+ year old light laser weapon in the modern age tickles. Fun fact: This is the only weapon in the game whose projectile changes color based on its level."
         },
         {
           "name": "Tulumbas, Pin",

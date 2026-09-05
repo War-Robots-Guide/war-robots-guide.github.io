@@ -383,6 +383,10 @@
     {
       "date": "2026-08-29",
       "text": "Added UE bot value ratings and mini build guides.\nMender mobility 8 -> 7. Mender does not reach its theoretical maximum speed due to a low speed cap. -Adazahi"
+    },
+    {
+      "date": "2026-09-04",
+      "text": "Added UE Titan roles to all titan roles (deleted the separate tab that Tropical made), added UE Titan value ratings to all titan value rating tab, added UE bots to mini build guides.\nAo Ming mobility 4 -> 5. This doesn't really matter for Ming much as it is T2 and thus bad, but I never noticed that Ming's mobility was this low and I don't really agree with it, so it needs to be changed for normal ming\nin order to have parity with UE Ming. UE Ming is 7 rather than 5 due to speed boosts from specializations and speed boost on heal as a UE trait. The majority of the reasoning for this change is just because of the\nvalue of Ming's vertical mobility. While it isn't very fast in the sense that it can cross long distances, it can fly over obstacles and access cover that most bots cannot. The flight having a 5 second cooldown and infinite\nduration is why it is notably higher mobility of other flying titans.\nAdjusted lethality scores for Kid, Arthur, and Ao Ming to treat them as though they are simply TNAless titans (ie Ao Ming firepower = Bjorn firepower)\nLuchador mobility 2 -> 4 to match with Bjorn. Bjorn accessibility 3 -> 2 to match with luchador. Aether mobility 5 -> 6, spamming the dashes in air can make it actually somewhat quick. \nArthur mobility 1 -> 0 Kid and sharanga mobility 2 -> 1 Devourer mobility 3 -> 2 Sharanga mobility 1 -> 2 Bedwyr and newton mobility 2 -> 3\nRedefined lethality for titans. Most high lethality titan ratings haven't changed at all, though lower lethality titans have dropped by about 1 point across the board. Sirocco utility 8 -> 9 because rust EMP field is mega broken\n-Adazahi"
     }
   ],
   "builds": [
@@ -394,7 +398,8 @@
       "drone_options": "Freezo",
       "pilot": "John Orsted",
       "specialization": "Support (Accelerator +\nLast Stand)\nRepair or Phase Shift",
-      "explanation": "A high-powered support build with close ranged weapons for self defense against rushing\nbrawlers. UE Cryo provides more DP through Freezo. Not recommended for f2p."
+      "explanation": "A high-powered support build with close ranged weapons for self defense against rushing\nbrawlers. UE Cryo provides more DP through Freezo. Not recommended for f2p.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midrange\nSupport",
@@ -404,7 +409,8 @@
       "drone_options": "Freezo\nFtaghn",
       "pilot": "John Orsted",
       "specialization": "Support (Accelerator +\nLast Stand)\nPhase Shift",
-      "explanation": "A more versatile support build that's a lot more accessible for f2p players. Can't defend itself\nfrom rushing brawlers, requiring friendlies to protect it, but is able to pick off enemies at range."
+      "explanation": "A more versatile support build that's a lot more accessible for f2p players. Can't defend itself\nfrom rushing brawlers, requiring friendlies to protect it, but is able to pick off enemies at range.",
+      "is_ultimate": false
     },
     {
       "build_name": "Lockdown\nSupport",
@@ -414,7 +420,8 @@
       "drone_options": "Qingting",
       "pilot": "John Orsted",
       "specialization": "Support (Accelerator +\nLast Stand)\nPhase Shift",
-      "explanation": "An incredibly niche build that makes use of Lv12 Qingting's lockdown extension to displace\nvaluable targets (ie meta titans) for a long time. Very stong in very few rare situations, but\ntrading off Freezo is incredibly hard to justify. Not recommended unless you already have several\nbuilt hangars."
+      "explanation": "An incredibly niche build that makes use of Lv12 Qingting's lockdown extension to displace\nvaluable targets (ie meta titans) for a long time. Very stong in very few rare situations, but\ntrading off Freezo is incredibly hard to justify. Not recommended unless you already have several\nbuilt hangars.",
+      "is_ultimate": false
     },
     {
       "build_name": "Debuffer\nSupport",
@@ -424,7 +431,8 @@
       "drone_options": "Webby",
       "pilot": "Monique\nLenormond",
       "specialization": "Support (Accelerator +\nLast Stand)\nPhase Shift or Repair",
-      "explanation": "Monique's ability allows Imugi to be one of three bots in the game that can trigger Webby's\nRust ability. The rust is strong, but the build won't work without Lv12 Webby."
+      "explanation": "Monique's ability allows Imugi to be one of three bots in the game that can trigger Webby's\nRust ability. The rust is strong, but the build won't work without Lv12 Webby.",
+      "is_ultimate": false
     },
     {
       "build_name": "Hybrid\nBrawler",
@@ -434,7 +442,8 @@
       "drone_options": "Scourveil\nKestrel\nShowdown",
       "pilot": "Mao Ling",
       "specialization": "Support (Accelerator +\nLast Stand)\nPhase Shift",
-      "explanation": "Mao Ling combined with a defensive drone turn Imugi into an uncharacteristically tanky\nrobot even when on the ground, allowing it to somewhat sustain a fight even out of ability."
+      "explanation": "Mao Ling combined with a defensive drone turn Imugi into an uncharacteristically tanky\nrobot even when on the ground, allowing it to somewhat sustain a fight even out of ability.",
+      "is_ultimate": false
     },
     {
       "build_name": "Offensive\nSupport",
@@ -444,7 +453,8 @@
       "drone_options": "Aopo\nShowdown",
       "pilot": "Walter Trommel",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nRepair, UC, or\nPhase Shift",
-      "explanation": "Nuo is able to emulalte Pathfider's OP damage buffs with a bit of a sidegrade. The max\ndamage boost is lower and requires you to stay alive and linked, but it also stacks MUCH\nfaster, provides stacks of counterblind, and provides grey immunity + healing with Walter."
+      "explanation": "Nuo is able to emulalte Pathfider's OP damage buffs with a bit of a sidegrade. The max\ndamage boost is lower and requires you to stay alive and linked, but it also stacks MUCH\nfaster, provides stacks of counterblind, and provides grey immunity + healing with Walter.",
+      "is_ultimate": false
     },
     {
       "build_name": "Sniper\nSupport\nHybrid",
@@ -454,7 +464,8 @@
       "drone_options": "Solar\nAopo\n(Use Aopo for\nGauss+Weber)",
       "pilot": "Walter Trommel\nBasil Lapatte\nHarold Han\n(With K-lasers)",
       "specialization": "Damage Dealer\n(Nuke Amp + Rangefinder)\nRepair, UC, or\nPhase Shift",
-      "explanation": "Nuo is probably the only bot in the game that can make a f2p friendly sniper build. Since it gives itself\nsuch a large damage boost that stacks multiplicatively with the defense ignore on Gauss + Weber (or K-lasers \nwith solar), their mediocre performance is somewhat alleviated vs bots relying on DP. Playing at a super long\ndistance means you're often not linked, so Basil becomes a competitive pilot choice. For f2p, it's\nnot worth spending memorium on Basil since he's so incredibly niche, and sometimes there\nis a friendly sniper in the backline with you that makes great use of the link. Harold is ideal\nfor K-lasers though. For weapons without built in defense mitigation, Solar becomes the best drone.\nSolar still works with railguns, but its value is questionable."
+      "explanation": "Nuo is probably the only bot in the game that can make a f2p friendly sniper build. Since it gives itself\nsuch a large damage boost that stacks multiplicatively with the defense ignore on Gauss + Weber (or K-lasers \nwith solar), their mediocre performance is somewhat alleviated vs bots relying on DP. Playing at a super long\ndistance means you're often not linked, so Basil becomes a competitive pilot choice. For f2p, it's\nnot worth spending memorium on Basil since he's so incredibly niche, and sometimes there\nis a friendly sniper in the backline with you that makes great use of the link. Harold is ideal\nfor K-lasers though. For weapons without built in defense mitigation, Solar becomes the best drone.\nSolar still works with railguns, but its value is questionable.",
+      "is_ultimate": false
     },
     {
       "build_name": "Defensive\nSupport",
@@ -464,7 +475,8 @@
       "drone_options": "Showdown",
       "pilot": "Walter Trommel",
       "specialization": "Support (Accelerator +\nLast Stand)\nBrawler (Repair Amp +\nImmune Amp)\nRepair or UC",
-      "explanation": "While Lio is not nearly as tanky as it once was, it can still share a noticable amount of defense points\nwith an ally, heal them, and give them grey resistance + occasional countersuppression charges.\nLio should be played conservatively, hiding from high-damage enemies while staying in range of a \ntanky teammate that it's linked to."
+      "explanation": "While Lio is not nearly as tanky as it once was, it can still share a noticable amount of defense points\nwith an ally, heal them, and give them grey resistance + occasional countersuppression charges.\nLio should be played conservatively, hiding from high-damage enemies while staying in range of a \ntanky teammate that it's linked to.",
+      "is_ultimate": false
     },
     {
       "build_name": "Rescue\nSupport",
@@ -474,7 +486,8 @@
       "drone_options": "Seeker\nWhiteout\nUE Glider\nGlider",
       "pilot": "APPM-3TR",
       "specialization": "Support (Accelerator +\nLast Stand)\nPhase Shift",
-      "explanation": "Demeter with Mogwans, Whiteout, and Appmeter provides not only healing and shielding, but\nalso debuffing to the enemy. At p2w investment, it's better to use OP weapons of your own\nrather than Mogwans."
+      "explanation": "Demeter with Mogwans, Whiteout, and Appmeter provides not only healing and shielding, but\nalso debuffing to the enemy. At p2w investment, it's better to use OP weapons of your own\nrather than Mogwans.",
+      "is_ultimate": false
     },
     {
       "build_name": "Evasive\nBrawler",
@@ -483,8 +496,9 @@
       "best_weapons": "UE Burst weapons\nMurix\nHarmattans",
       "drone_options": "Seeker\nShowdown\nWhiteout\nArmadillo\nUE Glider",
       "pilot": "Arnav Poe",
-      "specialization": "Brawler (Repair Amp +\nImmune Amp)\nRepair or Phase Shift",
-      "explanation": "Ravana should not attempt to statcheck meta brawlers; rather, its value lies in its ability to\noutlast the protective abilities of meta hit-and-run type bots."
+      "specialization": "Brawler (Repair Amp +\nLast stand)\nRepair or Phase Shift",
+      "explanation": "Ravana should not attempt to statcheck meta brawlers; rather, its value lies in its ability to\noutlast the protective abilities of meta hit-and-run type bots.",
+      "is_ultimate": false
     },
     {
       "build_name": "Beacon\nCapper",
@@ -494,7 +508,8 @@
       "drone_options": "Whiteout\nMyia\nShowdown\nWARD",
       "pilot": "Theseus",
       "specialization": "Saboteur (Beacon Op +\nAccelerator)\nRepair or Phase Shift",
-      "explanation": "Skyros played as a beacon capper should not leave ball mode. Just keep on rollin' and know\nwhen to eject into a titan."
+      "explanation": "Skyros played as a beacon capper should not leave ball mode. Just keep on rollin' and know\nwhen to eject into a titan.",
+      "is_ultimate": false
     },
     {
       "build_name": "Opportunist",
@@ -504,7 +519,8 @@
       "drone_options": "Scales\nWhiteout\nArmadillo",
       "pilot": "Roberto Baros",
       "specialization": "Saboteur (Beacon Op +\nAccelerator)\nDefense (Anticontrol +\nHeavy Armor Kit)\nRepair or Phase Shift",
-      "explanation": "The scales drone makes the hit-and-run skyros playstyle kind of real, since it means you don't\nneed theseus for DMI anymore. However, the burst required for this playstyle to be successful\n(and not to mention the OP drone) make this a very exclusive build. Not recommended for f2p."
+      "explanation": "The scales drone makes the hit-and-run skyros playstyle kind of real, since it means you don't\nneed theseus for DMI anymore. However, the burst required for this playstyle to be successful\n(and not to mention the OP drone) make this a very exclusive build. Not recommended for f2p.",
+      "is_ultimate": false
     },
     {
       "build_name": "Assassin",
@@ -514,7 +530,8 @@
       "drone_options": "Scourveil\nKestrel\nUE Glider\nShowdown\nWhiteout\nArmadillo\nSeeker",
       "pilot": "Sati \"Cat\" \nFelidae",
       "specialization": "Any Specialization\nPhase Shift",
-      "explanation": "Lynx is currently the only non-UE bot in the game with a reliable execute (Sword's sucks now).\nThis allows it to be competent at killing bots way out of its weight class, especially with the aid\nof a teammate. \n\nCurrently, with Harmattan shotguns being as insane as they are, Lynx has seen a massive glow up thanks to how \nits execute enables it to bypass the only weakness of Harmattans and finish off enemies."
+      "explanation": "Lynx is currently the only non-UE bot in the game with a reliable execute (Sword's sucks now).\nThis allows it to be competent at killing bots way out of its weight class, especially with the aid\nof a teammate. \n\nCurrently, with Harmattan shotguns being as insane as they are, Lynx has seen a massive glow up thanks to how \nits execute enables it to bypass the only weakness of Harmattans and finish off enemies.",
+      "is_ultimate": false
     },
     {
       "build_name": "Titan\nCharger/\nAssault",
@@ -524,7 +541,8 @@
       "drone_options": "Hawkeye\nShowdown\nSeeker\nUE Glider\nArmadillo",
       "pilot": "Twins",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift or Repair",
-      "explanation": "With the nerf to electric titan charge, Siren is now one of the best chargers, but it only\nworks if you fire at an enemy with a reflector (so, no Raptors = no charge). It's also signficantly\nenhanced when they fire at you. While this build can charge faster than prime electric builds,\nit's hindered by the fact that it relies on the enemies using reflectors in order to work."
+      "explanation": "With the nerf to electric titan charge, Siren is now one of the best chargers, but it only\nworks if you fire at an enemy with a reflector (so, no Raptors = no charge). It's also signficantly\nenhanced when they fire at you. While this build can charge faster than prime electric builds,\nit's hindered by the fact that it relies on the enemies using reflectors in order to work.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midrange",
@@ -534,7 +552,8 @@
       "drone_options": "Hawkeye\nShowdown\nSeeker\nUE Glider\nArmadillo",
       "pilot": "Twins",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift or Repair",
-      "explanation": "Siren is competent at midrange due to it's high battlefield visibility, strong reflector, and good\nuptime. All these benefits come at the cost of firepower when compared to other midrangers,\nbut it's nonetheless worth it. Yang Lee pilot is generally not recommended due to Hawkeye \nbeing able to replace it so that you can have the 4 seconds of extra uptime from twins."
+      "explanation": "Siren is competent at midrange due to it's high battlefield visibility, strong reflector, and good\nuptime. All these benefits come at the cost of firepower when compared to other midrangers,\nbut it's nonetheless worth it. Yang Lee pilot is generally not recommended due to Hawkeye \nbeing able to replace it so that you can have the 4 seconds of extra uptime from twins.",
+      "is_ultimate": false
     },
     {
       "build_name": "Brawler",
@@ -543,8 +562,9 @@
       "best_weapons": "Lumens\nKelvin+Celsius\nBasileus+Velos\nClose range UE setups\nAny+Velos\nHarmattans",
       "drone_options": "Showdown",
       "pilot": "Gloria Earhart",
-      "specialization": "Brawler (Repair Amp +\nImmune Amp)\nJump Unit or Repair",
-      "explanation": "Raptor is a decent opening robot, regardless of if it's being used for titan charge or not. Jump unit\nhelps you reach center early in the game, and can even cross maps to contest distant beacons. \nSimilarly to a lot of other new brawlers, it gains way too much from mk3 to be f2p viable unless you \nmanage to save enough to get it there. The ingame stat screen claims it gets 25% grey resist from mk3, \nbut in reality, it gets a massive 50% grey resist. For f2p, it should only be used as a suicide opener bot pre mk3."
+      "specialization": "Brawler (Repair Amp +\nLast Stand)\nJump Unit or Repair",
+      "explanation": "Raptor is a decent opening robot, regardless of if it's being used for titan charge or not. Jump unit\nhelps you reach center early in the game, and can even cross maps to contest distant beacons. \nSimilarly to a lot of other new brawlers, it gains way too much from mk3 to be f2p viable unless you \nmanage to save enough to get it there. The ingame stat screen claims it gets 25% grey resist from mk3, \nbut in reality, it gets a massive 50% grey resist. For f2p, it should only be used as a suicide opener bot pre mk3.",
+      "is_ultimate": false
     },
     {
       "build_name": "Flex\nSupport",
@@ -554,7 +574,8 @@
       "drone_options": "Scourveil\nKestrel\nMyia",
       "pilot": "Virginia Walker",
       "specialization": "Support (Accelerator +\nLast Stand)\nPhase Shift",
-      "explanation": "Nightingale is a support/beacon capper hybrid with the potential to reach amazingly fast speeds.\nUnlike Loki and Skyros, it lacks permanent protection, but it makes up for it with supportive utility."
+      "explanation": "Nightingale is a support/beacon capper hybrid with the potential to reach amazingly fast speeds.\nUnlike Loki and Skyros, it lacks permanent protection, but it makes up for it with supportive utility.",
+      "is_ultimate": false
     },
     {
       "build_name": "Tank\nBuster",
@@ -564,7 +585,8 @@
       "drone_options": "Webby\nScourveil\nKestrel\nUE Glider\nSeeker",
       "pilot": "Willa Owe",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
-      "explanation": "Dux weapons don't matter, you can even avoid the Quarker recommendation if you know what\nyou're doing and cycle your weapons such that the BiW fires infinitely. Dux drones' defense\nmitigation allows them to kill tanky targets like Lio surprisingly fast."
+      "explanation": "Dux weapons don't matter, you can even avoid the Quarker recommendation if you know what\nyou're doing and cycle your weapons such that the BiW fires infinitely. Dux drones' defense\nmitigation allows them to kill tanky targets like Lio surprisingly fast.",
+      "is_ultimate": false
     },
     {
       "build_name": "Assassin",
@@ -574,7 +596,8 @@
       "drone_options": "Seeker\nKestrel\nShowdown\nArmadilllo\nWhiteout\nUE Glider",
       "pilot": "Ash Skarsgard",
       "specialization": "Any Specialization\nPhase Shift",
-      "explanation": "Scorpion should be played like a wuss, teleporting in to try and steal deft survivor triggers and\nkills on squishy bots within its short stealth duration and then immediately running away."
+      "explanation": "Scorpion should be played like a wuss, teleporting in to try and steal deft survivor triggers and\nkills on squishy bots within its short stealth duration and then immediately running away.",
+      "is_ultimate": false
     },
     {
       "build_name": "Minelayer",
@@ -584,7 +607,8 @@
       "drone_options": "Myia\nKocho\nSeeker",
       "pilot": "Kevin O'Reilly",
       "specialization": "Damage Dealer\n(Nuke Amp + Rangefinder)\nPhase Shift",
-      "explanation": "Kaji's tactical gameplay with its mines make its own weapons relatively unimportant in the grand scheme of things.\nWell placed mines can take down incredibly heavy and valuable targets, as well as locking down important objectives.\nRangefinder works regardless of weapons if mines are far. Boom+Bash is a somewhat meme build that can be toxic in\nTDM but is overall worse than the others in beacon modes."
+      "explanation": "Kaji's tactical gameplay with its mines make its own weapons relatively unimportant in the grand scheme of things.\nWell placed mines can take down incredibly heavy and valuable targets, as well as locking down important objectives.\nRangefinder works regardless of weapons if mines are far. Boom+Bash is a somewhat meme build that can be toxic in\nTDM but is overall worse than the others in beacon modes.",
+      "is_ultimate": false
     },
     {
       "build_name": "Sniper",
@@ -594,7 +618,8 @@
       "drone_options": "Solar",
       "pilot": "Gintaire\nKaityre",
       "specialization": "Damage Dealer\n(Nuke Amp + Rangefinder)\nPhase Shift",
-      "explanation": "Snipers are only good due to how OP Shantak + Solar is. If you don't have both of Shantak and\nthe Solar drone, it's hardly worth running a sniper, though with Piercer as a f2p alternative, you can justify\nusing that with solar if you have it."
+      "explanation": "Snipers are only good due to how OP Shantak + Solar is. If you don't have both of Shantak and\nthe Solar drone, it's hardly worth running a sniper, though with Piercer as a f2p alternative, you can justify\nusing that with solar if you have it.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midranger",
@@ -604,7 +629,8 @@
       "drone_options": "Scourveil\nShowdown\nKestrel",
       "pilot": "Gintaire\nKaityre",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
-      "explanation": "Most gunboats are better relegated to being midrangers at f2p level investment. If you have\nShantak/Piercer and Solar, however, you should just use that instead."
+      "explanation": "Most gunboats are better relegated to being midrangers at f2p level investment. If you have\nShantak/Piercer and Solar, however, you should just use that instead.",
+      "is_ultimate": false
     },
     {
       "build_name": "Brawler",
@@ -613,8 +639,9 @@
       "best_weapons": "Lumens\nClose range UE setups\nFahrenheit+Celsius+Kelvin\nBasileus+Machiara+Velos\nAny+Velos\nMurix+Elox+Any\nHarmattans",
       "drone_options": "Seeker\nScarebeus\nShowdown\nArmadillo",
       "pilot": "Bast Neferu",
-      "specialization": "Brawler (Repair Amp +\nImmune Amp)\nRepair or Phase Shift",
-      "explanation": "Teth is an effective brawler regardless of if you use it as a titan charger. It's EMP can interrput\nother Brawlers like Rex and Ammit, and it's forcefield and regenerating physical shield lets it\nsustain close ranged fights."
+      "specialization": "Brawler (Repair Amp +\nLast Stand)\nRepair or Phase Shift",
+      "explanation": "Teth is an effective brawler regardless of if you use it as a titan charger. It's EMP can interrput\nother Brawlers like Rex and Ammit, and it's forcefield and regenerating physical shield lets it\nsustain close ranged fights.",
+      "is_ultimate": false
     },
     {
       "build_name": "Tank",
@@ -624,7 +651,8 @@
       "drone_options": "Scales\nShowdown",
       "pilot": "Mei Lan",
       "specialization": "Tank (Repair Amp +\nHeavy Armor Kit)\nRepair or Phase Shift",
-      "explanation": "Not much needs to be said about Ammit. It is a pretty broken robot, you can run almost anything \nand it will probably work decently. Scales and Showdown are about equal on it, with Showdown\nbeing better when fighting robots and Scales being better when fighting titans."
+      "explanation": "Not much needs to be said about Ammit. It is a pretty broken robot, you can run almost anything \nand it will probably work decently. Scales and Showdown are about equal on it, with Showdown\nbeing better when fighting robots and Scales being better when fighting titans.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midranger",
@@ -634,7 +662,8 @@
       "drone_options": "Scourveil\nKestrel\nShowdown\nSeeker",
       "pilot": "Nessa Riggs",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift or\nJump Unit",
-      "explanation": "Raven needs an optimal balance of range and damage to perform its primary duty, which is\nshutting down enemy snipers and midrangers through massive mobility and extensive stealth.\nAs a result, its best weapons are midrange guns."
+      "explanation": "Raven needs an optimal balance of range and damage to perform its primary duty, which is\nshutting down enemy snipers and midrangers through massive mobility and extensive stealth.\nAs a result, its best weapons are midrange guns.",
+      "is_ultimate": false
     },
     {
       "build_name": "Beacon\nCapper",
@@ -644,7 +673,8 @@
       "drone_options": "Whiteout\nShowdown\nMyia\nWARD\nKestrel\nScourveil\nSeeker",
       "pilot": "Chester Coen",
       "specialization": "Saboteur (Beacon Op +\nAccelerator)\nPhase Shift",
-      "explanation": "Similarly to Skyros, beacon capper Loki has pretty much no good reason to exit stealth. Seeker can be useful\nfor the level 9 counter suppression, which may save you from an encounter with an enemy running QR."
+      "explanation": "Similarly to Skyros, beacon capper Loki has pretty much no good reason to exit stealth. Seeker can be useful\nfor the level 9 counter suppression, which may save you from an encounter with an enemy running QR.",
+      "is_ultimate": false
     },
     {
       "build_name": "Opportunist",
@@ -654,7 +684,8 @@
       "drone_options": "Scourveil\nKestrel\nArmadillo\nSeeker",
       "pilot": "Chester Coen",
       "specialization": "Saboteur (Beacon Op +\nAccelerator)\nPhase Shift",
-      "explanation": "Loki as an opportunist is just like Skyros as an opportunist, requiring very high burst damage\nweapoms and a specific level 12 drone in order to perform.Not recommended for f2p."
+      "explanation": "Loki as an opportunist is just like Skyros as an opportunist, requiring very high burst damage\nweapoms and a specific level 12 drone in order to perform.Not recommended for f2p.",
+      "is_ultimate": false
     },
     {
       "build_name": "Assault",
@@ -664,7 +695,8 @@
       "drone_options": "Seeker\nScales\nUE Glider\nGlider",
       "pilot": "Thomas\nMindread\n(With Engine\nExpert skill)",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
-      "explanation": "Close ranged leech is a pretty dangerous build in 2026, but it's still viable if played with care. Thomas\nmindread with engine expert is a must in order to get in and out dangerous situations. Scales drone\nat high investment is also a huge upgrade, allowing leech to hold up in titan phase."
+      "explanation": "Close ranged leech is a pretty dangerous build in 2026, but it's still viable if played with care. Thomas\nmindread with engine expert is a must in order to get in and out dangerous situations. Scales drone\nat high investment is also a huge upgrade, allowing leech to hold up in titan phase.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midranger",
@@ -674,7 +706,8 @@
       "drone_options": "Seeker\nScales\nUE Glider\nGlider",
       "pilot": "Thomas\nMindread\n(With Engine\nExpert skill)",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
-      "explanation": "Midrange leech is a much safer leech variant. You should still ideally use Thomas with Engine expert.\nbut it's less important."
+      "explanation": "Midrange leech is a much safer leech variant. You should still ideally use Thomas with Engine expert.\nbut it's less important.",
+      "is_ultimate": false
     },
     {
       "build_name": "Sniper",
@@ -684,7 +717,8 @@
       "drone_options": "Solar",
       "pilot": "Nova Light \n(My beloved)",
       "specialization": "Damage Dealer\n(Nuke Amp + Rangefinder)\nPhase Shift, QR, SB",
-      "explanation": "Snipers are only good due to how OP Shantak + Solar is. If you don't have both of Shantak and\nthe Solar drone, it's hardly worth running a sniper, though with Piercer as a f2p alternative, you can justify\nusing that with solar if you have it."
+      "explanation": "Snipers are only good due to how OP Shantak + Solar is. If you don't have both of Shantak and\nthe Solar drone, it's hardly worth running a sniper, though with Piercer as a f2p alternative, you can justify\nusing that with solar if you have it.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midranger",
@@ -694,7 +728,8 @@
       "drone_options": "Seeker\nScales\nArmadillo\nShowdown\nUE Glider",
       "pilot": "Nova Light \n(My beloved)",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift, Repair, or\nSB",
-      "explanation": "Most gunboats are better relegated to being midrangers at f2p level investment. At non f2p investment,\nIf you don't have Basilieus but you do have Shantak/Piercer, use that instead. Unfortunately, even as\na midranger, Bagliore is a mk3 merchant since it's passive gets MUCH stronger at mk3, but it is still\nservicable at mk2. Just know that mk3 bagliore is a priority."
+      "explanation": "Most gunboats are better relegated to being midrangers at f2p level investment. At non f2p investment,\nIf you don't have Basilieus but you do have Shantak/Piercer, use that instead. Unfortunately, even as\na midranger, Bagliore is a mk3 merchant since it's passive gets MUCH stronger at mk3, but it is still\nservicable at mk2. Just know that mk3 bagliore is a priority.",
+      "is_ultimate": false
     },
     {
       "build_name": "Brawler",
@@ -704,7 +739,8 @@
       "drone_options": "Seeker\nScales\nArmadillo\nShowdown\nUE Glider",
       "pilot": "Nova Light \n(My beloved)",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift or Repair",
-      "explanation": "Bagliore as a Brawler is able to statcheck a surprising amount of enemies, especially if you properly\ntime the Nova Light healing and prepare groundwork in advance. This only works if you have high\nquality weapons and mk3. Not recommended for f2p."
+      "explanation": "Bagliore as a Brawler is able to statcheck a surprising amount of enemies, especially if you properly\ntime the Nova Light healing and prepare groundwork in advance. This only works if you have high\nquality weapons and mk3. Not recommended for f2p.",
+      "is_ultimate": false
     },
     {
       "build_name": "Brawler",
@@ -714,7 +750,8 @@
       "drone_options": "Bull \nHiruko \nShowdown",
       "pilot": "Vepkho\nLovidze",
       "specialization": "Brawler (Repair Amp +\nImmune Amp)\nRepair or Phase Shift",
-      "explanation": "Ochokochi is a fairly decent brawler that functions as a sidegrade to Rex. It trades burst uptime (only\none ability charge) and damage (no damage boosting pilot) as well as protection from low hit count guns\n(can't cleanse DoT stacks) for a strong CC ability that can launch people off the map. Just like Rex, it \nis a mk3 merchant that struggles to survive without it due to the crucial DoT resistance passive. Unless\nyou are a f2p that managed to get mk3 ocho, it is not recommended for f2p."
+      "explanation": "Ochokochi is a fairly decent brawler that functions as a sidegrade to Rex. It trades burst uptime (only\none ability charge) and damage (no damage boosting pilot) as well as protection from low hit count guns\n(can't cleanse DoT stacks) for a strong CC ability that can launch people off the map. Just like Rex, it \nis a mk3 merchant that struggles to survive without it due to the crucial DoT resistance passive. Unless\nyou are a f2p that managed to get mk3 ocho, it is not recommended for f2p.",
+      "is_ultimate": false
     },
     {
       "build_name": "Tank Buster",
@@ -724,7 +761,8 @@
       "drone_options": "Seeker\nShowdown\nArmadillo\nWhiteout\nUE Glider\nWARD",
       "pilot": "Otto Schreyer\n(With Arms)\nSam Stone\n(With EMGS)\nShani Kyne\n(if you have)\nMiharu Sharpe\n(Otherwise)",
       "specialization": "Raider (Nuke Amp + Any)\nPhase Shift or Lockdown\nAmmo",
-      "explanation": "Using Sword's Sword is no longer worth it. Sword should be played as though it were a sidegraded\nSiren, teleporting back to the translocator to refresh the ability after the flight phase ends. It's very\nmuch capable of outputting decent damage to enemies this way, though you may want to try using \nLockdown Unit in order to ensure they can't escape you. While Sword doesn't suffer from Siren's issue\nof getting bursted down by high damage weapons or titans, it is instead susceptable to shieldbreaker.\n\nDeshret+Hedjet build with Miharu Sharpe is the only sword build that can justify dashing in, but you need to ensure\nthat you choose a target that can't kill you (or is near the execution threshold) and then teleport out ASAP."
+      "explanation": "Using Sword's Sword is no longer worth it. Sword should be played as though it were a sidegraded\nSiren, teleporting back to the translocator to refresh the ability after the flight phase ends. It's very\nmuch capable of outputting decent damage to enemies this way, though you may want to try using \nLockdown Unit in order to ensure they can't escape you. While Sword doesn't suffer from Siren's issue\nof getting bursted down by high damage weapons or titans, it is instead susceptable to shieldbreaker.\n\nDeshret+Hedjet build with Miharu Sharpe is the only sword build that can justify dashing in, but you need to ensure\nthat you choose a target that can't kill you (or is near the execution threshold) and then teleport out ASAP.",
+      "is_ultimate": false
     },
     {
       "build_name": "Brawler",
@@ -734,7 +772,8 @@
       "drone_options": "Bull\nHiruko\nShowdown",
       "pilot": "Danny Kiberia",
       "specialization": "Brawler (Repair Amp +\nImmune Amp)\nRepair or Phase Shift",
-      "explanation": "Rex is able to deal unbelievably high damage for a brawler when equipped with the Danny pilot. The\nreduced amount of charges gives it less uptime at the start of the battle, but it shouldn't matter\nsince you can end fights so quickly with the damage boost. Just like Ochokochi, it is a mk3 merchant \nthat struggles to survive without it due to the crucial DoT resistance passive. Unless you are a f2p that\nmanaged to get mk3 Rex, it is not recommended for f2p."
+      "explanation": "Rex is able to deal unbelievably high damage for a brawler when equipped with the Danny pilot. The\nreduced amount of charges gives it less uptime at the start of the battle, but it shouldn't matter\nsince you can end fights so quickly with the damage boost. Just like Ochokochi, it is a mk3 merchant \nthat struggles to survive without it due to the crucial DoT resistance passive. Unless you are a f2p that\nmanaged to get mk3 Rex, it is not recommended for f2p.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midranger",
@@ -744,7 +783,8 @@
       "drone_options": "Seeker\nShowdown\nArmadillo\nUE Glider",
       "pilot": "Lucius Palma,\nLian Xin Bai\nis competitive",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift, Repair, or\nSB (if using Lian Xin Bai)",
-      "explanation": "Hastatus is a solid midranger with a very powerful defensive ability. It's best played at a medium\nrange, and both of its legendary pilots are quite strong. Webby does not work on Hastatus."
+      "explanation": "Hastatus is a solid midranger with a very powerful defensive ability. It's best played at a medium\nrange, and both of its legendary pilots are quite strong. Webby does not work on Hastatus.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midranger",
@@ -754,7 +794,8 @@
       "drone_options": "Seeker\nShowdown\nArmadillo\nUE Glider\nLar",
       "pilot": "Ryder Mourn",
       "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift or Repair",
-      "explanation": "Most gunboats are better relegated to being midrangers at f2p level investment. At non f2p investment,\nIf you don't have Basilieus but you do have Shantak/Piercer, use that instead."
+      "explanation": "Most gunboats are better relegated to being midrangers at f2p level investment. At non f2p investment,\nIf you don't have Basilieus but you do have Shantak/Piercer, use that instead.",
+      "is_ultimate": false
     },
     {
       "build_name": "Sniper",
@@ -764,17 +805,19 @@
       "drone_options": "Solar",
       "pilot": "Ryder Mourn",
       "specialization": "Damage Dealer\n(Nuke Amp + Rangefinder)\nPhase Shift, Repair,\nor Jump Unit",
-      "explanation": "Snipers are only good due to how OP Shantak + Solar is. If you don't have both of Shantak and\nthe Solar drone, it's hardly worth running a sniper, though with Piercer as a f2p alternative, you can justify\nusing that with solar if you have it."
+      "explanation": "Snipers are only good due to how OP Shantak + Solar is. If you don't have both of Shantak and\nthe Solar drone, it's hardly worth running a sniper, though with Piercer as a f2p alternative, you can justify\nusing that with solar if you have it.",
+      "is_ultimate": false
     },
     {
       "build_name": "Titan Slayer",
       "robot": "Anaksor",
       "f2p_weapons": "Damper+Subduer\nScreamer+Growler\nNucleon+Atomizer",
-      "best_weapons": "Machiara+Basilius\nLumens\nHarmattans\nFahrenheit+Kelvin",
+      "best_weapons": "Machiara+Basilius\nLumens\nHarmattans\nFahrenheit+Kelvin\nUE Avenger+UE Punisher",
       "drone_options": "Myia\nAopo\nSeeker",
       "pilot": "Single Malt",
       "specialization": "Raider\n(Nuke Amp + Integrated)\nPhase Shift, SB, or QS",
-      "explanation": "Ankasor will yield results as long as your screen is turned on while piloting it. This robot can\ncomfortably 1v1 most titans in the game with a bit of patience, though its most recent nerf has made it\nrequire a bit of forethought. If you notice that your cloak just got triggered for the third time, make sure\nto land in order to not get lit up midair with no protection. Also, don't let people get within 150m of you\nwhile you're flying."
+      "explanation": "Ankasor will yield results as long as your screen is turned on while piloting it. This robot can\ncomfortably 1v1 most titans in the game with a bit of patience, though its most recent nerf has made it\nrequire a bit of forethought. If you notice that your cloak just got triggered for the third time, make sure\nto land in order to not get lit up midair with no protection. Also, don't let people get within 150m of you\nwhile you're flying.",
+      "is_ultimate": false
     },
     {
       "build_name": "Titan Sniper",
@@ -784,7 +827,8 @@
       "drone_options": "Solar\nMyia",
       "pilot": "Single Malt",
       "specialization": "Raider\n(Nuke Amp + Integrated)\nPhase Shift, SB, or QR",
-      "explanation": "Sniping with Anaksor is technically a viable strat simply thanks to a combination of how OP eldritch snipers are\nand how much target access it has for free. Not recommended for f2p due to lack of access to eldritch snipers."
+      "explanation": "Sniping with Anaksor is technically a viable strat simply thanks to a combination of how OP eldritch snipers are\nand how much target access it has for free. Not recommended for f2p due to lack of access to eldritch snipers.",
+      "is_ultimate": false
     },
     {
       "build_name": "Brawler",
@@ -793,8 +837,9 @@
       "best_weapons": "Close range UE setups\nFahrenheit+Celsius\nMachiara+Velos\nMurix+Elox\nAny+Velos\nHarmattans",
       "drone_options": "Tensor\nHawkeye",
       "pilot": "Nika Schum",
-      "specialization": "Brawler (Repair Amp +\nImmune Amp)\nPhase Shift or Adv. Repair",
-      "explanation": "Vector is an absurdly fast brawler that can skate across the map. Regular brawling builds are very\nstrong on it, but as you might expect, fast brawlers tend to be best used as titan chargers."
+      "specialization": "Brawler (Repair Amp +\nLast Stand)\nPhase Shift or Adv. Repair",
+      "explanation": "Vector is an absurdly fast brawler that can skate across the map. Regular brawling builds are very\nstrong on it, but as you might expect, fast brawlers tend to be best used as titan chargers.",
+      "is_ultimate": false
     },
     {
       "build_name": "Titan Charger",
@@ -804,7 +849,8 @@
       "drone_options": "Hawkeye",
       "pilot": "Nika Schum",
       "specialization": "Brawler (Repair Amp +\nLast Stand)\nPhase Shift or Adv. Repair",
-      "explanation": "Vector is probably the single best titan charging bot in the game due to how much time it can stall for\nwith its 3 long duration ability charges."
+      "explanation": "Vector is probably the single best titan charging bot in the game due to how much time it can stall for\nwith its 3 long duration ability charges.",
+      "is_ultimate": false
     },
     {
       "build_name": "Sniper\nSupport",
@@ -814,7 +860,8 @@
       "drone_options": "Fhtagn\nSolar\nFreezo",
       "pilot": "Baek Taejun\nHarold Han\n(With K-lasers)",
       "specialization": "Damage Dealer\n(Nuke amp + Rangefinder)\nPhase shift or SB",
-      "explanation": "A pathfinder with a nuclear amp is scary, but a pathfinder that can lock you down and turn you into\nstacks from across the map is scarier. The sniper builds are scuffed at f2p investment due to lack\nof a medium Piercer, though it can still pull it off for a similar reason that Nuo can."
+      "explanation": "A pathfinder with a nuclear amp is scary, but a pathfinder that can lock you down and turn you into\nstacks from across the map is scarier. The sniper builds are scuffed at f2p investment due to lack\nof a medium Piercer, though it can still pull it off for a similar reason that Nuo can.",
+      "is_ultimate": false
     },
     {
       "build_name": "Midrange\nSupport",
@@ -824,7 +871,8 @@
       "drone_options": "Fhtagn\nFreezo",
       "pilot": "Baek Taejun",
       "specialization": "Damage Dealer\n(Nuke amp + Overdrive)\nPhase shift or SB",
-      "explanation": "The ideal way to play Shoggoth for f2p players. Still very powerful at p2w investment, though Urhag+Shantak\nis generally the strongest p2w build. Boom+Bash is a somewhat meme build that can be toxic in TDM but is\noverall worse than the others in beacon modes."
+      "explanation": "The ideal way to play Shoggoth for f2p players. Still very powerful at p2w investment, though Urhag+Shantak\nis generally the strongest p2w build. Boom+Bash is a somewhat meme build that can be toxic in TDM but is\noverall worse than the others in beacon modes.",
+      "is_ultimate": false
     },
     {
       "build_name": "Assault",
@@ -834,7 +882,8 @@
       "drone_options": "Lar\nSeeker",
       "pilot": "Ines Diaz",
       "specialization": "Damage Dealer\n(Nuke amp + Overdrive)\nPhase shift",
-      "explanation": "The general build if the only Vulcan you have is the regular edition. Vulcan is incredibly oppressive and\ncan statcheck almost anything in the game when scaled, though before it upgrades itself it is relatively\nmediocre and thus requires proper target selection to actually survive past its weak phase."
+      "explanation": "The general build if the only Vulcan you have is the regular edition. Vulcan is incredibly oppressive and\ncan statcheck almost anything in the game when scaled, though before it upgrades itself it is relatively\nmediocre and thus requires proper target selection to actually survive past its weak phase.",
+      "is_ultimate": false
     },
     {
       "build_name": "Debuffer\nAssault",
@@ -844,7 +893,8 @@
       "drone_options": "Webby",
       "pilot": "Ines Diaz",
       "specialization": "Damage Dealer\n(Nuke amp + Overdrive)\nPhase Shift or Adv. Repair",
-      "explanation": "The most effective Vulcan build in most situations, able to apply constant rust with 100% uptime. This\nrust application effect alows Vulcan to run UE Toxins in the light slots. It is not reccomended to run\nUE Venom in the medium slots as DoT damage does not charge the ability and you will struggle\nto scale up if you do this."
+      "explanation": "The most effective Vulcan build in most situations, able to apply constant rust with 100% uptime. This\nrust application effect alows Vulcan to run UE Toxins in the light slots. It is not reccomended to run\nUE Venom in the medium slots as DoT damage does not charge the ability and you will struggle\nto scale up if you do this.",
+      "is_ultimate": false
     },
     {
       "build_name": "Debuffer\nAssault",
@@ -854,7 +904,8 @@
       "drone_options": "Webby",
       "pilot": "Noa Minax",
       "specialization": "Raider\n(Nuke amp + Integrated)\nPhase Shift or\nAdvanced repair",
-      "explanation": "While extremely fragile and easy to shut down, the ability to wield a rust webby makes a bot \ntechnically viable by default. So long as your teammates take the attention, Fafnir can provide some \nserious debuffing utility with good uptime and has high damage potential if charged."
+      "explanation": "While extremely fragile and easy to shut down, the ability to wield a rust webby makes a bot \ntechnically viable by default. So long as your teammates take the attention, Fafnir can provide some \nserious debuffing utility with good uptime and has high damage potential if charged.",
+      "is_ultimate": false
     },
     {
       "build_name": "Saboteur",
@@ -864,7 +915,8 @@
       "drone_options": "Seeker\nChongue\nUE Glider\nGlider\nWARD/Bull/Myia",
       "pilot": "Sim Yo-Han",
       "specialization": "Saboteur (Beacon Op +\nAccelerator)\nPhase Shift",
-      "explanation": "Samjok can be an oppressively annoying saboteur when equipped with weapons that either have the\nmeans to deal damage from around cover, deal damage during phase shift, unload instantly, or a\ncombination of these effects. Samjok should ideally never expose itself to the enemy."
+      "explanation": "Samjok can be an oppressively annoying saboteur when equipped with weapons that either have the\nmeans to deal damage from around cover, deal damage during phase shift, unload instantly, or a\ncombination of these effects. Samjok should ideally never expose itself to the enemy.",
+      "is_ultimate": false
     },
     {
       "build_name": "Saboteur",
@@ -874,13 +926,256 @@
       "drone_options": "Scourveil\nSeeker\nKestrel",
       "pilot": "Nadir Rakhim",
       "specialization": "Any Specialization\nPhase Shift or QR",
-      "explanation": "Fang is like a Ravager, except it's way faster, applies powerful negative effects, and has multiple charges on its\nability. It lends itself well to weapons that can either hit from behind cover, or unload extremely quickly."
+      "explanation": "Fang is like a Ravager, except it's way faster, applies powerful negative effects, and has multiple charges on its\nability. It lends itself well to weapons that can either hit from behind cover, or unload extremely quickly.",
+      "is_ultimate": false
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Raven",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Machiara\nAny UE Setups\nUrhag\nLumens\nUE Storm+Harmattan",
+      "drone_options": "Scourveil\nKestrel\nShowdown\nSeeker",
+      "pilot": "Nessa Riggs",
+      "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
+      "explanation": "Equipped with Nessa Riggs, UE Raven can chain 5 seconds of stealth with 4 seconds of stasis barrier. Additionally,\nit can trigger Scourveil/Kestrel healing, giving it both insane uptime defenses and self sustain.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Blitz",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Close range UE setups\nHarmattans\nLumens\nVelos\nUE Shredder+Harmattan",
+      "drone_options": "Seeker",
+      "pilot": "Clive Vicious",
+      "specialization": "Any specialization\nPhase Shift",
+      "explanation": "Blitz can make dangerous plays fairly safely thanks to its translocator. Clive helps protect against enemies that\nhave shieldbreaker, as he does not remove the UE blitz slim aegis.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Haechi",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Close range UE setups\nHarmattans\nLumens\nMachiara\nKroko",
+      "drone_options": "Seeker",
+      "pilot": "Sergeius\nHayward",
+      "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
+      "explanation": "Haechi can be played with a wide variety of weapons, and as long as the enemy doesn't have shieldbreaker, it is\na total pain to deal with.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Griffin",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Close range UE setups\nHarmattans\nLumens\nMachiara\nUE Storm+Harmattan",
+      "drone_options": "Seeker",
+      "pilot": "Adam O'Leary",
+      "specialization": "Brawler (Repair Amp +\nLast stand)\nPhase Shift or Adv. Repair",
+      "explanation": "Griffin is fairly flexible and has great mobility. Unfortunately, its low uptime on the blind effect can leave it helpless\na few seconds after its jump.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Ravana",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Close range UE setups\nHarmattans",
+      "drone_options": "Seeker\nUE Glider",
+      "pilot": "Thomas Pear",
+      "specialization": "Brawler (Repair Amp +\nLast stand)\nPhase Shift or Adv. Repair",
+      "explanation": "UE Ravana is a dangerous brawler up close that can stall for an incredibly long time with how many phase charges it \nhas. While Arnav Poe can be used, Thomas Pear is preferred as he increases Ravana's brawling potential rath than its\nstalling potential.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Typhon",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Any UE setups\nUE Storm+Harmattan\nMachiara\nLumens\nFahrenheit\nUrhag",
+      "drone_options": "Seeker",
+      "pilot": "Gloria Putnam",
+      "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
+      "explanation": "UE Typhon can shut down high value targets with its blackout. It can be played at both close and long range, though\nit is vulnerable to bots surviving its payload with last stand and pushing it if its played at close range.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Hawk",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "UE Incinerator+UE Scald\nLumens\nVoonith+Shantak\nVelos+Basileus",
+      "drone_options": "Hawkeye\nAopo\nTensor",
+      "pilot": "Kyle Rogers",
+      "specialization": "Raider (Nuke Amp + Any)\nPhase Shift or Repair",
+      "explanation": "UE Hawk is dangerous in air and would prefer not to expose itself for long while on the ground, so weapons that\nunload quickly, unload from a range, or can deal damage without line of sight are ideal.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Mender",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Velos+Machiara\nAny UE setups\nHarmattans\nLumens",
+      "drone_options": "Seeker",
+      "pilot": "Marie Leclair",
+      "specialization": "Support (Accelerator +\nLast stand)\nPhase Shift",
+      "explanation": "UE Mender is an acceptable healer that is best equipped with midrange debuffing weapons, though it can serve as a\ntemporary brawler while its ability is active.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Leech",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Any UE setups\nUE Storm+Harmattan\nLumens\nMachiaras",
+      "drone_options": "Seeker",
+      "pilot": "Thomas\nMindread",
+      "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
+      "explanation": "Thomas Mindread is ideal on Leech, even over the ultimate pilot that heals grey damage. The ability to get in and get out\nwith incredible speed is invaluable. Leech's weapon setups are very flexible, as it can be played at both mid and close\nrange.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Rayker",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Midrange UE setups\nShantak+Urhag\nBasileus+Machiara\nLumens\nHarmattans",
+      "drone_options": "Freezo\nSeeker\nSolar",
+      "pilot": "Dexter Crow",
+      "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
+      "explanation": "UE Rayker really prefers to be played at a decent range, though the combination of execute, freezo, and suppression\nmay allow it to be played at close range with percentage damage weapons.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Rhino",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Harmattans+UE Shredder\nHarmattans\nClose range UE setups\nMurix+UE Shredder\nMurix+Harmattans\nUE Cryo+UE Shredder\nUE Cryo+Harmattans",
+      "drone_options": "Seeker\nHiruko\nBull",
+      "pilot": "Weapon Pilot\nMicheal Dupoint",
+      "specialization": "Brawler (Repair Amp +\nImmune Amp)\nPhase Shift or Adv. Repair",
+      "explanation": "UE Rhino prefers to have high burst, long reload weapons in its medium slots, with strong sustained damage weapons\nin the light slots. This allows it to maximize its firepower as its light slots are always active but its medium slots can\nonly be used for about 4 seconds every 10 or so seconds.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Scorpion",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Harmattans\nClose range UE setups\nMurix",
+      "drone_options": "Seeker",
+      "pilot": "A5H-5K4R\nAsh Skarsgard",
+      "specialization": "Any specialization\nPhase Shift",
+      "explanation": "Bursty close range weapons are ideal on UE Scorpion so that it can output massive damage after a teleport and then\nreturn to the translocator before it takes too much return fire.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Bulgasari",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Harmattans\nAny UE setups\nMachiara\nLumens\nKroko",
+      "drone_options": "Seeker\nUE Glider",
+      "pilot": "Reana Medaro\nWeapon Pilot",
+      "specialization": "Brawler (Repair Amp +\nLast stand)\nPhase Shift or Adv. Repair",
+      "explanation": "UE Bulgasari is a flexible brawler that prefers weapons with quick unloads or the ability to fire with direct line of sight\nso that it can keep its unbreakable physical shield pointed towards the enemy for as long as possible.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Phantom",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Close range UE setups\nKroko\nMurix\nHarmattans",
+      "drone_options": "Seeker\nUE Glider",
+      "pilot": "Olga Minima",
+      "specialization": "Any specialization\nPhase Shift",
+      "explanation": "UE Phantom plays much like UE Blitz, though it isn't as well defended, so it really prefers bursty weapons so\nthat it can get out of danger quickly without losing much damage.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Revenant",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Harmattan+UE Shredder\nBasileus+Harmattan\nHarmattans\nClose range UE setups",
+      "drone_options": "UE Glider\nSeeker\nShowdown",
+      "pilot": "Ricardo\nGonzales",
+      "specialization": "Brawler (Repair Amp +\nImmune Amp)\nPhase Shift or Adv. Repair",
+      "explanation": "UE Revenant should be equipped with high damage close range weapons in order to make best use of its close range\nteleport. Ricardo Gonzales is ideal for retreating after teleporting in, though the ultimate pilot which gives 20% more\ndurability can also be used to increase its statchecking capabilities. Healing drones are very much appreciated on\na bot with as much grey healing as UE Revenant.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Lancelot",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Liodari+Kroko\nFahrenheit+Kelvin\nAny UE setups",
+      "drone_options": "Seeker\nUE Glider",
+      "pilot": "Weapon Pilot\nIji Rime",
+      "specialization": "Brawler (Repair Amp +\nLast stand)\nPhase Shift or Adv. Repair",
+      "explanation": "UE Lancelot is a competent opener bot with plenty of self sustain and charges of speed that can be stacked up for\na quick head on assault. Kroko and Liodari are ideal mostly just for titan charging, as a general brawler, it would output\nmore with weapons that have better sustain.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Ao Jun",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Harmattans\nBasileus\nLumens\nUE Avenger",
+      "drone_options": "Scourveil\nKestrel",
+      "pilot": "Yang Lee",
+      "specialization": "Raider (Nuke Amp + Any)\nPhase Shift or Lockdown\nammo",
+      "explanation": "UE Ao Jun can be a decent anti titan robot, though it is showing its age and is largely outperformed in this role\nby many other bots.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Ares",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Midrange UE setups\nLumens\nMachiara\nUrhag",
+      "drone_options": "Seeker",
+      "pilot": "Warren Ozu",
+      "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
+      "explanation": "UE Ares can be a decently flexible midranger, though it is extremely vulnerable while its ability is on cooldown, which\nlimits its capabilities at close range.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Leo",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Lumens\nBasileus+Machiara\nAny UE setups",
+      "drone_options": "Hawkeye\nTensor",
+      "pilot": "Egorus Gafidos",
+      "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift or Repair",
+      "explanation": "Weapons with large reach (ie, Lumens) are ideal on UE Leo as it can stack both antistealth and shieldbreaker easily,\nallowing it to severely control where stealth and shield dependant bots can be on the field.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Sword Unit",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "UE Arms\nLumens\nMachiara+Velos\nHarmattans",
+      "drone_options": "UE Glider\nSeeker\nWARD",
+      "pilot": "Otto Schreyer\n(With Arms)\nWeapon Pilot\n(other weapons)\nShani Kyne\n(if you have)\nMiharu Sharpe\n(Otherwise)",
+      "specialization": "Raider (Nuke Amp + Any)\nPhase Shift",
+      "explanation": "UE Sword is a raider with some of the highest damage potential in the game given that the enemy charges up its\nsword. Unfortunately, it is very vulnerable to shieldbreaker and won't reach this potential often times as most enemies\nknow to avoid shooting its shield.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Spectre",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Midrange UE setups\nLumens\nMachiara\nUrhag",
+      "drone_options": "Seeker",
+      "pilot": "Weapon Pilot\nTal Mokri",
+      "specialization": "Damage Dealer\n(Nuke Amp + Overdrive)\nPhase Shift",
+      "explanation": "UE Spectre is a fairly outdated midranger that can be pretty much played identically to Raven. While its damage\npotential is a bit higher, both its mobility and uptime are worse.",
+      "is_ultimate": true
+    },
+    {
+      "build_name": "Ultimate",
+      "robot": "UE Fenrir",
+      "f2p_weapons": "Not recommended for F2P",
+      "best_weapons": "Any UE setups\nHarmattans\nMachiara+Basileus\nLumens\nKelvin+Fahrenheit",
+      "drone_options": "Showdown\nSeeker\nScales (with \nBernadette)",
+      "pilot": "Lisel and\nB4R0N3T\nBernadette\nWolff",
+      "specialization": "Brawler (Repair Amp +\nImmune Amp)\nPhase Shift or Adv. Repair",
+      "explanation": "UE Fenrir is an incredibly annoying to kill tank that can abuse Showdown's healing due to its grey resistance. It is\nunfortunately hard countered by rust and percentage damage, which can cripple it incredibly quickly.",
+      "is_ultimate": true
     }
   ],
   "robots": [
     {
       "name": "Harpy",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 30,
       "scores": {
         "longevity": 6.0,
@@ -888,7 +1183,7 @@
         "mobility": 5.0,
         "utility": 6.0,
         "accessibility": 6.0,
-        "overall": 30
+        "overall": 30.0
       },
       "roles": [
         {
@@ -903,6 +1198,16 @@
         },
         {
           "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
           "type": "primary",
           "footnote": ""
         }
@@ -911,7 +1216,7 @@
     },
     {
       "name": "Siren",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 34,
       "scores": {
         "longevity": 7.0,
@@ -919,7 +1224,7 @@
         "mobility": 5.0,
         "utility": 8.0,
         "accessibility": 7.0,
-        "overall": 34
+        "overall": 34.0
       },
       "roles": [
         {
@@ -936,13 +1241,23 @@
           "role": "Midrange",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Between the twin fliers, Siren's freeze and stronger reflector give it a notable edge in overall power. Equipped with lockdown unit, it can immobilize an entire team with its snowstorm."
     },
     {
       "name": "Typhon",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 4.0,
@@ -950,7 +1265,7 @@
         "mobility": 3.0,
         "utility": 6.0,
         "accessibility": 6.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
@@ -967,13 +1282,18 @@
           "role": "Midrange",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Typhon's access to mid-range support, availability in the super chest, and high damage make it a solid option. However, it is seriously outclassed by Pathfinder."
     },
     {
       "name": "Orochi",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 30,
       "scores": {
         "longevity": 6.0,
@@ -981,7 +1301,7 @@
         "mobility": 9.0,
         "utility": 3.0,
         "accessibility": 7.0,
-        "overall": 30
+        "overall": 30.0
       },
       "roles": [
         {
@@ -993,13 +1313,23 @@
           "role": "Assassin",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
         }
       ],
       "comments": "Orochi's multiple dashes with stealth are decent in a vacuum, but are also competing with Lynx and Raven."
     },
     {
       "name": "Demeter",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 36,
       "scores": {
         "longevity": 7.0,
@@ -1007,11 +1337,26 @@
         "mobility": 8.0,
         "utility": 8.0,
         "accessibility": 9.0,
-        "overall": 36
+        "overall": 36.0
       },
       "roles": [
         {
           "role": "Support",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "primary",
           "footnote": ""
         }
@@ -1020,7 +1365,7 @@
     },
     {
       "name": "Jaeger",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 20,
       "scores": {
         "longevity": 1.0,
@@ -1028,14 +1373,14 @@
         "mobility": 6.0,
         "utility": 2.0,
         "accessibility": 5.0,
-        "overall": 20
+        "overall": 20.0
       },
       "roles": [],
       "comments": "Jaeger is worse than Fury."
     },
     {
       "name": "Scorpion",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 30,
       "scores": {
         "longevity": 6.0,
@@ -1043,11 +1388,21 @@
         "mobility": 9.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 30
+        "overall": 30.0
       },
       "roles": [
         {
           "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
           "type": "primary",
           "footnote": ""
         }
@@ -1056,7 +1411,7 @@
     },
     {
       "name": "Erebus",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 27,
       "scores": {
         "longevity": 4.0,
@@ -1064,7 +1419,7 @@
         "mobility": 2.0,
         "utility": 7.0,
         "accessibility": 7.0,
-        "overall": 27
+        "overall": 27.0
       },
       "roles": [
         {
@@ -1081,13 +1436,23 @@
           "role": "Midrange",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Erebus, similarly to Typhon, has solid mid-range support and excellent damage."
     },
     {
       "name": "Fafnir",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 31,
       "scores": {
         "longevity": 7.0,
@@ -1095,7 +1460,7 @@
         "mobility": 5.0,
         "utility": 7.0,
         "accessibility": 5.0,
-        "overall": 31
+        "overall": 31.0
       },
       "roles": [
         {
@@ -1117,13 +1482,18 @@
           "role": "Brawler",
           "type": "secondary",
           "footnote": "*"
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "While half-reliance on defense points and half reliance on absorber to stay alive is unappealing, Fafnir's damage potential and webby synergy make up for it."
     },
     {
       "name": "Hawk",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 19,
       "scores": {
         "longevity": 2.0,
@@ -1131,14 +1501,14 @@
         "mobility": 3.0,
         "utility": 3.0,
         "accessibility": 4.0,
-        "overall": 19
+        "overall": 19.0
       },
       "roles": [],
       "comments": "Compared to the other aerial bots, Hawk lacks both damage and utility. The retraction of weapons during flight hurts it terribly, so it should fly as little as possible (only to escape bad positions) and play as Natasha Pro Max."
     },
     {
       "name": "Nightingale",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 31,
       "scores": {
         "longevity": 7.0,
@@ -1146,7 +1516,7 @@
         "mobility": 9.0,
         "utility": 7.0,
         "accessibility": 8.0,
-        "overall": 31
+        "overall": 31.0
       },
       "roles": [
         {
@@ -1163,13 +1533,23 @@
           "role": "Assassin",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "A true support, Nightingale provides long-lasting healing and protection via its suppression effect at the cost of any offensive capacity."
     },
     {
       "name": "Ravana",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 29,
       "scores": {
         "longevity": 8.0,
@@ -1177,7 +1557,7 @@
         "mobility": 8.0,
         "utility": 3.0,
         "accessibility": 6.0,
-        "overall": 29
+        "overall": 29.0
       },
       "roles": [
         {
@@ -1189,13 +1569,28 @@
           "role": "Assassin",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
         }
       ],
       "comments": "Ravana is accessible, threatening, and nearly impossible to kill when Transcendance is used properly."
     },
     {
       "name": "Shell",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 19,
       "scores": {
         "longevity": 4.0,
@@ -1203,7 +1598,7 @@
         "mobility": 7.0,
         "utility": 0.0,
         "accessibility": 4.0,
-        "overall": 19
+        "overall": 19.0
       },
       "roles": [
         {
@@ -1215,13 +1610,23 @@
           "role": "Beacon Runner",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
         }
       ],
       "comments": "Shell is a less accessible version of Hellburner that also runs the risk of charging opposing Nuclear Amplifiers."
     },
     {
       "name": "Khepri",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 31,
       "scores": {
         "longevity": 6.0,
@@ -1229,7 +1634,7 @@
         "mobility": 7.0,
         "utility": 7.0,
         "accessibility": 6.0,
-        "overall": 31
+        "overall": 31.0
       },
       "roles": [
         {
@@ -1246,13 +1651,28 @@
           "role": "Brawler",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
         }
       ],
       "comments": "Khepri has a solid mix of supporting and offensive capabilities, limited mainly by how modest both its base stats and its bonuses are individually."
     },
     {
       "name": "Revenant",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 22,
       "scores": {
         "longevity": 6.0,
@@ -1260,7 +1680,7 @@
         "mobility": 8.0,
         "utility": 1.0,
         "accessibility": 4.0,
-        "overall": 22
+        "overall": 22.0
       },
       "roles": [
         {
@@ -1272,13 +1692,18 @@
           "role": "Assassin",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Revenant's protection from grey damage necessitates tons of healing to make useful, which means lots of investment and a giant powercell burn rate. However, with Ricardo + Engine Expert, Revenant becomes extremely fast on top of already being able to teleport."
     },
     {
       "name": "Skyros",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 31,
       "scores": {
         "longevity": 9.0,
@@ -1286,7 +1711,7 @@
         "mobility": 10.0,
         "utility": 3.0,
         "accessibility": 9.0,
-        "overall": 31
+        "overall": 31.0
       },
       "roles": [
         {
@@ -1298,13 +1723,23 @@
           "role": "Assassin",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Skyros is an F2P beacon capturing machine, not even requiring a single upgrade or any equipment to work. It competes with Loki, whose stealth is sometimes superior to Skyros's resistances."
     },
     {
       "name": "Seraph",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 23,
       "scores": {
         "longevity": 1.0,
@@ -1312,14 +1747,14 @@
         "mobility": 9.0,
         "utility": 3.0,
         "accessibility": 4.0,
-        "overall": 23
+        "overall": 23.0
       },
       "roles": [],
       "comments": "Seraph technically has a niche via stellar air speed, but is otherwise unremarkable. It's alright for mindlessly clearing early PvE levels."
     },
     {
       "name": "Mars",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 20,
       "scores": {
         "longevity": 1.0,
@@ -1327,14 +1762,14 @@
         "mobility": 6.0,
         "utility": 3.0,
         "accessibility": 4.0,
-        "overall": 20
+        "overall": 20.0
       },
       "roles": [],
       "comments": "Mars is heavily reliant on its turret to differentiate itself, but the slow projectile speed and outright mediocre damage means it's unfortunately unreliable."
     },
     {
       "name": "Angler",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 27,
       "scores": {
         "longevity": 8.0,
@@ -1342,12 +1777,22 @@
         "mobility": 4.0,
         "utility": 5.0,
         "accessibility": 5.0,
-        "overall": 27
+        "overall": 27.0
       },
       "roles": [
         {
           "role": "Brawler",
           "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
           "footnote": ""
         }
       ],
@@ -1355,7 +1800,7 @@
     },
     {
       "name": "Nether",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 27,
       "scores": {
         "longevity": 1.0,
@@ -1363,12 +1808,22 @@
         "mobility": 10.0,
         "utility": 6.0,
         "accessibility": 4.0,
-        "overall": 27
+        "overall": 27.0
       },
       "roles": [
         {
           "role": "Beacon Runner",
           "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
           "footnote": ""
         }
       ],
@@ -1376,7 +1831,7 @@
     },
     {
       "name": "Imugi",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 40,
       "scores": {
         "longevity": 8.0,
@@ -1384,7 +1839,7 @@
         "mobility": 10.0,
         "utility": 9.0,
         "accessibility": 8.0,
-        "overall": 40
+        "overall": 40.0
       },
       "roles": [
         {
@@ -1416,13 +1871,28 @@
           "role": "Assassin",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "The cycle of stealth, healing, teleport+healing, repeat makes Imugi extremely powerful. With its availability in the workshop, it's one of the best F2P bots in the game."
     },
     {
       "name": "Lynx",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 33,
       "scores": {
         "longevity": 7.0,
@@ -1430,7 +1900,7 @@
         "mobility": 8.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 33
+        "overall": 33.0
       },
       "roles": [
         {
@@ -1447,13 +1917,28 @@
           "role": "Assassin",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Lynx's defensive tools in stealth and forcefield both don't care about level. That combined with the execute gun and high speed make Lynx a solid and accessible hit-and-run damage dealer."
     },
     {
       "name": "Crisis",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 29,
       "scores": {
         "longevity": 7.0,
@@ -1461,7 +1946,7 @@
         "mobility": 3.0,
         "utility": 2.0,
         "accessibility": 8.0,
-        "overall": 29
+        "overall": 29.0
       },
       "roles": [
         {
@@ -1478,13 +1963,23 @@
           "role": "Midrange",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Near permanent stealth and long-range camping make Crisis a fairly safe sniper, but also can make it a liability on short maps with clumped beacons."
     },
     {
       "name": "Ophion",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 27,
       "scores": {
         "longevity": 6.0,
@@ -1492,7 +1987,7 @@
         "mobility": 6.0,
         "utility": 2.0,
         "accessibility": 7.0,
-        "overall": 27
+        "overall": 27.0
       },
       "roles": [
         {
@@ -1504,13 +1999,18 @@
           "role": "Midrange",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Ophion's built-in-weapon has only 350m range, forcing you to play on a knife's edge with the absorber."
     },
     {
       "name": "Ochokochi",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 6.0,
@@ -1518,12 +2018,27 @@
         "mobility": 7.0,
         "utility": 4.0,
         "accessibility": 4.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
           "role": "Brawler",
           "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
           "footnote": ""
         }
       ],
@@ -1531,7 +2046,7 @@
     },
     {
       "name": "Dagon",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 23,
       "scores": {
         "longevity": 6.0,
@@ -1539,14 +2054,14 @@
         "mobility": 6.0,
         "utility": 3.0,
         "accessibility": 1.0,
-        "overall": 23
+        "overall": 23.0
       },
       "roles": [],
       "comments": "Dagon is moderately powerful but difficult to invest in, given its stat-check nature and 6 hardpoints."
     },
     {
       "name": "Curie",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 28,
       "scores": {
         "longevity": 6.0,
@@ -1554,7 +2069,7 @@
         "mobility": 6.0,
         "utility": 5.0,
         "accessibility": 5.0,
-        "overall": 28
+        "overall": 28.0
       },
       "roles": [
         {
@@ -1571,13 +2086,18 @@
           "role": "Brawler",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Curie's an all-around decent bot, but is short-ranged and thus a less reliable lockdown source than Typhon, Erebus, Siren, or Pathfinder."
     },
     {
       "name": "Shenlou",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 4.0,
@@ -1585,11 +2105,21 @@
         "mobility": 9.0,
         "utility": 3.0,
         "accessibility": 4.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
           "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
           "type": "primary",
           "footnote": ""
         }
@@ -1598,7 +2128,7 @@
     },
     {
       "name": "Pathfinder",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 44,
       "scores": {
         "longevity": 8.0,
@@ -1606,7 +2136,7 @@
         "mobility": 8.0,
         "utility": 10.0,
         "accessibility": 10.0,
-        "overall": 44
+        "overall": 44.0
       },
       "roles": [
         {
@@ -1633,13 +2163,28 @@
           "role": "Brawler",
           "type": "primary",
           "footnote": "**"
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
         }
       ],
       "comments": "Pathfinder's performance remains incredible across all investment levels; between speed boosts, damage boosts, lockdown, shieldbreak, healing, and more, it can truly do it all."
     },
     {
       "name": "Raptor",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 30,
       "scores": {
         "longevity": 7.0,
@@ -1647,7 +2192,7 @@
         "mobility": 8.0,
         "utility": 5.0,
         "accessibility": 5.0,
-        "overall": 30
+        "overall": 30.0
       },
       "roles": [
         {
@@ -1662,6 +2207,21 @@
         },
         {
           "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "secondary",
           "footnote": ""
         }
@@ -1670,7 +2230,7 @@
     },
     {
       "name": "Bagliore",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 29,
       "scores": {
         "longevity": 8.0,
@@ -1678,7 +2238,7 @@
         "mobility": 5.0,
         "utility": 2.0,
         "accessibility": 5.0,
-        "overall": 29
+        "overall": 29.0
       },
       "roles": [
         {
@@ -1700,13 +2260,28 @@
           "role": "Brawler",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Bagliore hits harder than Crisis, is bulkier, and has a teleport, but has no stealth, power stored in a MK3 upgrade, and no built-in shieldbreaker."
     },
     {
       "name": "Condor",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 22,
       "scores": {
         "longevity": 5.0,
@@ -1714,14 +2289,14 @@
         "mobility": 6.0,
         "utility": 0.0,
         "accessibility": 5.0,
-        "overall": 22
+        "overall": 22.0
       },
       "roles": [],
       "comments": "Condor's a mediore statchecker with no notable traits that'd make it worth investing into."
     },
     {
       "name": "Dux",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 36,
       "scores": {
         "longevity": 7.0,
@@ -1729,7 +2304,7 @@
         "mobility": 6.0,
         "utility": 7.0,
         "accessibility": 8.0,
-        "overall": 36
+        "overall": 36.0
       },
       "roles": [
         {
@@ -1746,13 +2321,23 @@
           "role": "Midrange",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Dux has high damage output and decent survivability, making it a solid tank-buster similar to Lynx. It can also wield Webby, further enhancing its ability to tank bust."
     },
     {
       "name": "Ravager",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 27,
       "scores": {
         "longevity": 8.0,
@@ -1760,7 +2345,7 @@
         "mobility": 3.0,
         "utility": 2.0,
         "accessibility": 6.0,
-        "overall": 27
+        "overall": 27.0
       },
       "roles": [
         {
@@ -1785,6 +2370,21 @@
         },
         {
           "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "secondary",
           "footnote": ""
         }
@@ -1793,7 +2393,7 @@
     },
     {
       "name": "Samjok",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 33,
       "scores": {
         "longevity": 6.0,
@@ -1801,7 +2401,7 @@
         "mobility": 8.0,
         "utility": 7.0,
         "accessibility": 8.0,
-        "overall": 33
+        "overall": 33.0
       },
       "roles": [
         {
@@ -1823,13 +2423,23 @@
           "role": "Assassin",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Samjok is easier to take down between phases compared to ravana. The turret is still deadly, even post nerf, though phase uptime is severely limited."
     },
     {
       "name": "Nuo",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 39,
       "scores": {
         "longevity": 6.0,
@@ -1837,7 +2447,7 @@
         "mobility": 10.0,
         "utility": 9.0,
         "accessibility": 6.0,
-        "overall": 39
+        "overall": 39.0
       },
       "roles": [
         {
@@ -1857,6 +2467,16 @@
         },
         {
           "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "primary",
           "footnote": ""
         }
@@ -1865,7 +2485,7 @@
     },
     {
       "name": "Lio",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 34,
       "scores": {
         "longevity": 7.0,
@@ -1873,7 +2493,7 @@
         "mobility": 6.0,
         "utility": 9.0,
         "accessibility": 6.0,
-        "overall": 34
+        "overall": 34.0
       },
       "roles": [
         {
@@ -1883,6 +2503,11 @@
         },
         {
           "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
           "type": "primary",
           "footnote": ""
         }
@@ -1891,7 +2516,7 @@
     },
     {
       "name": "Sword Unit",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 32,
       "scores": {
         "longevity": 5.0,
@@ -1899,7 +2524,7 @@
         "mobility": 5.0,
         "utility": 4.0,
         "accessibility": 10.0,
-        "overall": 32
+        "overall": 32.0
       },
       "roles": [
         {
@@ -1909,6 +2534,11 @@
         },
         {
           "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
           "type": "primary",
           "footnote": ""
         }
@@ -1917,7 +2547,7 @@
     },
     {
       "name": "Teth",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 8.0,
@@ -1925,11 +2555,16 @@
         "mobility": 6.0,
         "utility": 4.0,
         "accessibility": 2.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
           "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
           "type": "primary",
           "footnote": ""
         }
@@ -1938,7 +2573,7 @@
     },
     {
       "name": "Stryx",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 20,
       "scores": {
         "longevity": 4.0,
@@ -1946,7 +2581,7 @@
         "mobility": 2.0,
         "utility": 2.0,
         "accessibility": 3.0,
-        "overall": 20
+        "overall": 20.0
       },
       "roles": [
         {
@@ -1963,13 +2598,23 @@
           "role": "Midrange",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Stryx has incredibly high fire power. However, 5 hard points make it difficult to invest in."
     },
     {
       "name": "Kaji",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 31,
       "scores": {
         "longevity": 6.0,
@@ -1977,7 +2622,7 @@
         "mobility": 5.0,
         "utility": 7.0,
         "accessibility": 6.0,
-        "overall": 31
+        "overall": 31.0
       },
       "roles": [
         {
@@ -1999,13 +2644,28 @@
           "role": "Beacon Runner",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Kaji is a strategic minelayer with the potential to tear high health & slower enemies apart. It doesn't rely on its weapons much, having high damage potential with the mines alone in most cases."
     },
     {
       "name": "Rex",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 25,
       "scores": {
         "longevity": 7.0,
@@ -2013,7 +2673,7 @@
         "mobility": 7.0,
         "utility": 2.0,
         "accessibility": 2.0,
-        "overall": 25
+        "overall": 25.0
       },
       "roles": [
         {
@@ -2033,6 +2693,21 @@
         },
         {
           "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "primary",
           "footnote": ""
         }
@@ -2041,7 +2716,7 @@
     },
     {
       "name": "Hastatus",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 7.0,
@@ -2049,7 +2724,7 @@
         "mobility": 3.0,
         "utility": 3.0,
         "accessibility": 5.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
@@ -2059,6 +2734,11 @@
         },
         {
           "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
           "type": "primary",
           "footnote": ""
         }
@@ -2067,7 +2747,7 @@
     },
     {
       "name": "Ammit",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 10.0,
@@ -2075,7 +2755,7 @@
         "mobility": 2.0,
         "utility": 6.0,
         "accessibility": 3.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
@@ -2085,6 +2765,21 @@
         },
         {
           "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "primary",
           "footnote": ""
         }
@@ -2093,7 +2788,7 @@
     },
     {
       "name": "Anaksor",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 34,
       "scores": {
         "longevity": 7.0,
@@ -2101,7 +2796,7 @@
         "mobility": 9.0,
         "utility": 7.0,
         "accessibility": 3.0,
-        "overall": 34
+        "overall": 34.0
       },
       "roles": [
         {
@@ -2126,6 +2821,21 @@
         },
         {
           "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "secondary",
           "footnote": ""
         }
@@ -2134,7 +2844,7 @@
     },
     {
       "name": "Vector",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 28,
       "scores": {
         "longevity": 8.0,
@@ -2142,7 +2852,7 @@
         "mobility": 8.0,
         "utility": 6.0,
         "accessibility": 0.0,
-        "overall": 28
+        "overall": 28.0
       },
       "roles": [
         {
@@ -2159,13 +2869,28 @@
           "role": "Assassin",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Vector is a modern cross between an Ochokochi and a Raptor: It has immense survivability, crowd control that can toss enemies out of bounds, and map-crossing speed. Unfortunately, like most new brawlers, it requires mk3 at minimum for maximum impact."
     },
     {
       "name": "Shoggoth",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 31,
       "scores": {
         "longevity": 6.0,
@@ -2173,7 +2898,7 @@
         "mobility": 4.0,
         "utility": 10.0,
         "accessibility": 1.0,
-        "overall": 31
+        "overall": 31.0
       },
       "roles": [
         {
@@ -2195,13 +2920,28 @@
           "role": "Midrange",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
         }
       ],
       "comments": "It was hard to believe that pixonic would powercreep Pathfinder, but you truly can't underestimate their motives to add the most unhealthy robots to the game as possible. Shoggoth is an unholy abomination child between mother Pathfinder and father Bagliore."
     },
     {
       "name": "Vulcan",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 9.0,
@@ -2209,7 +2949,7 @@
         "mobility": 4.0,
         "utility": 4.0,
         "accessibility": 0.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
@@ -2231,13 +2971,28 @@
           "role": "Brawler",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Vulcan is the next generation of damage dealers, quite literally a walking Nuclear Amplifier: effortless to scale up, incredibly lethal, strong defensive capabilities for a non-brawling robot, and haunting strength if you obtain its special edition variant and equip Webby..."
     },
     {
       "name": "Omen Vulcan",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 31,
       "scores": {
         "longevity": 9.0,
@@ -2245,7 +3000,7 @@
         "mobility": 4.0,
         "utility": 9.0,
         "accessibility": 0.0,
-        "overall": 31
+        "overall": 31.0
       },
       "roles": [
         {
@@ -2272,13 +3027,28 @@
           "role": "Brawler",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Vulcan is a one of a kind robot that requires two seperate entries in order to reveal its actual value; the Special Edition Vulcan causes Webby to apply 100% rust permanently against any targets you aim at. Exceedingly lethal to use against brawler/healing reliant titans."
     },
     {
       "name": "Fang",
-      "sheet": "Tier 4",
+      "sheet": "Tier 4 Robots",
       "value_rating": 34,
       "scores": {
         "longevity": 7.0,
@@ -2286,7 +3056,7 @@
         "mobility": 10.0,
         "utility": 9.0,
         "accessibility": 1.0,
-        "overall": 34
+        "overall": 34.0
       },
       "roles": [
         {
@@ -2313,13 +3083,28 @@
           "role": "Assassin",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Fang is a potent assassin that single handedly dismantles Vectors and other brawlers alike. Rusts and EMPs through walls, can hit multiple targets at the same time, as is now the fastest robot in the game."
     },
     {
       "name": "Fury",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 21,
       "scores": {
         "longevity": 0.0,
@@ -2327,7 +3112,7 @@
         "mobility": 2.0,
         "utility": 3.0,
         "accessibility": 9.0,
-        "overall": 21
+        "overall": 21.0
       },
       "roles": [
         {
@@ -2337,6 +3122,11 @@
         },
         {
           "role": "Midrange",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
           "type": "secondary",
           "footnote": ""
         }
@@ -2345,7 +3135,7 @@
     },
     {
       "name": "Strider",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 22,
       "scores": {
         "longevity": 0.0,
@@ -2353,14 +3143,14 @@
         "mobility": 10.0,
         "utility": 3.0,
         "accessibility": 6.0,
-        "overall": 22
+        "overall": 22.0
       },
       "roles": [],
       "comments": "Strider has some potential with the legendary pilot, but it is too outclassed by Nether."
     },
     {
       "name": "Raven",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 34,
       "scores": {
         "longevity": 6.0,
@@ -2368,7 +3158,7 @@
         "mobility": 10.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 34
+        "overall": 34.0
       },
       "roles": [
         {
@@ -2390,13 +3180,23 @@
           "role": "Assassin",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Raven is the gold standard for offensive F2P bots, staying viable all the way up in champion league via its legendary pilot."
     },
     {
       "name": "Rayker",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 27,
       "scores": {
         "longevity": 4.0,
@@ -2404,7 +3204,7 @@
         "mobility": 4.0,
         "utility": 4.0,
         "accessibility": 8.0,
-        "overall": 27
+        "overall": 27.0
       },
       "roles": [
         {
@@ -2416,13 +3216,18 @@
           "role": "Midrange",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
         }
       ],
       "comments": "Rayker's long-range support ability makes it a tenable contributor to a team, even with no investment."
     },
     {
       "name": "Ao Guang",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 23,
       "scores": {
         "longevity": 5.0,
@@ -2430,14 +3235,14 @@
         "mobility": 4.0,
         "utility": 3.0,
         "accessibility": 5.0,
-        "overall": 23
+        "overall": 23.0
       },
       "roles": [],
       "comments": "Ao Guang is mediocre in the air and terrible outside of it."
     },
     {
       "name": "Bulgasari",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 23,
       "scores": {
         "longevity": 4.0,
@@ -2445,14 +3250,14 @@
         "mobility": 7.0,
         "utility": 3.0,
         "accessibility": 5.0,
-        "overall": 23
+        "overall": 23.0
       },
       "roles": [],
       "comments": "Bulgasari is mediocre to bad across the board, and really needs its legendary pilot to function at all."
     },
     {
       "name": "Hellburner",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 6.0,
@@ -2460,7 +3265,7 @@
         "mobility": 7.0,
         "utility": 3.0,
         "accessibility": 6.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
@@ -2476,6 +3281,16 @@
         {
           "role": "Assassin",
           "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
           "footnote": ""
         }
       ],
@@ -2483,7 +3298,7 @@
     },
     {
       "name": "Cerberus",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 27,
       "scores": {
         "longevity": 3.0,
@@ -2491,14 +3306,14 @@
         "mobility": 4.0,
         "utility": 5.0,
         "accessibility": 8.0,
-        "overall": 27
+        "overall": 27.0
       },
       "roles": [],
       "comments": "Cerberus's utility via Blackout is seriously limited by its low range and lack of an EMP."
     },
     {
       "name": "Haechi",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 24,
       "scores": {
         "longevity": 1.0,
@@ -2506,14 +3321,14 @@
         "mobility": 8.0,
         "utility": 3.0,
         "accessibility": 6.0,
-        "overall": 24
+        "overall": 24.0
       },
       "roles": [],
       "comments": "Haechi is similar to Bulgasari, but also lacks a decent pilot."
     },
     {
       "name": "Inquisitor",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 28,
       "scores": {
         "longevity": 6.0,
@@ -2521,12 +3336,17 @@
         "mobility": 6.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 28
+        "overall": 28.0
       },
       "roles": [
         {
           "role": "Midrange",
           "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
           "footnote": ""
         }
       ],
@@ -2534,7 +3354,7 @@
     },
     {
       "name": "Falcon",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 24,
       "scores": {
         "longevity": 9.0,
@@ -2542,20 +3362,25 @@
         "mobility": 3.0,
         "utility": 2.0,
         "accessibility": 9.0,
-        "overall": 24
+        "overall": 24.0
       },
       "roles": [
         {
           "role": "Brawler",
           "type": "primary",
           "footnote": "*"
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "T-falcon is very cheap and tanky, but not nearly as good as modern brawlers. Regular Falcon isn't worth playing."
     },
     {
       "name": "Pursuer",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 5.0,
@@ -2563,7 +3388,7 @@
         "mobility": 8.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
@@ -2573,6 +3398,11 @@
         },
         {
           "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "primary",
           "footnote": ""
         }
@@ -2581,7 +3411,7 @@
     },
     {
       "name": "Spectre",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 29,
       "scores": {
         "longevity": 5.0,
@@ -2589,12 +3419,17 @@
         "mobility": 6.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 29
+        "overall": 29.0
       },
       "roles": [
         {
           "role": "Midrange",
           "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
           "footnote": ""
         }
       ],
@@ -2602,7 +3437,7 @@
     },
     {
       "name": "Mercury",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 6.0,
@@ -2610,14 +3445,14 @@
         "mobility": 6.0,
         "utility": 3.0,
         "accessibility": 6.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [],
       "comments": "Mercury is a sidegrade to Inquisitor, trading hardpoint strength for a better ability."
     },
     {
       "name": "Nemesis",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 24,
       "scores": {
         "longevity": 7.0,
@@ -2625,14 +3460,14 @@
         "mobility": 3.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 24
+        "overall": 24.0
       },
       "roles": [],
       "comments": "Nemesis sacrifices too much firepower and speed for its absorber shield."
     },
     {
       "name": "Weyland",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 26,
       "scores": {
         "longevity": 7.0,
@@ -2640,14 +3475,14 @@
         "mobility": 3.0,
         "utility": 6.0,
         "accessibility": 7.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [],
       "comments": "Weyland is a relatively slow close-range support-tank hybrid, necessitating heavy investment for not questionable return."
     },
     {
       "name": "Behemoth",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 20,
       "scores": {
         "longevity": 4.0,
@@ -2655,14 +3490,14 @@
         "mobility": 0.0,
         "utility": 2.0,
         "accessibility": 6.0,
-        "overall": 20
+        "overall": 20.0
       },
       "roles": [],
       "comments": "Behemoth's worse than Bagliore in basically every way. Even Fury has a niche over it with its shieldbreaker."
     },
     {
       "name": "Bulwark",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 16,
       "scores": {
         "longevity": 4.0,
@@ -2670,14 +3505,14 @@
         "mobility": 2.0,
         "utility": 2.0,
         "accessibility": 5.0,
-        "overall": 16
+        "overall": 16.0
       },
       "roles": [],
       "comments": "Bulwark is a statcheck machine that loses to other statcheck machines."
     },
     {
       "name": "Invader",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 22,
       "scores": {
         "longevity": 5.0,
@@ -2685,14 +3520,14 @@
         "mobility": 4.0,
         "utility": 4.0,
         "accessibility": 6.0,
-        "overall": 22
+        "overall": 22.0
       },
       "roles": [],
       "comments": "Invader's biggest issue is that as a statchecking tank, you'll need to upgrade it tremendously before it will have enough durability to do its job."
     },
     {
       "name": "Mender",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 32,
       "scores": {
         "longevity": 7.0,
@@ -2700,7 +3535,7 @@
         "mobility": 7.0,
         "utility": 7.0,
         "accessibility": 8.0,
-        "overall": 32
+        "overall": 32.0
       },
       "roles": [
         {
@@ -2712,13 +3547,18 @@
           "role": "Brawler",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Mender is a more mobile version of Weyland that has the ability to heal a minor amount of grey damage through its legendary pilot."
     },
     {
       "name": "Loki",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 31,
       "scores": {
         "longevity": 8.0,
@@ -2726,7 +3566,7 @@
         "mobility": 10.0,
         "utility": 3.0,
         "accessibility": 10.0,
-        "overall": 31
+        "overall": 31.0
       },
       "roles": [
         {
@@ -2736,6 +3576,16 @@
         },
         {
           "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
           "type": "primary",
           "footnote": ""
         }
@@ -2744,7 +3594,7 @@
     },
     {
       "name": "Tyr",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 25,
       "scores": {
         "longevity": 4.0,
@@ -2752,14 +3602,14 @@
         "mobility": 4.0,
         "utility": 6.0,
         "accessibility": 6.0,
-        "overall": 25
+        "overall": 25.0
       },
       "roles": [],
       "comments": "Tyr's an unimpressive middle ground between Weyland's bulk and Mender's speed."
     },
     {
       "name": "Blitz",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 29,
       "scores": {
         "longevity": 7.0,
@@ -2767,7 +3617,7 @@
         "mobility": 7.0,
         "utility": 4.0,
         "accessibility": 6.0,
-        "overall": 29
+        "overall": 29.0
       },
       "roles": [
         {
@@ -2784,13 +3634,18 @@
           "role": "Assassin",
           "type": "primary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Blitz plays a lot like Hellburner, but has the added bonuses of a longer ability and access to suppression."
     },
     {
       "name": "Fenrir",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 24,
       "scores": {
         "longevity": 8.0,
@@ -2798,14 +3653,14 @@
         "mobility": 1.0,
         "utility": 2.0,
         "accessibility": 8.0,
-        "overall": 24
+        "overall": 24.0
       },
       "roles": [],
       "comments": "Fenrir is a strange case. It's given for free and can use midrange weapons somewhat well, but reaching Fenrir's maximum potential as a closerange statchecker requires tons of investment."
     },
     {
       "name": "Hades",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 25,
       "scores": {
         "longevity": 5.0,
@@ -2813,14 +3668,14 @@
         "mobility": 3.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 25
+        "overall": 25.0
       },
       "roles": [],
       "comments": "Hades is better than Nemesis, but is still plainly outclassed by other absorber bots."
     },
     {
       "name": "Ao Jun",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 28,
       "scores": {
         "longevity": 5.0,
@@ -2828,14 +3683,14 @@
         "mobility": 6.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 28
+        "overall": 28.0
       },
       "roles": [],
       "comments": "Ao Jun is frail and requires getting extremely close in order to use its flamethrowers, making it too risky for not much reward. Its long cooldown and generally short lived playstyle makes it extremely clunky to use, especially in comparison to other flying bots."
     },
     {
       "name": "Ares",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 27,
       "scores": {
         "longevity": 5.0,
@@ -2843,12 +3698,17 @@
         "mobility": 4.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 27
+        "overall": 27.0
       },
       "roles": [
         {
           "role": "Midrange",
           "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
           "footnote": ""
         }
       ],
@@ -2856,7 +3716,7 @@
     },
     {
       "name": "Leech",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 32,
       "scores": {
         "longevity": 7.0,
@@ -2864,7 +3724,7 @@
         "mobility": 7.0,
         "utility": 3.0,
         "accessibility": 8.0,
-        "overall": 32
+        "overall": 32.0
       },
       "roles": [
         {
@@ -2876,13 +3736,18 @@
           "role": "Assassin",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Leech is a huge threat on the battlefield with proper positioning and timing of its ability. After its shift from T4 to T3, it's also extremely accessible."
     },
     {
       "name": "Phantom",
-      "sheet": "Tier 3",
+      "sheet": "Tier 3 Robots",
       "value_rating": 25,
       "scores": {
         "longevity": 5.0,
@@ -2890,7 +3755,7 @@
         "mobility": 8.0,
         "utility": 3.0,
         "accessibility": 6.0,
-        "overall": 25
+        "overall": 25.0
       },
       "roles": [
         {
@@ -2907,56 +3772,1195 @@
           "role": "Assassin",
           "type": "secondary",
           "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
         }
       ],
       "comments": "Phantom is essentially a Loki with brawling tendencies. Few bots are both as fast and tanky as it is; though it pays for it in the firepower department."
+    },
+    {
+      "name": "UE Ao Jun",
+      "sheet": "Ultimate Robots",
+      "value_rating": 22,
+      "scores": {
+        "longevity": 7.0,
+        "lethality": 6.0,
+        "mobility": 7.0,
+        "utility": 2.0,
+        "accessibility": 0.0,
+        "overall": 22.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Ao Jun is one of the weaker UE bots in the game, though if you manage to get your hands on one, it is nonetheless a competent raider."
+    },
+    {
+      "name": "UE Ares",
+      "sheet": "Ultimate Robots",
+      "value_rating": 22,
+      "scores": {
+        "longevity": 6.0,
+        "lethality": 8.0,
+        "mobility": 5.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 22.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Sniper",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Ares is a fairly old UE and it shows, though it still holds up as an acceptable damage dealer if you manage to obtain it."
+    },
+    {
+      "name": "UE Blitz",
+      "sheet": "Ultimate Robots",
+      "value_rating": 28,
+      "scores": {
+        "longevity": 9.0,
+        "lethality": 6.0,
+        "mobility": 9.0,
+        "utility": 4.0,
+        "accessibility": 0.0,
+        "overall": 28.0
+      },
+      "roles": [
+        {
+          "role": "Support",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Blitz is an exceptionally fast saboteur with some added utility in the form of suppression that can aid it in making aggressive plays."
+    },
+    {
+      "name": "UE Bulgasari",
+      "sheet": "Ultimate Robots",
+      "value_rating": 23,
+      "scores": {
+        "longevity": 6.0,
+        "lethality": 4.0,
+        "mobility": 10.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 23.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Bulgasari is incredibly mobile, though it isn't particularly bulky nor capable of particularly high damage. If you can make use of the unbreakable shield, you can be really annoying to enemies without splash."
+    },
+    {
+      "name": "UE Destrier",
+      "sheet": "Ultimate Robots",
+      "value_rating": 17,
+      "scores": {
+        "longevity": 2.0,
+        "lethality": 5.0,
+        "mobility": 7.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 17.0
+      },
+      "roles": [
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Destrier was given for free on anniversary, and as well all know, in War Robots, you get what you (don't) pay for."
+    },
+    {
+      "name": "UE Fenrir",
+      "sheet": "Ultimate Robots",
+      "value_rating": 18,
+      "scores": {
+        "longevity": 10.0,
+        "lethality": 5.0,
+        "mobility": 1.0,
+        "utility": 2.0,
+        "accessibility": 0.0,
+        "overall": 18.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Fenrir is incredibly tanky but practically immobile and offers no utility."
+    },
+    {
+      "name": "UE Fujin",
+      "sheet": "Ultimate Robots",
+      "value_rating": 15,
+      "scores": {
+        "longevity": 6.0,
+        "lethality": 5.0,
+        "mobility": 1.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 15.0
+      },
+      "roles": [
+        {
+          "role": "Sniper",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Fuijin is a victim of its own specialization: For some reason it was given Brawler rather than Damage Dealer, which isn't particularly helpful for a low HP bot that relies on its shield."
+    },
+    {
+      "name": "UE Griffin",
+      "sheet": "Ultimate Robots",
+      "value_rating": 26,
+      "scores": {
+        "longevity": 6.0,
+        "lethality": 5.0,
+        "mobility": 10.0,
+        "utility": 5.0,
+        "accessibility": 0.0,
+        "overall": 26.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Griffin can apply blind to a lot of enemies at once, which is annoying, but it doesn't last all too long. During the cooldown of blind, Griffin is left with little to defend itself with."
+    },
+    {
+      "name": "UE Haechi",
+      "sheet": "Ultimate Robots",
+      "value_rating": 28,
+      "scores": {
+        "longevity": 8.0,
+        "lethality": 7.0,
+        "mobility": 10.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 28.0
+      },
+      "roles": [
+        {
+          "role": "Support",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Sniper",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Haechi is notoriously difficult to kill without shieldbreaker, as it can have incredibly high uptime on its flexible absorber charges."
+    },
+    {
+      "name": "UE Hawk",
+      "sheet": "Ultimate Robots",
+      "value_rating": 25,
+      "scores": {
+        "longevity": 7.0,
+        "lethality": 8.0,
+        "mobility": 8.0,
+        "utility": 2.0,
+        "accessibility": 0.0,
+        "overall": 25.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Hawk suffers from chip damage, though unlike normal Hawk, its firepower is dangerous both in air and on the ground."
+    },
+    {
+      "name": "UE Invader",
+      "sheet": "Ultimate Robots",
+      "value_rating": 18,
+      "scores": {
+        "longevity": 6.0,
+        "lethality": 4.0,
+        "mobility": 4.0,
+        "utility": 4.0,
+        "accessibility": 0.0,
+        "overall": 18.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Invader is a poor tank, not just by UE standards, but also by regular bot standards. It lacks any the protection systems required to properly brawl with meta tanks."
+    },
+    {
+      "name": "UE Lancelot",
+      "sheet": "Ultimate Robots",
+      "value_rating": 22,
+      "scores": {
+        "longevity": 9.0,
+        "lethality": 6.0,
+        "mobility": 7.0,
+        "utility": 0.0,
+        "accessibility": 0.0,
+        "overall": 22.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Lancelot unfortunately is a nuclear amplifier charger, but that is really its only big weakness. It is both mobile, tanky, and posesses plenty of self sustaining grey repair."
+    },
+    {
+      "name": "UE Leech",
+      "sheet": "Ultimate Robots",
+      "value_rating": 24,
+      "scores": {
+        "longevity": 7.0,
+        "lethality": 7.0,
+        "mobility": 7.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 24.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Leech is not a significant upgrade over normal Leech, but normal Leech is pretty good, so UE Leech is pretty good too."
+    },
+    {
+      "name": "UE Leo",
+      "sheet": "Ultimate Robots",
+      "value_rating": 22,
+      "scores": {
+        "longevity": 8.0,
+        "lethality": 9.0,
+        "mobility": 3.0,
+        "utility": 2.0,
+        "accessibility": 0.0,
+        "overall": 22.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Sniper",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Leo is a Bagliore-esque Brawler/Damage Dealer hybrid, ditching the fancy tricks of traditional damage dealers for a fairly high health pool and reflector. It also has easy access to both QS (pilot) and SB (Hawkeye) allowing it to counter many bots at once."
+    },
+    {
+      "name": "UE Mender",
+      "sheet": "Ultimate Robots",
+      "value_rating": 24,
+      "scores": {
+        "longevity": 7.0,
+        "lethality": 3.0,
+        "mobility": 7.0,
+        "utility": 7.0,
+        "accessibility": 0.0,
+        "overall": 24.0
+      },
+      "roles": [
+        {
+          "role": "Support",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Mender is held back by its awful firepower. Nonetheless, it is moderately tanky and fairly fast, plus it can grey heal teammates."
+    },
+    {
+      "name": "UE Phantom",
+      "sheet": "Ultimate Robots",
+      "value_rating": 23,
+      "scores": {
+        "longevity": 7.0,
+        "lethality": 4.0,
+        "mobility": 9.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 23.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Phantom is incredibly fast and fairly tanky, plus its firepower isn't nearly as bad as normal Phantom. Still, it is susceptable to being bursted down, especially when outside of ability."
+    },
+    {
+      "name": "UE Ravana",
+      "sheet": "Ultimate Robots",
+      "value_rating": 26,
+      "scores": {
+        "longevity": 10.0,
+        "lethality": 4.0,
+        "mobility": 9.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 26.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Ravana leans into all the things that made the original Ravana good and improves on them, making for a very powerful ultimate brawler."
+    },
+    {
+      "name": "UE Raven",
+      "sheet": "Ultimate Robots",
+      "value_rating": 30,
+      "scores": {
+        "longevity": 10.0,
+        "lethality": 8.0,
+        "mobility": 10.0,
+        "utility": 2.0,
+        "accessibility": 0.0,
+        "overall": 30.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Sniper",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Raven is completely broken, able to stack stealth, stasis barrier, and incredible grey healing from Scourveil into one dangerous, high firepower package."
+    },
+    {
+      "name": "UE Rayker",
+      "sheet": "Ultimate Robots",
+      "value_rating": 24,
+      "scores": {
+        "longevity": 8.0,
+        "lethality": 8.0,
+        "mobility": 4.0,
+        "utility": 4.0,
+        "accessibility": 0.0,
+        "overall": 24.0
+      },
+      "roles": [
+        {
+          "role": "Support",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": "**"
+        },
+        {
+          "role": "Assassin",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Rayker is like a Pathfinder without the Hunter Marks... which is, fine, I guess? Hunter is what makes Pathfinder so OP, but everything else about Pathfinder is also OP, so Rayker is pretty good. Plus, it can execute!"
+    },
+    {
+      "name": "UE Revenant",
+      "sheet": "Ultimate Robots",
+      "value_rating": 23,
+      "scores": {
+        "longevity": 10.0,
+        "lethality": 3.0,
+        "mobility": 9.0,
+        "utility": 1.0,
+        "accessibility": 0.0,
+        "overall": 23.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Revenant is an incredibly powerful self sustaining brawler with two unbreakable shields and a long distance teleport. Ricardo makes UE Revenant incredibly mobile when used with Engine Expert, though Revenant gives up a lot of firepower for its tankieness."
+    },
+    {
+      "name": "UE Rhino",
+      "sheet": "Ultimate Robots",
+      "value_rating": 24,
+      "scores": {
+        "longevity": 10.0,
+        "lethality": 2.0,
+        "mobility": 10.0,
+        "utility": 2.0,
+        "accessibility": 0.0,
+        "overall": 24.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Rhino is potentially the tankiest bot in the game, becoming virtually unkillable while in ability. Unfortunately, it gives up on a lot of firepower to accomplish this."
+    },
+    {
+      "name": "UE Sword Unit",
+      "sheet": "Ultimate Robots",
+      "value_rating": 22,
+      "scores": {
+        "longevity": 6.0,
+        "lethality": 9.0,
+        "mobility": 5.0,
+        "utility": 2.0,
+        "accessibility": 0.0,
+        "overall": 22.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Sword has massive damage potential with its sword, assuming you can fool an enemy into charging you up. Aside from that, it is not all too different from regular sword."
+    },
+    {
+      "name": "UE Scorpion",
+      "sheet": "Ultimate Robots",
+      "value_rating": 24,
+      "scores": {
+        "longevity": 7.0,
+        "lethality": 5.0,
+        "mobility": 9.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 24.0
+      },
+      "roles": [
+        {
+          "role": "Brawler",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Assassin",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Scorpion is a cross between a saboteur and a brawler, able to get in, bite the ankles of something way out of its weight class, and then get out just as fast."
+    },
+    {
+      "name": "UE Spectre",
+      "sheet": "Ultimate Robots",
+      "value_rating": 22,
+      "scores": {
+        "longevity": 5.0,
+        "lethality": 8.0,
+        "mobility": 6.0,
+        "utility": 3.0,
+        "accessibility": 0.0,
+        "overall": 22.0
+      },
+      "roles": [
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Sniper",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Spectre is a sidegrade to regular edition raven, having better firepower but worse everything else."
+    },
+    {
+      "name": "UE Typhon",
+      "sheet": "Ultimate Robots",
+      "value_rating": 26,
+      "scores": {
+        "longevity": 6.0,
+        "lethality": 8.0,
+        "mobility": 6.0,
+        "utility": 6.0,
+        "accessibility": 0.0,
+        "overall": 26.0
+      },
+      "roles": [
+        {
+          "role": "Support",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Tank-buster",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Opener",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midgame",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Endgame",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "UE Typhon's blackout and firepower make it insanely dangerous, though it is fairly frail and its long cooldown leaves it open to be punished if it makes a mistake."
     }
   ],
   "titans": [
     {
       "name": "Kid",
-      "value_rating": 15,
+      "sheet": "All Titans",
+      "value_rating": 14,
       "scores": {
         "longevity": 1.0,
         "lethality": 0.0,
-        "mobility": 2.0,
+        "mobility": 1.0,
         "utility": 2.0,
         "accessibility": 10.0,
-        "overall": 15
+        "overall": 14.0
       },
       "roles": [],
       "comments": "Kid is given for free. It's only worth using until you get any other titan to replace it with."
     },
     {
       "name": "Arthur",
+      "sheet": "All Titans",
       "value_rating": 12,
       "scores": {
         "longevity": 1.0,
-        "lethality": 1.0,
-        "mobility": 1.0,
+        "lethality": 2.0,
+        "mobility": 0.0,
         "utility": 1.0,
         "accessibility": 8.0,
-        "overall": 12
+        "overall": 12.0
       },
       "roles": [],
       "comments": "T2 titans are not worth wasting platinum on. Their lack of specializations neuters their stats."
     },
     {
       "name": "Ao Ming",
-      "value_rating": 15,
+      "sheet": "All Titans",
+      "value_rating": 19,
       "scores": {
         "longevity": 0.0,
-        "lethality": 1.0,
-        "mobility": 4.0,
+        "lethality": 4.0,
+        "mobility": 5.0,
         "utility": 2.0,
         "accessibility": 8.0,
-        "overall": 15
+        "overall": 19.0
       },
       "roles": [],
       "comments": "T2 titans are not worth wasting platinum on. Their lack of specializations neuters their stats."
     },
     {
       "name": "Nodens",
+      "sheet": "All Titans",
       "value_rating": 29,
       "scores": {
         "longevity": 5.0,
@@ -2964,7 +4968,7 @@
         "mobility": 3.0,
         "utility": 7.0,
         "accessibility": 8.0,
-        "overall": 29
+        "overall": 29.0
       },
       "roles": [
         {
@@ -2997,14 +5001,15 @@
     },
     {
       "name": "Minos",
-      "value_rating": 30,
+      "sheet": "All Titans",
+      "value_rating": 29,
       "scores": {
         "longevity": 8.0,
-        "lethality": 3.0,
+        "lethality": 2.0,
         "mobility": 8.0,
         "utility": 4.0,
         "accessibility": 7.0,
-        "overall": 30
+        "overall": 29.0
       },
       "roles": [
         {
@@ -3032,6 +5037,7 @@
     },
     {
       "name": "Sharanga",
+      "sheet": "All Titans",
       "value_rating": 23,
       "scores": {
         "longevity": 3.0,
@@ -3039,7 +5045,7 @@
         "mobility": 2.0,
         "utility": 4.0,
         "accessibility": 7.0,
-        "overall": 23
+        "overall": 23.0
       },
       "roles": [
         {
@@ -3062,6 +5068,7 @@
     },
     {
       "name": "Murometz",
+      "sheet": "All Titans",
       "value_rating": 30,
       "scores": {
         "longevity": 5.0,
@@ -3069,7 +5076,7 @@
         "mobility": 5.0,
         "utility": 6.0,
         "accessibility": 7.0,
-        "overall": 30
+        "overall": 30.0
       },
       "roles": [
         {
@@ -3092,14 +5099,15 @@
     },
     {
       "name": "Luchador",
+      "sheet": "All Titans",
       "value_rating": 19,
       "scores": {
         "longevity": 7.0,
-        "lethality": 5.0,
-        "mobility": 2.0,
+        "lethality": 3.0,
+        "mobility": 4.0,
         "utility": 3.0,
         "accessibility": 2.0,
-        "overall": 19
+        "overall": 19.0
       },
       "roles": [
         {
@@ -3122,6 +5130,7 @@
     },
     {
       "name": "Heimdall",
+      "sheet": "All Titans",
       "value_rating": 26,
       "scores": {
         "longevity": 5.0,
@@ -3129,7 +5138,7 @@
         "mobility": 5.0,
         "utility": 7.0,
         "accessibility": 5.0,
-        "overall": 26
+        "overall": 26.0
       },
       "roles": [
         {
@@ -3157,14 +5166,15 @@
     },
     {
       "name": "Indra",
-      "value_rating": 32,
+      "sheet": "All Titans",
+      "value_rating": 31,
       "scores": {
         "longevity": 8.0,
-        "lethality": 6.0,
+        "lethality": 5.0,
         "mobility": 7.0,
         "utility": 4.0,
         "accessibility": 7.0,
-        "overall": 32
+        "overall": 31.0
       },
       "roles": [
         {
@@ -3192,14 +5202,15 @@
     },
     {
       "name": "Aether",
-      "value_rating": 28,
+      "sheet": "All Titans",
+      "value_rating": 29,
       "scores": {
         "longevity": 6.0,
         "lethality": 7.0,
-        "mobility": 5.0,
+        "mobility": 6.0,
         "utility": 5.0,
         "accessibility": 5.0,
-        "overall": 28
+        "overall": 29.0
       },
       "roles": [
         {
@@ -3222,14 +5233,15 @@
     },
     {
       "name": "Sirius",
-      "value_rating": 25,
+      "sheet": "All Titans",
+      "value_rating": 24,
       "scores": {
         "longevity": 6.0,
-        "lethality": 5.0,
+        "lethality": 4.0,
         "mobility": 4.0,
         "utility": 5.0,
         "accessibility": 5.0,
-        "overall": 25
+        "overall": 24.0
       },
       "roles": [
         {
@@ -3257,14 +5269,15 @@
     },
     {
       "name": "Rook",
-      "value_rating": 23,
+      "sheet": "All Titans",
+      "value_rating": 21,
       "scores": {
         "longevity": 5.0,
-        "lethality": 5.0,
+        "lethality": 3.0,
         "mobility": 8.0,
         "utility": 1.0,
         "accessibility": 4.0,
-        "overall": 23
+        "overall": 21.0
       },
       "roles": [
         {
@@ -3287,14 +5300,15 @@
     },
     {
       "name": "Newton",
-      "value_rating": 30,
+      "sheet": "All Titans",
+      "value_rating": 31,
       "scores": {
         "longevity": 2.0,
         "lethality": 8.0,
-        "mobility": 2.0,
+        "mobility": 3.0,
         "utility": 9.0,
         "accessibility": 9.0,
-        "overall": 30
+        "overall": 31.0
       },
       "roles": [
         {
@@ -3327,6 +5341,7 @@
     },
     {
       "name": "Eiffel",
+      "sheet": "All Titans",
       "value_rating": 30,
       "scores": {
         "longevity": 6.0,
@@ -3334,7 +5349,7 @@
         "mobility": 9.0,
         "utility": 2.0,
         "accessibility": 3.0,
-        "overall": 30
+        "overall": 30.0
       },
       "roles": [
         {
@@ -3362,14 +5377,15 @@
     },
     {
       "name": "Bedwyr",
+      "sheet": "All Titans",
       "value_rating": 33,
       "scores": {
         "longevity": 8.0,
-        "lethality": 6.0,
-        "mobility": 2.0,
+        "lethality": 5.0,
+        "mobility": 3.0,
         "utility": 9.0,
         "accessibility": 8.0,
-        "overall": 33
+        "overall": 33.0
       },
       "roles": [
         {
@@ -3397,6 +5413,7 @@
     },
     {
       "name": "Bersagliere",
+      "sheet": "All Titans",
       "value_rating": 35,
       "scores": {
         "longevity": 7.0,
@@ -3404,7 +5421,7 @@
         "mobility": 10.0,
         "utility": 2.0,
         "accessibility": 8.0,
-        "overall": 35
+        "overall": 35.0
       },
       "roles": [
         {
@@ -3437,6 +5454,7 @@
     },
     {
       "name": "Mauler",
+      "sheet": "All Titans",
       "value_rating": 34,
       "scores": {
         "longevity": 6.0,
@@ -3444,7 +5462,7 @@
         "mobility": 7.0,
         "utility": 7.0,
         "accessibility": 4.0,
-        "overall": 34
+        "overall": 34.0
       },
       "roles": [
         {
@@ -3472,14 +5490,15 @@
     },
     {
       "name": "Devourer",
-      "value_rating": 33,
+      "sheet": "All Titans",
+      "value_rating": 32,
       "scores": {
         "longevity": 6.0,
         "lethality": 8.0,
-        "mobility": 3.0,
+        "mobility": 2.0,
         "utility": 8.0,
         "accessibility": 8.0,
-        "overall": 33
+        "overall": 32.0
       },
       "roles": [
         {
@@ -3512,14 +5531,15 @@
     },
     {
       "name": "Bjorn",
-      "value_rating": 24,
+      "sheet": "All Titans",
+      "value_rating": 22,
       "scores": {
         "longevity": 8.0,
-        "lethality": 6.0,
+        "lethality": 5.0,
         "mobility": 4.0,
         "utility": 3.0,
-        "accessibility": 3.0,
-        "overall": 24
+        "accessibility": 2.0,
+        "overall": 22.0
       },
       "roles": [
         {
@@ -3547,14 +5567,15 @@
     },
     {
       "name": "Atlas",
-      "value_rating": 35,
+      "sheet": "All Titans",
+      "value_rating": 33,
       "scores": {
         "longevity": 8.0,
-        "lethality": 5.0,
+        "lethality": 3.0,
         "mobility": 7.0,
         "utility": 8.0,
         "accessibility": 7.0,
-        "overall": 35
+        "overall": 33.0
       },
       "roles": [
         {
@@ -3587,6 +5608,7 @@
     },
     {
       "name": "Princeps",
+      "sheet": "All Titans",
       "value_rating": 37,
       "scores": {
         "longevity": 10.0,
@@ -3594,7 +5616,7 @@
         "mobility": 4.0,
         "utility": 8.0,
         "accessibility": 8.0,
-        "overall": 37
+        "overall": 37.0
       },
       "roles": [
         {
@@ -3632,6 +5654,7 @@
     },
     {
       "name": "Waymaker",
+      "sheet": "All Titans",
       "value_rating": 34,
       "scores": {
         "longevity": 6.0,
@@ -3639,7 +5662,7 @@
         "mobility": 6.0,
         "utility": 10.0,
         "accessibility": 3.0,
-        "overall": 34
+        "overall": 34.0
       },
       "roles": [
         {
@@ -3672,14 +5695,15 @@
     },
     {
       "name": "Sirocco",
+      "sheet": "All Titans",
       "value_rating": 32,
       "scores": {
         "longevity": 9.0,
-        "lethality": 6.0,
+        "lethality": 5.0,
         "mobility": 8.0,
-        "utility": 8.0,
+        "utility": 9.0,
         "accessibility": 1.0,
-        "overall": 32
+        "overall": 32.0
       },
       "roles": [
         {
@@ -3709,6 +5733,196 @@
         }
       ],
       "comments": "Sirocco has Indra's evergreen feature of going into phase while also being extremely mobile and durable. This is combined with a utility perk similar to Atlas' with potent rust and EMP."
+    },
+    {
+      "name": "UE Ao Ming",
+      "sheet": "All Titans",
+      "value_rating": 25,
+      "scores": {
+        "longevity": 7.0,
+        "lethality": 10.0,
+        "mobility": 6.0,
+        "utility": 2.0,
+        "accessibility": 0.0,
+        "overall": 25.0
+      },
+      "roles": [
+        {
+          "role": "Sniper",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Early Drop",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Late Drop",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "Assumes UE TNA. Ming is pretty much the fattest statchecker in the game with massive firepower and decent longevity to back it up. If played with UE TRA, it can competently fend off enemy brawlers as well as bully enemy damage dealers."
+    },
+    {
+      "name": "UE Arthur",
+      "sheet": "All Titans",
+      "value_rating": 15,
+      "scores": {
+        "longevity": 5.0,
+        "lethality": 7.0,
+        "mobility": 2.0,
+        "utility": 1.0,
+        "accessibility": 0.0,
+        "overall": 15.0
+      },
+      "roles": [
+        {
+          "role": "Sniper",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Early Drop",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "Assumes UE TNA. UE Arthur is not nearly tanky enough to make use of UE TRA. While it is a massive pain to deal with if you don't have splash damage, it is a free kill if you do."
+    },
+    {
+      "name": "UE Murometz",
+      "sheet": "All Titans",
+      "value_rating": 27,
+      "scores": {
+        "longevity": 8.0,
+        "lethality": 8.0,
+        "mobility": 5.0,
+        "utility": 6.0,
+        "accessibility": 0.0,
+        "overall": 27.0
+      },
+      "roles": [
+        {
+          "role": "Support",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Sniper",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Early Drop",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Late Drop",
+          "type": "secondary",
+          "footnote": ""
+        }
+      ],
+      "comments": "Assumes UE TNA. UE Murometz is currently one of the strongest titans in the game. Its EMP is dangerous, it has insane self sustaining grey heals, and the stealth has incredibly high uptime. UE TRA can be used as a get out of jail free card that lowers your ceiling output."
+    },
+    {
+      "name": "UE Nodens",
+      "sheet": "All Titans",
+      "value_rating": 26,
+      "scores": {
+        "longevity": 8.0,
+        "lethality": 4.0,
+        "mobility": 5.0,
+        "utility": 9.0,
+        "accessibility": 0.0,
+        "overall": 26.0
+      },
+      "roles": [
+        {
+          "role": "Support",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Midrange",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Early Drop",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Late Drop",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "Assumes UE TRA. Both a powerful grey healing and speed boosting support and a staller that is difficult to take down without rust, the assistance UE Nodens is always appreciated on the team."
+    },
+    {
+      "name": "UE Minos",
+      "sheet": "All Titans",
+      "value_rating": 25,
+      "scores": {
+        "longevity": 8.0,
+        "lethality": 2.0,
+        "mobility": 8.0,
+        "utility": 7.0,
+        "accessibility": 0.0,
+        "overall": 25.0
+      },
+      "roles": [
+        {
+          "role": "Support",
+          "type": "secondary",
+          "footnote": ""
+        },
+        {
+          "role": "Brawler",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Beacon Runner",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Early Drop",
+          "type": "primary",
+          "footnote": ""
+        },
+        {
+          "role": "Late Drop",
+          "type": "primary",
+          "footnote": ""
+        }
+      ],
+      "comments": "Assumes UE TRA. UE Minos is a tanky staller that is very similar to the original one. The biggest upgrade you'll notice is the incredibly long duration EMP that its charge applies."
     }
   ],
   "camelot": [],
@@ -3719,6 +5933,12 @@
     "****Only with Scourveil",
     "*****Only with level 12 Webby"
   ],
+  "ue_weapon_index": {
+    "Midrange": "Pulsar, Ion, Arms, Molot/Tempest, Shocktrain, Wasp, Incinerator/Scald,",
+    "Burst": "Storm, Glory, Corona, Halo, Cryo, Incinerator/Scald, ArmM/ArmL (some midrange weapons are also burst weapons)",
+    "Close Range": "\"Burst\", Calmity/Scourge, Orkan, Punisher/Avenger, Blaze/Igniter, Shredder, Redeemer/Taran, Venom/Toxin (only use with Shieldbreak or Webby)",
+    "Any": "Anything goes. Exceptions: Hussar, Dragoon, Scatter, Havoc, and Devastator are not recommended because they suck.Vortex is niche and only recommended on pathfinder."
+  },
   "rating_colors": {
     "<= -2": "#ff0000",
     "-1": "#ff8000",

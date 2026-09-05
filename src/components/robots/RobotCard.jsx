@@ -4,11 +4,12 @@ import { getTierForName, getFootnoteText } from '../../utils/tierLookup';
 
 export function RobotCard({ robot, onClick, robotGuideData }) {
   const tier = getTierForName(robot.name, 'Robots');
+  const isUltimate = robot.sheet === 'Ultimate Robots' || robot.name.toLowerCase().startsWith('ue ');
 
   return (
     <div
-      className="glass-panel glass-panel-hover robot-card"
-      style={{ overflow: 'visible' }}
+      className={`glass-panel glass-panel-hover robot-card ${isUltimate ? 'ultimate-robot-card' : ''}`}
+      style={{ overflow: 'visible', ...(isUltimate ? { borderColor: 'rgba(234, 179, 8, 0.25)' } : {}) }}
       onClick={() => onClick(robot, 'Robots')}
       onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(robot, 'Robots'); } }}
       tabIndex={0}
@@ -18,7 +19,7 @@ export function RobotCard({ robot, onClick, robotGuideData }) {
       <div className="robot-card-header">
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '2px' }}>
-            <h3 style={{ fontSize: '20px', color: 'var(--cyan)', margin: 0 }}>{robot.name}</h3>
+            <h3 style={{ fontSize: '20px', color: isUltimate ? '#fef08a' : 'var(--cyan)', margin: 0 }}>{robot.name}</h3>
             {tier && (
               <span className={`tier-badge-${tier.toLowerCase()}`} style={{
                 fontSize: '11px',
@@ -31,6 +32,20 @@ export function RobotCard({ robot, onClick, robotGuideData }) {
                 textTransform: 'uppercase'
               }}>
                 {tier} Tier
+              </span>
+            )}
+            {isUltimate && (
+              <span style={{
+                fontSize: '11px',
+                fontWeight: 'bold',
+                padding: '1px 6px',
+                borderRadius: '4px',
+                background: 'rgba(234, 179, 8, 0.15)',
+                color: '#fbbf24',
+                border: '1px solid rgba(234, 179, 8, 0.35)',
+                textTransform: 'uppercase'
+              }}>
+                Ultimate
               </span>
             )}
           </div>

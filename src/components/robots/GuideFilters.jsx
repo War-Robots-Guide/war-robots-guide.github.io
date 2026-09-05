@@ -4,6 +4,9 @@ export function GuideFilters({
   guideSubTab,
   searchInput,
   setSearchInput,
+  categoryFilter,
+  setCategoryFilter,
+  availableCategories = [],
   robotValueFilter,
   setRobotValueFilter,
   robotRoleFilter,
@@ -23,6 +26,22 @@ export function GuideFilters({
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
       />
+
+      {/* Category filter (Tier 4 Robots / Tier 3 Robots / Ultimate Robots) */}
+      {guideSubTab === 'robots' && availableCategories.length > 1 && (
+        <select
+          className="select-filter"
+          value={categoryFilter}
+          onChange={(e) => setCategoryFilter(e.target.value)}
+        >
+          <option value="All">All Robot Types</option>
+          {availableCategories.map(cat => (
+            <option key={cat} value={cat}>
+              {cat}
+            </option>
+          ))}
+        </select>
+      )}
 
       {/* Value rating filter */}
       <select

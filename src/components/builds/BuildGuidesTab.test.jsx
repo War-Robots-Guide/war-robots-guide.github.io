@@ -5,6 +5,10 @@ import { BuildGuidesTab } from './BuildGuidesTab';
 // Mock robot guide data to control test cases
 vi.mock('../../data/robot_guide.json', () => ({
   default: {
+    ue_weapon_index: {
+      Midrange: 'Pulsar, Ion, Arms',
+      Burst: 'Storm, Glory'
+    },
     builds: [
       {
         build_name: 'Brawler',
@@ -14,7 +18,8 @@ vi.mock('../../data/robot_guide.json', () => ({
         best_weapons: 'Kroko',
         pilot: 'John Orsted',
         specialization: 'Support',
-        explanation: 'Pathfinder brawler explanation.'
+        explanation: 'Pathfinder brawler explanation.',
+        is_ultimate: false
       },
       {
         build_name: 'Sniper',
@@ -24,7 +29,8 @@ vi.mock('../../data/robot_guide.json', () => ({
         best_weapons: 'Shantak',
         pilot: 'Walter Trommel',
         specialization: 'Damage Dealer',
-        explanation: 'Nuo sniper explanation.'
+        explanation: 'Nuo sniper explanation.',
+        is_ultimate: false
       },
       {
         build_name: 'Brawler',
@@ -34,7 +40,19 @@ vi.mock('../../data/robot_guide.json', () => ({
         best_weapons: 'Machiara',
         pilot: 'Walter Trommel',
         specialization: 'Damage Dealer',
-        explanation: 'Nuo brawler explanation.'
+        explanation: 'Nuo brawler explanation.',
+        is_ultimate: false
+      },
+      {
+        build_name: 'Ultimate',
+        robot: 'UE Raven',
+        f2p_weapons: 'Not recommended for F2P',
+        drone_options: 'Scourveil\nKestrel',
+        best_weapons: 'Machiara\nAny UE Setups',
+        pilot: 'Nessa Riggs',
+        specialization: 'Damage Dealer',
+        explanation: 'UE Raven explanation.',
+        is_ultimate: true
       }
     ]
   }
@@ -110,5 +128,24 @@ describe('BuildGuidesTab Search and Duplication Fix', () => {
     render(<BuildGuidesTab />);
     const hazardElement = screen.getByText('Hazard');
     expect(hazardElement).toHaveStyle({ whiteSpace: 'pre-line' });
+  });
+
+  it('renders all builds including Ultimate builds together initially', () => {
+    render(<BuildGuidesTab />);
+    expect(screen.getByText('Pathfinder')).toBeInTheDocument();
+    expect(screen.getByText('UE Raven')).toBeInTheDocument();
+  });
+
+  it('renders Ultimate badge on Ultimate builds', () => {
+    render(<BuildGuidesTab />);
+    const ultimateBadges = screen.getAllByText('Ultimate');
+    expect(ultimateBadges.length).toBeGreaterThanOrEqual(1);
+  });
+
+  it('renders the UE Weapon Index reference legend', () => {
+    render(<BuildGuidesTab />);
+    expect(screen.getByText('UE (Ultimate Edition) Weapon Index')).toBeInTheDocument();
+    expect(screen.getByText(/Pulsar, Ion, Arms/i)).toBeInTheDocument();
+    expect(screen.getByText(/Storm, Glory/i)).toBeInTheDocument();
   });
 });

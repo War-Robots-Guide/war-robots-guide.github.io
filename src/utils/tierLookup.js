@@ -44,8 +44,16 @@ if (tiersData) {
 
 export const getTierForName = (name, category) => {
   if (!name || !tierLookupCache[category]) return null;
-  const match = tierLookupCache[category].get(name.toLowerCase());
-  return match ? match.tierLetter : null;
+  const clean = name.trim().toLowerCase();
+  const match = tierLookupCache[category].get(clean);
+  if (match) return match.tierLetter;
+
+  // Check alias without 'unit' (e.g. 'ue sword unit' -> 'ue sword')
+  const alias = clean.replace(/\s+unit$/, '');
+  const aliasMatch = tierLookupCache[category].get(alias);
+  if (aliasMatch) return aliasMatch.tierLetter;
+
+  return null;
 };
 
 export const getDescriptionForName = (name, category) => {
